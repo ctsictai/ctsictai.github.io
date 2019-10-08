@@ -1,4 +1,94 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[CTS junior Web developer]]></title><description><![CDATA[Web developer Learning.]]></description><link>https://ctsictai.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 08 Oct 2019 13:37:00 GMT</lastBuildDate><item><title><![CDATA[Git을 이용한 gatsby blog 작성]]></title><link>https://ctsictai.github.io//posts/the-origins-of-social-stationery-lettering</link><guid isPermaLink="false">https://ctsictai.github.io//posts/the-origins-of-social-stationery-lettering</guid><pubDate>Tue, 08 Oct 2019 22:30:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;git의-구조&quot;&gt;&lt;a href=&quot;#git%EC%9D%98-%EA%B5%AC%EC%A1%B0&quot; aria-label=&quot;git의 구조 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;git의 구조&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[CTS junior Web developer]]></title><description><![CDATA[Web developer Learning.]]></description><link>https://ctsictai.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 08 Oct 2019 13:56:13 GMT</lastBuildDate><item><title><![CDATA[09.30~10.04 한 주 정리 part2]]></title><link>https://ctsictai.github.io//posts/a-brief-history-of-typography/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/a-brief-history-of-typography/</guid><pubDate>Tue, 08 Oct 2019 22:50:32 GMT</pubDate><content:encoded>&lt;h2 id=&quot;1-string-type에-대해-파헤쳐-보자&quot;&gt;&lt;a href=&quot;#1-string-type%EC%97%90-%EB%8C%80%ED%95%B4-%ED%8C%8C%ED%97%A4%EC%B3%90-%EB%B3%B4%EC%9E%90&quot; aria-label=&quot;1 string type에 대해 파헤쳐 보자 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. String type에 대해 파헤쳐 보자&lt;/h2&gt;
+&lt;p&gt;string type은 ” ” / ’ ’ / &lt;code class=&quot;language-text&quot;&gt;&lt;/code&gt; 사이에 있는 것을 말한다.&lt;/p&gt;
+&lt;p&gt;string type은 대소문자를 구별한다. n is not equal N&lt;/p&gt;
+&lt;p&gt;string type은 str에 제공되는 메서드를 쓸 수 있다.&lt;/p&gt;
+&lt;p&gt;​&lt;/p&gt;
+&lt;p&gt;(1) Length 메서드&lt;/p&gt;
+&lt;p&gt;Str.length = str의 길이를 알 수 있다 – 굉장히 많이 씀!!&lt;/p&gt;
+&lt;p&gt;​&lt;/p&gt;
+&lt;p&gt;(2) indexOf 메서드&lt;/p&gt;
+&lt;p&gt;str.indexOf(“찾고자 하는 문자”) – 찾고자 하는 문자의 인덱싱 값을 반환 해준다. – 많이 씀!!
+문자가 복수 문자일 경우 첫 문자열 기준으로 반환한다. 만약에 인자값에 입력한 값이 없으면 -1을 반환한다.&lt;/p&gt;
+&lt;p&gt;​&lt;/p&gt;
+&lt;p&gt;※ 문자의 인덱싱 값(위치)를 알아서 무엇에 좋을까?&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;차단할 단어 모음이 존재하면, 사용자가 댓글 쓰고 댓글달기를 누를 때 차단할 단어 모음중 하나라도 매치되면 댓글을 못달게 할 수 있다.&lt;/li&gt;
+&lt;li&gt;오타를 코딩으로 수정 가능함.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;​&lt;/p&gt;
+&lt;p&gt;(3) Slice 메서드
+str.slice(시작할 인덱싱 혹은 특정 str, 종료 인덱싱 혹은 특정 str) – 텍스트를 잘라주는 함수&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;str = “JavaScript는 프로래밍 언어이다.&amp;quot;;&lt;/code&gt;
+&lt;code class=&quot;language-text&quot;&gt;str.slice(0, 4);&lt;/code&gt; - java =&gt; [4]의 위치는 ‘S’인데 S앞까지 잘라준다!! 중요!!!
+&lt;code class=&quot;language-text&quot;&gt;Str.slice(5, 13);&lt;/code&gt; - “cript는 프” [5] 부터 시작 [13]인 ‘로’ 앞까지
+앞서서 &lt;code class=&quot;language-text&quot;&gt;let char = str.indexOf(“Script”);&lt;/code&gt; - 위치 인덱싱 값 반환 – 첫 문자 ‘S’ 기준으로 인덱싱값 반환&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;str.slice(char);&lt;/code&gt;=&gt; Script는 프로래밍 언어이다 - 출력 =&gt; 2번째 인자 안주면 무조건 끝까지 !!&lt;/p&gt;
+&lt;p&gt;​&lt;/p&gt;
+&lt;p&gt;(4) StartsWith(“시작하는 문자열”)&lt;/p&gt;
+&lt;p&gt;– 해당 문자열로 str이 시작하는지 아닌지 true/false&lt;/p&gt;
+&lt;p&gt;(5) endsWith(“끝나는 문자열”)&lt;/p&gt;
+&lt;p&gt;– 해당 문자열로 str이 끝나는지 아닌지 true/false&lt;/p&gt;
+&lt;p&gt;(6) includes(“찾으려는 문자열”)&lt;/p&gt;
+&lt;p&gt;– 해당 문자열에 찾으려는 문자열이 있으면 true 없으면 false 반환&lt;/p&gt;
+&lt;p&gt;​&lt;/p&gt;
+&lt;h2 id=&quot;1-2-텍스트-문자열str의-연결&quot;&gt;&lt;a href=&quot;#1-2-%ED%85%8D%EC%8A%A4%ED%8A%B8-%EB%AC%B8%EC%9E%90%EC%97%B4str%EC%9D%98-%EC%97%B0%EA%B2%B0&quot; aria-label=&quot;1 2 텍스트 문자열str의 연결 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1-2. 텍스트 문자열(str)의 연결**&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;구버전&lt;/th&gt;
+&lt;th&gt;ES6&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;“안녕하세요! ” + username(변수) + “님”&lt;/td&gt;
+&lt;td&gt;const hi = &lt;code class=&quot;language-text&quot;&gt;안녕하세요. 저는 ${name} 입니다.&lt;/code&gt;;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;- +를 붙여야 한다. Str type이라면 ‘’나 “” 필수&lt;/td&gt;
+&lt;td&gt;+ 필요없고 ${name -변수} 변수값을 문자열 값에 넣을 수 있다. 그리고 &lt;code class=&quot;language-text&quot;&gt;&lt;/code&gt;(1옆에 있는 기호)로 문자열 지정이 가능하고 변수값을 넣을 수 있게 되었다.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;​&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;구버전&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Let detail = ‘자세히’\n +’보아야’\n + ‘이이이’;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Let detail = “자세히&lt;/p&gt;
+&lt;p&gt;보아야&lt;/p&gt;
+&lt;p&gt;이이이”;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ES6&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;let message = &amp;quot;감사합니다., &amp;quot;;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;let userName = &amp;quot;김개발&amp;quot;;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;let banger = &amp;quot;님!&amp;quot;;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;let customMess = message + userName + banger;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;let message = &amp;quot;감사합니다., &amp;quot;;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;let userName = &amp;quot;김개발&amp;quot;;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;let banger = &amp;quot;님!&amp;quot;;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;let customMess =&lt;/code&gt; &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&quot;application/x-tex&quot;&gt;{message}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&quot;katex-html&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:0.625em;vertical-align:-0.19444em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mord mathdefault&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;mord mathdefault&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;mord mathdefault&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;mord mathdefault&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;mord mathdefault&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;mord mathdefault&quot; style=&quot;margin-right:0.03588em;&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;mord mathdefault&quot;&gt;e&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;{userName} ${banger};`&lt;/p&gt;
+&lt;h3 id=&quot;str과-number-type의-만남--js의-특징&quot;&gt;&lt;a href=&quot;#str%EA%B3%BC-number-type%EC%9D%98-%EB%A7%8C%EB%82%A8--js%EC%9D%98-%ED%8A%B9%EC%A7%95&quot; aria-label=&quot;str과 number type의 만남  js의 특징 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;str과 number type의 만남 – js의 특징&lt;/h3&gt;
+&lt;p&gt;String + Number 을 시도할 때 항상 주의해야 합니다.
+String과 Number형을 더하면 항상 String 형으로 변환됩니다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;let text = &amp;quot;2 더하기 2는 &amp;quot; + (2 + 2)&lt;/code&gt; – |2 더하기 2는 4| 출력&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;let text = &amp;quot;2 더하기 2는 &amp;quot; + 2 + 2;&lt;/code&gt; - |2 더하기 2는 22| 출력&lt;/p&gt;
+&lt;h2 id=&quot;1-3-string-☞-number-type-변환&quot;&gt;&lt;a href=&quot;#1-3-string-%E2%98%9E-number-type-%EB%B3%80%ED%99%98&quot; aria-label=&quot;1 3 string ☞ number type 변환 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1-3. String ☞ Number type 변환​&lt;/h2&gt;
+&lt;p&gt;JS에서는 type error가 잘 안나는 편이라 덜 신경쓰이지만 원래 다른 언어에서는 칼 같이 type에 따른 error가 많이 뜬다. 범용적으로 str은 str끼리 num은 num끼리 묶어야 코드 가독성이 좋다.&lt;/p&gt;
+&lt;p&gt;​&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;+기호_는 str, num type 신경안쓰고 모두 되는 연산자라 많이 헷갈린다.
+꼭 문자형과 숫자형을 구분하는 것이 좋다.&lt;/li&gt;
+&lt;li&gt;기호_는 num type만 가능하므로 str type으로 -연산하면 NaN(Not a Number)가 뜬다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;string을-number-type으로-변환하는-메서드&quot;&gt;&lt;a href=&quot;#string%EC%9D%84-number-type%EC%9C%BC%EB%A1%9C-%EB%B3%80%ED%99%98%ED%95%98%EB%8A%94-%EB%A9%94%EC%84%9C%EB%93%9C&quot; aria-label=&quot;string을 number type으로 변환하는 메서드 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;String을 Number type으로 변환하는 메서드&lt;/h3&gt;
+&lt;p&gt;Number! parseInt / parseFloat
+&lt;code class=&quot;language-text&quot;&gt;Let birthinput = “1999”&lt;/code&gt; -str
+&lt;code class=&quot;language-text&quot;&gt;Let birth = Number(birhinput);&lt;/code&gt; - num​&lt;/p&gt;
+&lt;h3 id=&quot;number을-string-type으로-변환하는-메서드&quot;&gt;&lt;a href=&quot;#number%EC%9D%84-string-type%EC%9C%BC%EB%A1%9C-%EB%B3%80%ED%99%98%ED%95%98%EB%8A%94-%EB%A9%94%EC%84%9C%EB%93%9C&quot; aria-label=&quot;number을 string type으로 변환하는 메서드 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Number을 String type으로 변환하는 메서드&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Let n = 12;&lt;/code&gt;
+&lt;code class=&quot;language-text&quot;&gt;Let nToS = n.toString();&lt;/code&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Git을 이용한 gatsby blog 작성]]></title><link>https://ctsictai.github.io//posts/the-origins-of-social-stationery-lettering</link><guid isPermaLink="false">https://ctsictai.github.io//posts/the-origins-of-social-stationery-lettering</guid><pubDate>Tue, 08 Oct 2019 22:30:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;git의-구조&quot;&gt;&lt;a href=&quot;#git%EC%9D%98-%EA%B5%AC%EC%A1%B0&quot; aria-label=&quot;git의 구조 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;git의 구조&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://jistol.github.io/assets/img/git/git-basic/git-basic-3.png&quot; alt=&quot;Git-Structure&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;git-add-&quot;&gt;&lt;a href=&quot;#git-add-&quot; aria-label=&quot;git add  permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Git add .&lt;/h2&gt;
 &lt;ul&gt;
@@ -373,75 +463,4 @@
 &lt;p&gt;Thus, they feel that “the decisive factor for the birth of typography”, the use of reusable moulds for casting type, might have been a more progressive process than was previously thought. They suggest that the additional step of using the punch to create a mould that could be reused many times was not taken until twenty years later, in the 1470s. Others have not accepted some or all of their suggestions, and have interpreted the evidence in other ways, and the truth of the matter remains very uncertain.&lt;/p&gt;
 &lt;p&gt;A 1568 history by Hadrianus Junius of Holland claims that the basic idea of the movable type came to Gutenberg from Laurens Janszoon Coster via Fust, who was apprenticed to Coster in the 1430s and may have brought some of his equipment from Haarlem to Mainz. While Coster appears to have experimented with moulds and castable metal type, there is no evidence that he had actually printed anything with this technology. He was an inventor and a goldsmith. However, there is one indirect supporter of the claim that Coster might be the inventor. The author of the Cologne Chronicle of 1499 quotes Ulrich Zell, the first printer of Cologne, that printing was performed in Mainz in 1450, but that some type of printing of lower quality had previously occurred in the Netherlands. However, the chronicle does not mention the name of Coster, while it actually credits Gutenberg as the “first inventor of printing” in the very same passage (fol. 312). The first securely dated book by Dutch printers is from 1471, and the Coster connection is today regarded as a mere legend.&lt;/p&gt;
 &lt;p&gt;The 19th century printer and typefounder Fournier Le Jeune suggested that Gutenberg might not have been using type cast with a reusable matrix, but possibly wooden types that were carved individually. A similar suggestion was made by Nash in 2004. This remains possible, albeit entirely unproven.&lt;/p&gt;
-&lt;p&gt;It has also been questioned whether Gutenberg used movable types at all. In 2004, Italian professor Bruno Fabbiani claimed that examination of the 42-line Bible revealed an overlapping of letters, suggesting that Gutenberg did not in fact use movable type (individual cast characters) but rather used whole plates made from a system somewhat like a modern typewriter, whereby the letters were stamped successively into the plate and then printed. However, most specialists regard the occasional overlapping of type as caused by paper movement over pieces of type of slightly unequal height.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[A Brief History of Typography]]></title><description><![CDATA[Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.]]></description><link>https://ctsictai.github.io//posts/a-brief-history-of-typography/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/a-brief-history-of-typography/</guid><pubDate>Tue, 02 Feb 2016 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Pellentesque habitant morbi tristique&lt;/strong&gt; senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. &lt;em&gt;Aenean ultricies mi vitae est.&lt;/em&gt; Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. &lt;/p&gt;
-&lt;p&gt;Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui.  &lt;a href=&quot;#&quot;&gt;Donec non enim&lt;/a&gt; in turpis pulvinar facilisis.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/b3e5e61f7fb8888ba76b502242e27bd0/98235/image-0.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 66.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwAE/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAVhO4azw/wD/xAAcEAABAwUAAAAAAAAAAAAAAAABAAIhAxESMkH/2gAIAQEAAQUCBQkPxvKp6d//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAZEAACAwEAAAAAAAAAAAAAAAAAARAhYXH/2gAIAQEABj8CmhaPp//EAB0QAQADAAEFAAAAAAAAAAAAAAEAESExQVFhcYH/2gAIAQEAAT8htrv1hy4LT3KNpfmLq1U1Oc66X7GnMxE//9oADAMBAAIAAwAAABBzD//EABYRAAMAAAAAAAAAAAAAAAAAAAABIf/aAAgBAwEBPxBKEP/EABYRAAMAAAAAAAAAAAAAAAAAAAABIf/aAAgBAgEBPxBulP/EAB0QAQACAgIDAAAAAAAAAAAAAAEAESExQWFRcbH/2gAIAQEAAT8QGoNcw44SBSasTtvqOqqmWzEKyw4t138gKUs5A3YhC8wW8+5//9k=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-        &lt;source
-          srcset=&quot;/static/b3e5e61f7fb8888ba76b502242e27bd0/01472/image-0.webp 240w,
-/static/b3e5e61f7fb8888ba76b502242e27bd0/222bd/image-0.webp 480w,
-/static/b3e5e61f7fb8888ba76b502242e27bd0/620b9/image-0.webp 960w,
-/static/b3e5e61f7fb8888ba76b502242e27bd0/28063/image-0.webp 1440w,
-/static/b3e5e61f7fb8888ba76b502242e27bd0/44134/image-0.webp 1800w&quot;
-          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-          type=&quot;image/webp&quot;
-        /&gt;
-        &lt;source
-          srcset=&quot;/static/b3e5e61f7fb8888ba76b502242e27bd0/3bc27/image-0.jpg 240w,
-/static/b3e5e61f7fb8888ba76b502242e27bd0/98431/image-0.jpg 480w,
-/static/b3e5e61f7fb8888ba76b502242e27bd0/b3ee8/image-0.jpg 960w,
-/static/b3e5e61f7fb8888ba76b502242e27bd0/b97fe/image-0.jpg 1440w,
-/static/b3e5e61f7fb8888ba76b502242e27bd0/98235/image-0.jpg 1800w&quot;
-          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-          type=&quot;image/jpeg&quot;
-        /&gt;
-        &lt;img
-          class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/b3e5e61f7fb8888ba76b502242e27bd0/b3ee8/image-0.jpg&quot;
-          alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
-          title=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
-          loading=&quot;lazy&quot;
-        /&gt;
-      &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;h2 id=&quot;header-level-2&quot;&gt;&lt;a href=&quot;#header-level-2&quot; aria-label=&quot;header level 2 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Header Level 2&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
-&lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. &lt;/p&gt;
-&lt;figure&gt;
-	&lt;blockquote&gt;
-		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.&lt;/p&gt;
-		&lt;footer&gt;
-			&lt;cite&gt;— Aliquam tincidunt mauris eu risus.&lt;/cite&gt;
-		&lt;/footer&gt;
-	&lt;/blockquote&gt;
-&lt;/figure&gt;
-&lt;h3 id=&quot;header-level-3&quot;&gt;&lt;a href=&quot;#header-level-3&quot; aria-label=&quot;header level 3 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Header Level 3&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
-&lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;#header h1 a&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; block&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;token property&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 300px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;token property&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 80px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;It has also been questioned whether Gutenberg used movable types at all. In 2004, Italian professor Bruno Fabbiani claimed that examination of the 42-line Bible revealed an overlapping of letters, suggesting that Gutenberg did not in fact use movable type (individual cast characters) but rather used whole plates made from a system somewhat like a modern typewriter, whereby the letters were stamped successively into the plate and then printed. However, most specialists regard the occasional overlapping of type as caused by paper movement over pieces of type of slightly unequal height.&lt;/p&gt;</content:encoded></item></channel></rss>
