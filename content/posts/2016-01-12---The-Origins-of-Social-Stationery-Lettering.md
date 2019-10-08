@@ -1,51 +1,52 @@
 ---
-title: The Origins of Social Stationery Lettering
-date: "2016-12-01T22:40:32.169Z"
+title: Git을 이용한 gatsby blog 작성
+date: "2019-10-08T22:30:32.169Z"
 template: "post"
 draft: false
 slug: "/posts/the-origins-of-social-stationery-lettering"
-category: "Design Culture"
-description: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante."
+category: "git"
+description: ""
 socialImage: "/media/image-3.jpg"
 ---
 
-**Pellentesque habitant morbi tristique** senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. *Aenean ultricies mi vitae est.* Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. 
+# git의 구조
 
-Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui.  [Donec non enim](#) in turpis pulvinar facilisis.
+![Git-Structure](https://jistol.github.io/assets/img/git/git-basic/git-basic-3.png)
 
-![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/image-3.jpg)
+## Git add .
 
-## Header Level 2
+- 변경된 파일을 모두 tracking해서 working space에서 stage(index)로 upload
 
-+ Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-+ Aliquam tincidunt mauris eu risus.
+## git status
 
-Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. 
+- 현재의 git과의 상태를 체크하는 명령어 - step by step 마다 쳐서 확인한다. (add/commit 상태 확인)
 
-<figure>
-	<blockquote>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
-		<footer>
-			<cite>— Aliquam tincidunt mauris eu risus.</cite>
-		</footer>
-	</blockquote>
-</figure>
+- no add status
+  - modified: movie/views.py
+- add status
+  - new file: requirements.txt
 
-### Header Level 3
+## git commit -m "message"
 
-+ Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-+ Aliquam tincidunt mauris eu risus.
+- 간결하고 알아볼 수 있는 message를 남긴다. commit을 하면 index에서 local repo로 간다.
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.
+## git remote add origin github repo url
 
-```css
-#header h1 a {
-  display: block;
-  width: 300px;
-  height: 80px;
-}
-```
+- local repo와 remote repo를 연결하기 위해 github에서 만든 new repository 주소를 붙여준다.
 
-Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+## git remote -v
 
-![Test SVG](/media/cpu.svg)
+- local repo와 연결된 remote repo 상태를 보여주는 명령어
+
+## git branch "branch name"
+
+- create branch
+
+## git branch
+
+- 해당 remote repo에 생성된 branch 현황을 보여준다.
+
+## git push origin master 혹은 branch name
+
+- remote repo(github에 있는 repo)에 최종적으로 file upload
+- 이 때 master는 master branch에 push 하는 것이고 branch name은 만든 branchdp push 한다.
