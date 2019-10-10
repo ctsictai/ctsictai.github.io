@@ -1,22 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[CTS junior Web developer]]></title><description><![CDATA[Web developer Learning.]]></description><link>https://ctsictai.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 10 Oct 2019 14:53:04 GMT</lastBuildDate><item><title><![CDATA[09.30~10.04 한 주 정리 part.4]]></title><description><![CDATA[배열 / class / 주석]]></description><link>https://ctsictai.github.io//posts/the-birth-of-movable-type/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/the-birth-of-movable-type/</guid><pubDate>Thu, 10 Oct 2019 23:45:03 GMT</pubDate><content:encoded>&lt;h2 id=&quot;array배열&quot;&gt;&lt;a href=&quot;#array%EB%B0%B0%EC%97%B4&quot; aria-label=&quot;array배열 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Array(배열)&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[CTS junior Web developer]]></title><description><![CDATA[Web developer Learning.]]></description><link>https://ctsictai.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 10 Oct 2019 15:05:51 GMT</lastBuildDate><item><title><![CDATA[09.30~10.04 한 주 정리 part.4]]></title><description><![CDATA[배열 / class / 주석]]></description><link>https://ctsictai.github.io//posts/the-birth-of-movable-type/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/the-birth-of-movable-type/</guid><pubDate>Thu, 10 Oct 2019 23:45:03 GMT</pubDate><content:encoded>&lt;h2 id=&quot;array배열&quot;&gt;&lt;a href=&quot;#array%EB%B0%B0%EC%97%B4&quot; aria-label=&quot;array배열 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Array(배열)&lt;/h2&gt;
 &lt;p&gt;비슷한 성질을 가진 데이터들의 집합&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;배열의 요소(Elements)&lt;br&gt;
+&lt;code&gt;let name = [‘chris’, 2, test(name), [‘rs’, ‘esp’], function (price)]&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;배열의 요소(Elements)
-&lt;code&gt;let name = [‘chris’, 2, test(name), [‘rs’, ‘esp’], function (price)]&lt;/code&gt;&lt;br&gt;
-&amp;#x3C;&gt; Element type – everything! – str /num / array / etc on..&lt;/li&gt;
-&lt;li&gt;인덱싱 – 배열안에서 각 요소들은 주소값(?)을 가지고 있다. – 배열안의 요소를 쉽게 찾을 수 있도록 하는 기능이다. – 매우매우 많이 씀&lt;/li&gt;
+&lt;li&gt;Element type – everything! – str /num / array / etc on..&lt;/li&gt;
 &lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;인덱싱 – 배열안에서 각 요소들은 주소값(?)을 가지고 있다. – 배열안의 요소를 쉽게 찾을 수 있도록 하는 기능이다.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;code&gt;function getElement() {
 let arr = [3, [4, [“array”, 9], 2+3], [0]];}&lt;/code&gt;
 &lt;code&gt;return arr[1][1][0];}&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;배열의 요소는 다양한 타입이 가능하다. 특히 배열안의 배열도 가능하다. 이렇게 [[[]]]- 배열 속에 배열이 있는 구조를 다차원 배열이라고 한다.&lt;/li&gt;
-&lt;li&gt;그러면 다차원 배열의 인덱싱은 어떻게 할까??? 가장 바깥의 배열부터 안에 있는 배열 순서대로 인덱싱을 진행하면&lt;/li&gt;
+&lt;blockquote&gt;
+&lt;p&gt;배열의 요소는 다양한 타입이 가능하다. 특히 배열안의 배열도 가능하다. 이렇게 [[[]]]- 배열 속에 배열이 있는 구조를 다차원 배열이라고 한다.
+그러면 다차원 배열의 인덱싱은 어떻게 할까??? 가장 바깥의 배열부터 안에 있는 배열 순서대로 인덱싱을 진행하면&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
 &lt;li&gt;[1]-가장 바깥의 배열의 2번째 요소(이게 배열이다) - [4, [“array”, 9], 2+3],&lt;/li&gt;
 &lt;li&gt;[1] - 1에서 인덱싱한 요소가 배열이고 이 배열에서 2번째 요소(이것도 배열) - [“array”, 9]&lt;/li&gt;
 &lt;li&gt;[0] - 2에서 인덱싱한 요소가 배열이고 이 배열에서 1번째 요소 -“array”가 출력된다.&lt;/li&gt;
 &lt;li&gt;배열 요소 추가하기&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/ol&gt;
 &lt;p&gt;&lt;code&gt;let cities = [];&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;array명[원하는 인덱싱] = 넣으려는 요소값&lt;/li&gt;
@@ -55,24 +61,24 @@ forEach함수를 탈출 하고 싶을 때 return을 사용하면 됨 – 지정 
 원하는 구조의 객체의 프레임을 설계해 놓고, 비슷한 모양의 객체를 공장처럼 찍어낼 수 있다.
 비슷한 모양의 객체를 계속적으로 만드는 건 낭비 이걸 class라는 설계도를 통해 공통적인 부분의 중복 코딩을 막을 수 있다. 또한 코드 가독성 및 유지, 보수, 변경에도 훨씬 유리하다&lt;/p&gt;
 &lt;p&gt;★ CSS에서 말하는 Class와는 개념이 다르다!!&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;JS Class 작성 예시&lt;/li&gt;
-&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;JS Class 작성 예시&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;class Car {&lt;/code&gt; 클래스명은 대문자 시작 CamelCase 작성 규칙&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;constructor(name, price) {&lt;/code&gt;생성자 영역 – 인자 2개 받음 context 밖에서 인스턴스 생성할때마다 맨 먼저 호출되는 부분(클래스를 시작하기 위한 첫 기초단계라고 생각하자)
-&lt;code class=&quot;language-text&quot;&gt;this.name = name;&lt;/code&gt; this는 class 영역(context) 내에서 적용할 인스턴스 name인스턴스는 = 인자 name값 ø context(class 개념에서) = scope (함수 개념에서)
-&lt;code class=&quot;language-text&quot;&gt;this.price = price;&lt;/code&gt; 위와 동일하고 price인스턴스 인자값만 price로
-&lt;code class=&quot;language-text&quot;&gt;this.department = &amp;quot;선릉지점&amp;quot;;&lt;/code&gt; department 인스턴스는 “선릉지점” 값
-&lt;code class=&quot;language-text&quot;&gt;this.salesAmount = 0;&lt;/code&gt;salesAmount 인스턴스는 0값
-&lt;code class=&quot;language-text&quot;&gt;}&lt;/code&gt;
-&lt;code class=&quot;language-text&quot;&gt;applyDiscount(discount) {&lt;/code&gt;클래스 내에 생성되는 함수 = 메서드 à 객체가 프로터티 값으로 갖고 있다.
-&lt;code class=&quot;language-text&quot;&gt;return this.price * discount;&lt;/code&gt; - this 인스턴스를 써야 class내에서는 통한다!
-&lt;code class=&quot;language-text&quot;&gt;} addSales() { this.salesAmount++; } changeDepartment(departmentName){ this.department = departmentName; } }&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;constructor(name, price) {&lt;/code&gt;생성자 영역 – 인자 2개 받음 context 밖에서 인스턴스 생성할때마다 맨 먼저 호출되는 부분(클래스를 시작하기 위한 첫 기초단계라고 생각하자)&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;this.name = name;&lt;/code&gt; this는 class 영역(context) 내에서 적용할 인스턴스 name인스턴스는 = 인자 name값 ø context(class 개념에서) = scope (함수 개념에서)&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;this.price = price;&lt;/code&gt; 위와 동일하고 price인스턴스 인자값만 price로&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;this.department = &amp;quot;선릉지점&amp;quot;;&lt;/code&gt; department 인스턴스는 “선릉지점” 값&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;this.salesAmount = 0;&lt;/code&gt;salesAmount 인스턴스는 0값&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;}&lt;/code&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;applyDiscount(discount) {&lt;/code&gt;클래스 내에 생성되는 함수 = 메서드 à 객체가 프로터티 값으로 갖고 있다.&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;return this.price * discount;&lt;/code&gt; - this 인스턴스를 써야 class내에서는 통한다!&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;} addSales() { this.salesAmount++; } changeDepartment(departmentName) { this.department = departmentName; } }&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&quot;if문&quot;&gt;&lt;a href=&quot;#if%EB%AC%B8&quot; aria-label=&quot;if문 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;if문&lt;/h2&gt;
 &lt;p&gt;“만약에 ~하면 ~한다.”가 컴퓨터 언어로 변환&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;|| and &amp;#x26;&amp;#x26;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;|| and &amp;#x26;&amp;#x26;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;if (answer === &amp;quot;선릉&amp;quot; || answer === &amp;quot;강남&amp;quot; || answer === &amp;quot;역삼&amp;quot;)&lt;/code&gt; - 선릉 or 강남 or 역삼인 경우&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;||는 or 논리 연산자이다.&lt;/li&gt;
@@ -80,12 +86,12 @@ forEach함수를 탈출 하고 싶을 때 return을 사용하면 됨 – 지정 
 &lt;code class=&quot;language-text&quot;&gt;if (hobby === &amp;quot;축구&amp;quot; &amp;amp;&amp;amp; morning === &amp;quot;네&amp;quot;)&lt;/code&gt; - hobby가 축구이고 morning이 네인 경우&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;ex)
-&lt;code class=&quot;language-text&quot;&gt;if (age &amp;gt; 65 || age &amp;lt; 21 &amp;amp;&amp;amp; res === &amp;quot;한국&amp;quot;)&lt;/code&gt; – 왼쪽부터 해석!
+&lt;code class=&quot;language-text&quot;&gt;if (age &amp;gt; 65 || age &amp;lt; 21 &amp;amp;&amp;amp; res === &amp;quot;한국&amp;quot;)&lt;/code&gt;&lt;br&gt;
 =&gt; 나이가 65세 초과이거나 나이가 21세 미만이고 한국거주하는 사람&lt;/p&gt;
-&lt;p&gt;위의 코드는 가독성이 좋지 않으므로 밑에 처럼 () 처리하는게 좋다
+&lt;p&gt;위의 코드는 가독성이 좋지 않으므로 밑에 처럼 () 처리하는게 좋다&lt;br&gt;
 &lt;code class=&quot;language-text&quot;&gt;if (age &amp;gt; 65 || (age &amp;lt; 21 &amp;amp;&amp;amp; res === &amp;quot;한국&amp;quot;))&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;만약에 이런 형식의 코드는 어떻게 해석이 될까?
-&lt;code class=&quot;language-text&quot;&gt;if ((age &amp;gt; 65 || age &amp;lt; 21) &amp;amp;&amp;amp; res === &amp;quot;한국&amp;quot;)&lt;/code&gt;
+&lt;p&gt;만약에 이런 형식의 코드는 어떻게 해석이 될까?&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;if ((age &amp;gt; 65 || age &amp;lt; 21) &amp;amp;&amp;amp; res === &amp;quot;한국&amp;quot;)&lt;/code&gt;&lt;br&gt;
 =&gt; 나이가 65세 초과거나 21세미만이고 한국 거주하는 자&lt;/p&gt;
 &lt;h2 id=&quot;주석---주석-연산자--&quot;&gt;&lt;a href=&quot;#%EC%A3%BC%EC%84%9D---%EC%A3%BC%EC%84%9D-%EC%97%B0%EC%82%B0%EC%9E%90--&quot; aria-label=&quot;주석   주석 연산자   permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;주석 - 주석 연산자(//, /* */)&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[09.30~10.04 한 주 정리 part3]]></title><description><![CDATA[Number Type / Object 정리]]></description><link>https://ctsictai.github.io//posts/humane-typography-in-the-digital-age/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/humane-typography-in-the-digital-age/</guid><pubDate>Wed, 09 Oct 2019 22:40:32 GMT</pubDate><content:encoded>&lt;h2 id=&quot;number-type-파헤치기&quot;&gt;&lt;a href=&quot;#number-type-%ED%8C%8C%ED%97%A4%EC%B9%98%EA%B8%B0&quot; aria-label=&quot;number type 파헤치기 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Number type 파헤치기!!&lt;/h2&gt;
 &lt;p&gt;가장 중요한 객체 Math 객체 – 수학 계산식을 모아 놓은 object라고 보면 된다.&lt;/p&gt;
