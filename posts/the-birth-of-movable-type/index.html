@@ -50,88 +50,122 @@
 
         gtag('config', 'UA-73379983-2', {"send_page_view":false});
       }
-      </script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="shortcut icon" href="/icons/icon-48x48.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#F7A046"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=4bf6ec2f3b10076939f185cb36455e32"/><title data-react-helmet="true">09.30~10.04 한 주 정리 part.5 - CTS junior Web developer</title><meta data-react-helmet="true" name="description" content="배열 / class / 주석"/><meta data-react-helmet="true" property="og:site_name" content="09.30~10.04 한 주 정리 part.5 - CTS junior Web developer"/><meta data-react-helmet="true" property="og:image" content="https://ctsictai.github.io//media/gutenberg.jpg"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:title" content="09.30~10.04 한 주 정리 part.5 - CTS junior Web developer"/><meta data-react-helmet="true" name="twitter:description" content="배열 / class / 주석"/><meta data-react-helmet="true" name="twitter:image" content="https://ctsictai.github.io//media/gutenberg.jpg"/><link as="script" rel="preload" href="/webpack-runtime-878c52a9116873c6db99.js"/><link as="script" rel="preload" href="/app-3771147922fd423e71e9.js"/><link as="script" rel="preload" href="/styles-555c1065b6682b33de91.js"/><link as="script" rel="preload" href="/commons-462b862441b9e7056d58.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-js-a50e0cd8c76d9b151bee.js"/><link as="fetch" rel="preload" href="/page-data\posts\the-birth-of-movable-type\page-data.json" crossorigin="anonymous"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="Layout-module--layout--EpQHE"><div><a class="Post-module--post__home-button--3zx_9" href="/">All Articles</a><div><div class="Content-module--content--1tfQQ"><h1 class="Content-module--content__title--1qFLI">09.30~10.04 한 주 정리 part.5</h1><div class="Content-module--content__body--2bfha"><h1 id="for문"><a href="#for%EB%AC%B8" aria-label="for문 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>For문</h1>
-<p>원하는 만큼 반복하는 함수(일정한 형식의 많은 데이터를 다루기 위해 유용함)</p>
-<p><code> for(let i =0; i&#x3C;=5; i++)</code></p>
+      </script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="shortcut icon" href="/icons/icon-48x48.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#F7A046"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=4bf6ec2f3b10076939f185cb36455e32"/><title data-react-helmet="true">09.30~10.04 한 주 정리 part.6 - CTS junior Web developer</title><meta data-react-helmet="true" name="description" content="HTML에서의 JS / DOM / 이벤트"/><meta data-react-helmet="true" property="og:site_name" content="09.30~10.04 한 주 정리 part.6 - CTS junior Web developer"/><meta data-react-helmet="true" property="og:image" content="https://ctsictai.github.io//media/gutenberg.jpg"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:title" content="09.30~10.04 한 주 정리 part.6 - CTS junior Web developer"/><meta data-react-helmet="true" name="twitter:description" content="HTML에서의 JS / DOM / 이벤트"/><meta data-react-helmet="true" name="twitter:image" content="https://ctsictai.github.io//media/gutenberg.jpg"/><link as="script" rel="preload" href="/webpack-runtime-795be18b6a6bd2a330b3.js"/><link as="script" rel="preload" href="/app-4672416bfd5b77998413.js"/><link as="script" rel="preload" href="/styles-a479cb5e6900c01cf4cf.js"/><link as="script" rel="preload" href="/commons-7a4ef11ea4a4cb085171.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-js-c43b72a84ba1e7cd4df6.js"/><link as="fetch" rel="preload" href="/page-data\posts\the-birth-of-movable-type\page-data.json" crossorigin="anonymous"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="Layout-module--layout--EpQHE"><div><a class="Post-module--post__home-button--3zx_9" href="/">All Articles</a><div><div class="Content-module--content--1tfQQ"><h1 class="Content-module--content__title--1qFLI">09.30~10.04 한 주 정리 part.6</h1><div class="Content-module--content__body--2bfha"><h1 id="html에서의-js-로드하기"><a href="#html%EC%97%90%EC%84%9C%EC%9D%98-js-%EB%A1%9C%EB%93%9C%ED%95%98%EA%B8%B0" aria-label="html에서의 js 로드하기 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>HTML에서의 JS 로드하기</h1>
 <ul>
-<li><code>let i=0 </code> 시작조건 - i변수 0부터 시작</li>
-<li><code> i&#x3C;=5 </code> 종료조건 - 5보다 같거나 작을 떄</li>
-<li><code> i++ </code> 증감식 - 1씩 증가</li>
+<li>inline 방식 – html 태그에 직접 javascript를 기술하는 방식이다. 장점은 태그에 관련된 스크립트가 분명하게 드러난다. 하지만 정보와 제어가 섞여 있기 때문에 정보로서의 가치가 떨어짐.</li>
+<li>Script 방식 - script 태그를 만들어서 여기에 자바스크립트 코드를 삽입하는 방식. 장점은 html태그와 js 코드를 분리할 수 있다.</li>
+<li>외부 파일로 분리
+js를 별도의 파일로 분리할 수도 있다. 장점은 보다 엄격하게 정보와 제어를 분리할 수 있다. 하나의 js 파일을 여러 웹페이지에서 로드함으로서 js의 재활용성을 높일 수 있다. 캐쉬를 통해서 속도의 향상, 전송량의 경량화를 도모할 수 있다. 유지보수의 편의성(중복 제거)</li>
 </ul>
-<blockquote>
-<p>i가 0, 1, 2, 3, 4, 5까지 for문 반복한다</p>
-</blockquote>
-<p><code>for (var i = 2; i &#x3C; 10; i = i + 2)</code></p>
-<ol>
-<li>i는 2부터 시작하여</li>
-<li>10보다 작을때까지</li>
-<li>2씩 증가시키면서 for문을 돌린다.</li>
-<li>i가 2,4,6,8 으로 2씩 증가하며 for문을 총 4번 반복합니다.</li>
-</ol>
-<blockquote>
-<p>보통 배열 요소에 대한 for문 돌릴 땐 length 프로퍼티를 사용해 종료값을 정한다</p>
-</blockquote>
-<blockquote>
-<blockquote>
-<p><code>for (var i = 0; i &#x3C; 배열명.length; i++)</code></p>
-</blockquote>
-</blockquote>
-<p>※ 종료조건에 &#x3C;을 쓰는 이유<br>
-배열의 인덱싱 시작이 0부터 시작하기 때문에 배열의 길이보다 작을 때까지 반복해야 한다.</p>
-<h1 id="date-value날짜와-시간"><a href="#date-value%EB%82%A0%EC%A7%9C%EC%99%80-%EC%8B%9C%EA%B0%84" aria-label="date value날짜와 시간 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Date value(날짜와 시간)</h1>
+<p>※ Scripts 파일은 태그보다 페이지 하단(body tag 안에서 맨뒤)에 위치시키는 것이 더 좋음</p>
+<h1 id="dom-document-object-model"><a href="#dom-document-object-model" aria-label="dom document object model permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DOM (Document Object Model)</h1>
 <ul>
-<li>날짜 객체 호출해서 날짜 시간을 얻는다.<br>
-<code>let rightNow = new Date();</code> - new Date</li>
-<li>반환되는 값이 2019-02-18T00:45:06.562Z – 그대로는 이용안하고 가공한번더 해야 됨<br>
-<code>let year = rightNow.getFullYear();</code> -년도만<br>
-<code>let month = rightNow.getMonth()+1;</code> -월만 (원래 값보다 1개월 작은값이 반환되서 +1함)<br>
-<code>let date = rightNow.getDate();</code> - 일만<br>
-<code>let day = rightNow.getDay();</code> - 요일만(0부터 월요일 ~6은 일요일)- 숫자값으로 뽑아줌<br>
-<code>let currentHour = rightNow.getHours();</code> -시간만<br>
-<code>let currentMin = rightNow.getMinutes();</code> -분만<br>
-<code>Let time = rightNow.getTime();</code> - 밀리초 표현 반환 가능</li>
+<li>DOM(돔)이란 웹페이지의 HTML을 계층화시켜 트리구조로 만든 객체(Object) 모델입니다.</li>
+<li>JavaScript는 이 model로 웹 페이지에 접근하고, 페이지를 수정할 수 있습니다.</li>
+<li>DOM은 HTML인 웹페이지와 스크립팅언어(JavaScript)를 서로 잇는 역할입니다.</li>
+</ul>
+<p>JS로 html문서를 제어하려면 젤 처음에 해야 하는 일이 제어의 대상에 해당되는 객체를 찾는 것이다.</p>
+<blockquote>
+<p>객체 찾는 방법은 document 객체의 조회 관련 메소드 이용</p>
+</blockquote>
+<ul>
+<li>document.getElementsByTagName – HTML tag 이름 ul/ li/ p/ div 으로 찾아냄 보통 tag가 중복되서 많이 쓰이므로 찾으려는 태그명에 대해 배열값으로 리턴한다.</li>
+<li>document.getElementsById – ID명으로 찾음 – ID는 유일한 값이므로 유일한 객체만 검색됨</li>
+<li>document.getElementsByClassName - class명으로 찾아냄 – 클래스도 같은 이름으로 여러 개가 쓰일 수 있으므로 tagName과 같게 배열값으로 리턴한다.</li>
+<li>document.querySelector – css의 선택자의 문법을 이용한 객체 조회 – 위의 3개를 다 쓸 수 있는 듯 but 1개만 검색됨</li>
 <li>
-<p>특정날짜 Date</p>
-<p><code class="language-text">let date1 = new Date(&#39;December 17, 2019 03:24:00&#39;);</code><br>
-<code class="language-text">let date2 = new Date(&#39;2019-12-17T03:24:00&#39;);</code><br>
-<code class="language-text">let date3 = new Date(2019, 5, 1);</code></p>
+<p>document.querySelectorall – css 선택자 모든 객체 조회 – 맨 위의 3개를 다 쓸 수 있는 강력한 도구</p>
+<blockquote>
+<p>속성 - 엘리먼트의 속성을 알아내고 변경하는 API – MTV 모델에서 많이 쓰임</p>
+</blockquote>
 </li>
+<li>Element.getAttribute(name) – 속성을 가져오는 것</li>
+<li>Element.setAttribute(name, value) – 속성을 변경, 추가 하는 것</li>
+<li>Element.hasAttribute(name); - 속성의 존재여부를 boolean값으로 확인</li>
+<li>Element.removeAttribute(name) ; - 속성을 제거하는 것</li>
+</ul>
+<h3 id="node-객체"><a href="#node-%EA%B0%9D%EC%B2%B4" aria-label="node 객체 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Node 객체</h3>
+<blockquote>
+<p>관계 - 엘리먼트는 서로 부모, 자식, 혹은 형제자매 관계로 연결되어 있다.</p>
+<blockquote>
+<p>각각의 Node가 다른 Node와 연결된 정보를 보여주는 API를 통해서 문서를 프로그래밍적으로 탐색할 수 있다.</p>
+</blockquote>
+</blockquote>
+<ul>
+<li>Node.childNodes – 자식노드들을 유사배열에 담아서 리턴</li>
+<li>Node.firstChild – 첫번째 자식 노드</li>
+<li>Node.lastChild – 마지막 자식 노드</li>
+<li>Node.nextSibling – 다음 형제 노드</li>
+<li>Node.previousSibling – 이전형제 노드</li>
+<li>Node.contains() – 가지고 있는 자식 노드</li>
+<li>Node.hasChildNodes() – 특정 자식 노드를 가지고 있느냐 없느냐</li>
+</ul>
+<h3 id="노드의-종류"><a href="#%EB%85%B8%EB%93%9C%EC%9D%98-%EC%A2%85%EB%A5%98" aria-label="노드의 종류 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>노드의 종류</h3>
+<blockquote>
+<p>Node 객체는 모든 구성요소를 대표하는 객체이기 때문에 각각의 구성요소가 어떤 카테고리에 속하는 것인지를 알려주는 식별자를 제공한다.</p>
+</blockquote>
+<ul>
+<li>Node.nodeType - 노드의 종류에 따라서 정해진 상수가 존재한다.</li>
 <li>
-<p>날짜 계산도 가능함 but 차원은 동일하게 (년도 – 년도) (월 – 월) (일 -일) 이렇게</p>
-<p><code>let year = now.getFullYear();</code><br>
-<code> let birthdayYear = birthday.getFullYear();</code><br>
-<code> let age = year - birthdayYear;</code></p>
+<p>Node.nodeName – name은 태그명을 의미한다.</p>
+<blockquote>
+<p>값 - Node 객체의 값을 제공하는 API</p>
+</blockquote>
 </li>
+<li>Node.nodeValue</li>
+<li>
+<p>Node.textContent</p>
+<blockquote>
+<p>자식관리 - Node 객체의 자식을 추가하는 방법에 대한 API</p>
+</blockquote>
+</li>
+<li>★ Node.appendChild()</li>
+<li>Node.removeChild()</li>
 </ul>
-<h1 id="scope"><a href="#scope" aria-label="scope permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Scope</h1>
-<p>변수의 사용 범위를 뜻한다</p>
+<h3 id="노드-추가"><a href="#%EB%85%B8%EB%93%9C-%EC%B6%94%EA%B0%80" aria-label="노드 추가 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>노드 추가</h3>
 <ul>
-<li>block이란 중괄호({}, curly brace)로 감싸진 것을 block – func, if, for 모두 포함 여기 안에서 선언된 변수를 지역(local) 변수라고 하며 해당 함수(block)내에서 만 쓸 수 있다.</li>
-<li>Global(전역) scope<br>
-block밖인 global scope에서 만든 변수를 global variable(전역변수)라고 합니다.
-코드 어디서든 접근 가능해서 변수값을 확인할 수 있습니다.</li>
-<li>Scope 오염<br>
-Global 변수 남용하지 마라 나중에 찾기 힘들어지고 global 변수에 의해 값이 오염이 되어 원하는 결과가 나오지 않게 된다.</li>
+<li>appendChild(child)- 노드의 마지막 자식으로 주어진 엘리먼트 추가</li>
+<li>
+<p>insertBefore(newElement, referenceElement) - appendChild와 동작방법은 같으나 두번째 인자로 엘리먼트를 전달 했을 때 이것 앞에 엘리먼트가 추가된다.</p>
+<blockquote>
+<p>위치 지정해서 엘리먼트를 추가하는 방법
+노드를 추가하기 위해서는 추가할 엘리먼트를 생성해야 하는데 이것은 document 객체의 기능이다. 아래 API는 노드를 생성하는 API이다.</p>
+</blockquote>
+</li>
+<li>document.createElement(tagName) -엘리먼트 노드를 추가한다.</li>
+<li>document.createTextNode(data) - 텍스트 노드를 추가한다.</li>
+</ul>
+<h3 id="노드-제거"><a href="#%EB%85%B8%EB%93%9C-%EC%A0%9C%EA%B1%B0" aria-label="노드 제거 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>노드 제거</h3>
+<p>메소드는 삭제 대상의 부모 노드 객체의 것을 실행해야 한다는 점에 유의하자.</p>
+<ul>
+<li>removeChild(child)</li>
+</ul>
+<h3 id="노드-교체"><a href="#%EB%85%B8%EB%93%9C-%EA%B5%90%EC%B2%B4" aria-label="노드 교체 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>노드 교체</h3>
+<ul>
+<li>replaceChild(newchild, oldchild)</li>
+</ul>
+<h3 id="문자열로-노드-제어-위의-방법보다-훨씬-쉬움"><a href="#%EB%AC%B8%EC%9E%90%EC%97%B4%EB%A1%9C-%EB%85%B8%EB%93%9C-%EC%A0%9C%EC%96%B4-%EC%9C%84%EC%9D%98-%EB%B0%A9%EB%B2%95%EB%B3%B4%EB%8B%A4-%ED%9B%A8%EC%94%AC-%EC%89%AC%EC%9B%80" aria-label="문자열로 노드 제어 위의 방법보다 훨씬 쉬움 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>문자열로 노드 제어 (위의 방법보다 훨씬 쉬움)</h3>
+<ul>
+<li>innerHTML - 문자열로 자식 노드를 만들 수 있는 기능을 제공한다. 또한 자식 노드의 값을 읽어올 수도 있다. 선택한 엘리먼트는 검색되지 않는다 (부모노드는 검색 범위에서 제외)</li>
+<li>outerHTML - outerHTML은 선택한 엘리먼트를 포함해서 처리된다.</li>
+</ul>
+<h1 id="이벤트"><a href="#%EC%9D%B4%EB%B2%A4%ED%8A%B8" aria-label="이벤트 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>이벤트</h1>
+<p>★ addEventListener() 메서드 ★</p>
+<p><code>target.addEventListener(type, listener[, options]);</code></p>
+<p><code>target:이벤트 발생시킬 타겟(이게 젤중요함 어디에 적용되느냐!!) (type:이벤트 종류, listener: 이벤트 작동할 로직 or 로직 있는함수
+[,이벤트 특성])</code></p>
+<ul>
+<li>EventTarget의 addEventListener() 메서드는 지정한 이벤트가 대상에 전달될 때마다 호출할 함수를 설정합니다. 일반적인 대상은 Element, Document, Window지만, XMLHttpRequest와 같이 이벤트를 지원하는 모든 객체를 대상으로 지정할 수 있습니다.</li>
+<li>addEventListener()는 EventTarget의 주어진 이벤트 유형에, EventListener를 구현한 함수 또는 객체를 이벤트 처리기 목록에 추가해 작동합니다.</li>
 </ul>
 <blockquote>
-<p>타이트한 scope(tightly scoping)의 변수는 코드 품질을 올려줍니다!!</p>
-<blockquote>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">- 코드가 block으로 명확하게 구분되기 때문에 코드 가독성이 올라갑니다.
-- 코드가 한줄한줄 쭉 나열된 것이 아니라 각각의 기능별로 block을 나누면 코드가 이해하기 쉬워집니다.
-- 나중에 코드를 수정할 일이 있을 때, 코드를 오랜만에 보더라도 잘 나뉘어 있어서 유지보수가 쉬워집니다.
-- 프로그램이 끝날때까지 변수가 살아있는 것이 아니라서(block이 끝나면 local 변수의 삶이 끝나서) 메모리 절약도 됩니다.</code></pre></div>
+<p>키이벤트</p>
 </blockquote>
-</blockquote>
-<h2 id="switch"><a href="#switch" aria-label="switch permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Switch</h2>
-<p>많은 코드 블록영역중 조건(case)에 match 되는 block을 executed 한다</p>
+<p>사람이 키보드를 누르면 발생하는 이벤트 입니다.</p>
 <ul>
-<li>case ‘scope’: description = ‘변수영역’;</li>
-<li>case ‘block’: description = ’{}로 둘러쌓인 특정한 영역(함수, for문, if문 등)‘;</li>
-<li>case ‘global scope’: description = ‘이 자바스크립트 파일 전체 영역’;</li>
-<li>case ‘global variable’: description = ‘이 자바스크립트 파일 전체 영역에 쓰이는 변수’;</li>
-<li>case ‘block scope’: description = ‘특정한 영역 내에서만 쓰이는 변수’;</li>
-<li>case ‘local variable’: description = ‘지역(특정영역) 내에서만 쓰이는 함수’;</li>
-<li>case ‘global namespace’: description = ‘이 자바스크립트 파일 전체에 선언된 변수 이름’;</li>
-<li>case ‘scope pollution’: description = ‘내가 의도하지 않는 글로벌 변수가 리턴되는 것’;</li>
-<li>default : description = ‘초기값’</li>
-</ul></div></div></div><div class="Post-module--post__footer--1BvmJ"><div><p class="Meta-module--meta__date--3FNDv">Published <!-- -->12 Oct 2019</p></div><div class="Tags-module--tags--1oNz4"><ul class="Tags-module--tags__list--2UTD-"><li class="Tags-module--tags__list-item--b7tap"><a class="Tags-module--tags__list-item-link--1hQL0" href="/tag/java-script/">JavaScript</a></li></ul></div><div class="Author-module--author--2kf8a"><p>World Wide Web<a class="Author-module--author__bio-twitter--MufFK" href="https://www.twitter.com/#" rel="noopener noreferrer" target="_blank"><strong>Taesoon Chang</strong> on Twitter</a></p></div></div><div class="Post-module--post__comments--2T8dL"></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/posts/the-birth-of-movable-type/";window.webpackCompilationHash="02f0f180c63503534c73";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-3771147922fd423e71e9.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-d32a813eaa36e4ddb601.js"],"component---src-templates-not-found-template-js":["/component---src-templates-not-found-template-js-0104e73952b6ef0004ca.js"],"component---src-templates-tags-list-template-js":["/component---src-templates-tags-list-template-js-bb361524cc28c8c0e902.js"],"component---src-templates-categories-list-template-js":["/component---src-templates-categories-list-template-js-23f14fe65649910947f2.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js-a50e0cd8c76d9b151bee.js"],"component---src-templates-page-template-js":["/component---src-templates-page-template-js-dfd15bd4144e594541cd.js"],"component---src-templates-tag-template-js":["/component---src-templates-tag-template-js-170238ccbbedcc2902f1.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-0ccb0d051e5eec947e51.js"],"component---src-templates-index-template-js":["/component---src-templates-index-template-js-699b39e5ff89ed197293.js"]};/*]]>*/</script><script src="/component---src-templates-post-template-js-a50e0cd8c76d9b151bee.js" async=""></script><script src="/commons-462b862441b9e7056d58.js" async=""></script><script src="/styles-555c1065b6682b33de91.js" async=""></script><script src="/app-3771147922fd423e71e9.js" async=""></script><script src="/webpack-runtime-878c52a9116873c6db99.js" async=""></script></body></html>
+<li>키보드를 눌렀을 때 발생하는 keydown</li>
+<li>키보드를 누르고 떼는 순간 발생하는 keyup</li>
+<li>키보드를 눌러 어떤 텍스트가 작성되는 순간 발생하는 keypress</li>
+</ul>
+<p>등등 더 많은 이벤트가 존재한다 다른 이벤트를 보려면 밑의 링크를 클릭하시면 됩니다.</p>
+<p>[<a href="https://developer.mozilla.org/ko/docs/Web/Events" target="_blank" rel="nofollow noopener noreferrer">이벤트 종류 더 보기</a>]</p></div></div></div><div class="Post-module--post__footer--1BvmJ"><div><p class="Meta-module--meta__date--3FNDv">Published <!-- -->15 Oct 2019</p></div><div class="Tags-module--tags--1oNz4"><ul class="Tags-module--tags__list--2UTD-"><li class="Tags-module--tags__list-item--b7tap"><a class="Tags-module--tags__list-item-link--1hQL0" href="/tag/java-script/">JavaScript</a></li></ul></div><div class="Author-module--author--2kf8a"><p>World Wide Web<a class="Author-module--author__bio-twitter--MufFK" href="https://www.twitter.com/#" rel="noopener noreferrer" target="_blank"><strong>Taesoon Chang</strong> on Twitter</a></p></div></div><div class="Post-module--post__comments--2T8dL"></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/posts/the-birth-of-movable-type/";window.webpackCompilationHash="d48dd4455d8e3f68c804";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-4672416bfd5b77998413.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-d32a813eaa36e4ddb601.js"],"component---src-templates-not-found-template-js":["/component---src-templates-not-found-template-js-0104e73952b6ef0004ca.js"],"component---src-templates-tags-list-template-js":["/component---src-templates-tags-list-template-js-bb361524cc28c8c0e902.js"],"component---src-templates-categories-list-template-js":["/component---src-templates-categories-list-template-js-23f14fe65649910947f2.js"],"component---src-templates-page-template-js":["/component---src-templates-page-template-js-cad06b7171c10ee8bbd7.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js-c43b72a84ba1e7cd4df6.js"],"component---src-templates-tag-template-js":["/component---src-templates-tag-template-js-170238ccbbedcc2902f1.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-0ccb0d051e5eec947e51.js"],"component---src-templates-index-template-js":["/component---src-templates-index-template-js-699b39e5ff89ed197293.js"]};/*]]>*/</script><script src="/component---src-templates-post-template-js-c43b72a84ba1e7cd4df6.js" async=""></script><script src="/commons-7a4ef11ea4a4cb085171.js" async=""></script><script src="/styles-a479cb5e6900c01cf4cf.js" async=""></script><script src="/app-4672416bfd5b77998413.js" async=""></script><script src="/webpack-runtime-795be18b6a6bd2a330b3.js" async=""></script></body></html>
