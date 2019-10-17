@@ -50,122 +50,92 @@
 
         gtag('config', 'UA-73379983-2', {"send_page_view":false});
       }
-      </script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="shortcut icon" href="/icons/icon-48x48.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#F7A046"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=4bf6ec2f3b10076939f185cb36455e32"/><title data-react-helmet="true">09.30~10.04 한 주 정리 part.6 - CTS junior Web developer</title><meta data-react-helmet="true" name="description" content="HTML에서의 JS / DOM / 이벤트"/><meta data-react-helmet="true" property="og:site_name" content="09.30~10.04 한 주 정리 part.6 - CTS junior Web developer"/><meta data-react-helmet="true" property="og:image" content="https://ctsictai.github.io//media/gutenberg.jpg"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:title" content="09.30~10.04 한 주 정리 part.6 - CTS junior Web developer"/><meta data-react-helmet="true" name="twitter:description" content="HTML에서의 JS / DOM / 이벤트"/><meta data-react-helmet="true" name="twitter:image" content="https://ctsictai.github.io//media/gutenberg.jpg"/><link as="script" rel="preload" href="/webpack-runtime-795be18b6a6bd2a330b3.js"/><link as="script" rel="preload" href="/app-4672416bfd5b77998413.js"/><link as="script" rel="preload" href="/styles-a479cb5e6900c01cf4cf.js"/><link as="script" rel="preload" href="/commons-7a4ef11ea4a4cb085171.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-js-c43b72a84ba1e7cd4df6.js"/><link as="fetch" rel="preload" href="/page-data\posts\the-birth-of-movable-type\page-data.json" crossorigin="anonymous"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="Layout-module--layout--EpQHE"><div><a class="Post-module--post__home-button--3zx_9" href="/">All Articles</a><div><div class="Content-module--content--1tfQQ"><h1 class="Content-module--content__title--1qFLI">09.30~10.04 한 주 정리 part.6</h1><div class="Content-module--content__body--2bfha"><h1 id="html에서의-js-로드하기"><a href="#html%EC%97%90%EC%84%9C%EC%9D%98-js-%EB%A1%9C%EB%93%9C%ED%95%98%EA%B8%B0" aria-label="html에서의 js 로드하기 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>HTML에서의 JS 로드하기</h1>
+      </script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="shortcut icon" href="/icons/icon-48x48.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#F7A046"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=4bf6ec2f3b10076939f185cb36455e32"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=4bf6ec2f3b10076939f185cb36455e32"/><title data-react-helmet="true">Python Apprenticeship Study Part.1 - CTS junior Web developer</title><meta data-react-helmet="true" name="description" content="변수 선언/연산자/들여쓰기/if 조건문"/><meta data-react-helmet="true" property="og:site_name" content="Python Apprenticeship Study Part.1 - CTS junior Web developer"/><meta data-react-helmet="true" property="og:image" content="https://ctsictai.github.io//media/gutenberg.jpg"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:title" content="Python Apprenticeship Study Part.1 - CTS junior Web developer"/><meta data-react-helmet="true" name="twitter:description" content="변수 선언/연산자/들여쓰기/if 조건문"/><meta data-react-helmet="true" name="twitter:image" content="https://ctsictai.github.io//media/gutenberg.jpg"/><link as="script" rel="preload" href="/webpack-runtime-795be18b6a6bd2a330b3.js"/><link as="script" rel="preload" href="/app-4672416bfd5b77998413.js"/><link as="script" rel="preload" href="/styles-d4c29b8c93c6b065a016.js"/><link as="script" rel="preload" href="/commons-7a4ef11ea4a4cb085171.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-js-c43b72a84ba1e7cd4df6.js"/><link as="fetch" rel="preload" href="/page-data\posts\the-birth-of-movable-type\page-data.json" crossorigin="anonymous"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="Layout-module--layout--EpQHE"><div><a class="Post-module--post__home-button--3zx_9" href="/">All Articles</a><div><div class="Content-module--content--1tfQQ"><h1 class="Content-module--content__title--1qFLI">Python Apprenticeship Study Part.1</h1><div class="Content-module--content__body--2bfha"><h1 id="변수-할당"><a href="#%EB%B3%80%EC%88%98-%ED%95%A0%EB%8B%B9" aria-label="변수 할당 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>변수 할당</h1>
 <ul>
-<li>inline 방식 – html 태그에 직접 javascript를 기술하는 방식이다. 장점은 태그에 관련된 스크립트가 분명하게 드러난다. 하지만 정보와 제어가 섞여 있기 때문에 정보로서의 가치가 떨어짐.</li>
-<li>Script 방식 - script 태그를 만들어서 여기에 자바스크립트 코드를 삽입하는 방식. 장점은 html태그와 js 코드를 분리할 수 있다.</li>
-<li>외부 파일로 분리
-js를 별도의 파일로 분리할 수도 있다. 장점은 보다 엄격하게 정보와 제어를 분리할 수 있다. 하나의 js 파일을 여러 웹페이지에서 로드함으로서 js의 재활용성을 높일 수 있다. 캐쉬를 통해서 속도의 향상, 전송량의 경량화를 도모할 수 있다. 유지보수의 편의성(중복 제거)</li>
-</ul>
-<p>※ Scripts 파일은 태그보다 페이지 하단(body tag 안에서 맨뒤)에 위치시키는 것이 더 좋음</p>
-<h1 id="dom-document-object-model"><a href="#dom-document-object-model" aria-label="dom document object model permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DOM (Document Object Model)</h1>
-<ul>
-<li>DOM(돔)이란 웹페이지의 HTML을 계층화시켜 트리구조로 만든 객체(Object) 모델입니다.</li>
-<li>JavaScript는 이 model로 웹 페이지에 접근하고, 페이지를 수정할 수 있습니다.</li>
-<li>DOM은 HTML인 웹페이지와 스크립팅언어(JavaScript)를 서로 잇는 역할입니다.</li>
-</ul>
-<p>JS로 html문서를 제어하려면 젤 처음에 해야 하는 일이 제어의 대상에 해당되는 객체를 찾는 것이다.</p>
-<blockquote>
-<p>객체 찾는 방법은 document 객체의 조회 관련 메소드 이용</p>
-</blockquote>
-<ul>
-<li>document.getElementsByTagName – HTML tag 이름 ul/ li/ p/ div 으로 찾아냄 보통 tag가 중복되서 많이 쓰이므로 찾으려는 태그명에 대해 배열값으로 리턴한다.</li>
-<li>document.getElementsById – ID명으로 찾음 – ID는 유일한 값이므로 유일한 객체만 검색됨</li>
-<li>document.getElementsByClassName - class명으로 찾아냄 – 클래스도 같은 이름으로 여러 개가 쓰일 수 있으므로 tagName과 같게 배열값으로 리턴한다.</li>
-<li>document.querySelector – css의 선택자의 문법을 이용한 객체 조회 – 위의 3개를 다 쓸 수 있는 듯 but 1개만 검색됨</li>
-<li>
-<p>document.querySelectorall – css 선택자 모든 객체 조회 – 맨 위의 3개를 다 쓸 수 있는 강력한 도구</p>
-<blockquote>
-<p>속성 - 엘리먼트의 속성을 알아내고 변경하는 API – MTV 모델에서 많이 쓰임</p>
-</blockquote>
-</li>
-<li>Element.getAttribute(name) – 속성을 가져오는 것</li>
-<li>Element.setAttribute(name, value) – 속성을 변경, 추가 하는 것</li>
-<li>Element.hasAttribute(name); - 속성의 존재여부를 boolean값으로 확인</li>
-<li>Element.removeAttribute(name) ; - 속성을 제거하는 것</li>
-</ul>
-<h3 id="node-객체"><a href="#node-%EA%B0%9D%EC%B2%B4" aria-label="node 객체 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Node 객체</h3>
-<blockquote>
-<p>관계 - 엘리먼트는 서로 부모, 자식, 혹은 형제자매 관계로 연결되어 있다.</p>
-<blockquote>
-<p>각각의 Node가 다른 Node와 연결된 정보를 보여주는 API를 통해서 문서를 프로그래밍적으로 탐색할 수 있다.</p>
-</blockquote>
-</blockquote>
-<ul>
-<li>Node.childNodes – 자식노드들을 유사배열에 담아서 리턴</li>
-<li>Node.firstChild – 첫번째 자식 노드</li>
-<li>Node.lastChild – 마지막 자식 노드</li>
-<li>Node.nextSibling – 다음 형제 노드</li>
-<li>Node.previousSibling – 이전형제 노드</li>
-<li>Node.contains() – 가지고 있는 자식 노드</li>
-<li>Node.hasChildNodes() – 특정 자식 노드를 가지고 있느냐 없느냐</li>
-</ul>
-<h3 id="노드의-종류"><a href="#%EB%85%B8%EB%93%9C%EC%9D%98-%EC%A2%85%EB%A5%98" aria-label="노드의 종류 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>노드의 종류</h3>
-<blockquote>
-<p>Node 객체는 모든 구성요소를 대표하는 객체이기 때문에 각각의 구성요소가 어떤 카테고리에 속하는 것인지를 알려주는 식별자를 제공한다.</p>
-</blockquote>
-<ul>
-<li>Node.nodeType - 노드의 종류에 따라서 정해진 상수가 존재한다.</li>
-<li>
-<p>Node.nodeName – name은 태그명을 의미한다.</p>
-<blockquote>
-<p>값 - Node 객체의 값을 제공하는 API</p>
-</blockquote>
-</li>
-<li>Node.nodeValue</li>
-<li>
-<p>Node.textContent</p>
-<blockquote>
-<p>자식관리 - Node 객체의 자식을 추가하는 방법에 대한 API</p>
-</blockquote>
-</li>
-<li>★ Node.appendChild()</li>
-<li>Node.removeChild()</li>
-</ul>
-<h3 id="노드-추가"><a href="#%EB%85%B8%EB%93%9C-%EC%B6%94%EA%B0%80" aria-label="노드 추가 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>노드 추가</h3>
-<ul>
-<li>appendChild(child)- 노드의 마지막 자식으로 주어진 엘리먼트 추가</li>
-<li>
-<p>insertBefore(newElement, referenceElement) - appendChild와 동작방법은 같으나 두번째 인자로 엘리먼트를 전달 했을 때 이것 앞에 엘리먼트가 추가된다.</p>
-<blockquote>
-<p>위치 지정해서 엘리먼트를 추가하는 방법
-노드를 추가하기 위해서는 추가할 엘리먼트를 생성해야 하는데 이것은 document 객체의 기능이다. 아래 API는 노드를 생성하는 API이다.</p>
-</blockquote>
-</li>
-<li>document.createElement(tagName) -엘리먼트 노드를 추가한다.</li>
-<li>document.createTextNode(data) - 텍스트 노드를 추가한다.</li>
-</ul>
-<h3 id="노드-제거"><a href="#%EB%85%B8%EB%93%9C-%EC%A0%9C%EA%B1%B0" aria-label="노드 제거 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>노드 제거</h3>
-<p>메소드는 삭제 대상의 부모 노드 객체의 것을 실행해야 한다는 점에 유의하자.</p>
-<ul>
-<li>removeChild(child)</li>
-</ul>
-<h3 id="노드-교체"><a href="#%EB%85%B8%EB%93%9C-%EA%B5%90%EC%B2%B4" aria-label="노드 교체 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>노드 교체</h3>
-<ul>
-<li>replaceChild(newchild, oldchild)</li>
-</ul>
-<h3 id="문자열로-노드-제어-위의-방법보다-훨씬-쉬움"><a href="#%EB%AC%B8%EC%9E%90%EC%97%B4%EB%A1%9C-%EB%85%B8%EB%93%9C-%EC%A0%9C%EC%96%B4-%EC%9C%84%EC%9D%98-%EB%B0%A9%EB%B2%95%EB%B3%B4%EB%8B%A4-%ED%9B%A8%EC%94%AC-%EC%89%AC%EC%9B%80" aria-label="문자열로 노드 제어 위의 방법보다 훨씬 쉬움 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>문자열로 노드 제어 (위의 방법보다 훨씬 쉬움)</h3>
-<ul>
-<li>innerHTML - 문자열로 자식 노드를 만들 수 있는 기능을 제공한다. 또한 자식 노드의 값을 읽어올 수도 있다. 선택한 엘리먼트는 검색되지 않는다 (부모노드는 검색 범위에서 제외)</li>
-<li>outerHTML - outerHTML은 선택한 엘리먼트를 포함해서 처리된다.</li>
-</ul>
-<h1 id="이벤트"><a href="#%EC%9D%B4%EB%B2%A4%ED%8A%B8" aria-label="이벤트 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>이벤트</h1>
-<p>★ addEventListener() 메서드 ★</p>
-<p><code>target.addEventListener(type, listener[, options]);</code></p>
-<p><code>target:이벤트 발생시킬 타겟(이게 젤중요함 어디에 적용되느냐!!) (type:이벤트 종류, listener: 이벤트 작동할 로직 or 로직 있는함수
-[,이벤트 특성])</code></p>
-<ul>
-<li>EventTarget의 addEventListener() 메서드는 지정한 이벤트가 대상에 전달될 때마다 호출할 함수를 설정합니다. 일반적인 대상은 Element, Document, Window지만, XMLHttpRequest와 같이 이벤트를 지원하는 모든 객체를 대상으로 지정할 수 있습니다.</li>
-<li>addEventListener()는 EventTarget의 주어진 이벤트 유형에, EventListener를 구현한 함수 또는 객체를 이벤트 처리기 목록에 추가해 작동합니다.</li>
+<li>name = “wsd”</li>
+<li>변수 이름 = 변수 값</li>
 </ul>
 <blockquote>
-<p>키이벤트</p>
+<p>javascript와 달리 var / let /const를 붙일 필요가 없다.</p>
 </blockquote>
-<p>사람이 키보드를 누르면 발생하는 이벤트 입니다.</p>
+<h1 id="주요-연산자"><a href="#%EC%A3%BC%EC%9A%94-%EC%97%B0%EC%82%B0%EC%9E%90" aria-label="주요 연산자 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>주요 연산자</h1>
 <ul>
-<li>키보드를 눌렀을 때 발생하는 keydown</li>
-<li>키보드를 누르고 떼는 순간 발생하는 keyup</li>
-<li>키보드를 눌러 어떤 텍스트가 작성되는 순간 발생하는 keypress</li>
+<li><strong>”+”</strong> 덧셈 <em>a + b</em></li>
+<li><strong>”-”</strong> 뺄셈 <em>a - b</em></li>
+<li><strong>”*”</strong> 곱셈 <em>a * b</em></li>
+<li><strong>”/”</strong> 나눗셈 <em>a / b</em></li>
+<li><strong>”//”</strong> 버림 나눗셈 <em>a // b</em></li>
+<li><strong>”%”</strong> 나머지 <em>a % b</em></li>
+<li>”**” 거듭제곱 _a ** b_</li>
+<li><strong>”+=”</strong> 덧셈 후 할당 <em>a += b</em></li>
+<li><strong>”-=”</strong> 뺄셈 후 할당 <em>a -= b</em></li>
+<li><strong>”*=”</strong> 곱셈 후 할당 <em>a *= b</em></li>
+<li><strong>/=</strong> 나눗셈 후 할당 <em>a /= b</em></li>
 </ul>
-<p>등등 더 많은 이벤트가 존재한다 다른 이벤트를 보려면 밑의 링크를 클릭하시면 됩니다.</p>
-<p>[<a href="https://developer.mozilla.org/ko/docs/Web/Events" target="_blank" rel="nofollow noopener noreferrer">이벤트 종류 더 보기</a>]</p></div></div></div><div class="Post-module--post__footer--1BvmJ"><div><p class="Meta-module--meta__date--3FNDv">Published <!-- -->15 Oct 2019</p></div><div class="Tags-module--tags--1oNz4"><ul class="Tags-module--tags__list--2UTD-"><li class="Tags-module--tags__list-item--b7tap"><a class="Tags-module--tags__list-item-link--1hQL0" href="/tag/java-script/">JavaScript</a></li></ul></div><div class="Author-module--author--2kf8a"><p>World Wide Web<a class="Author-module--author__bio-twitter--MufFK" href="https://www.twitter.com/#" rel="noopener noreferrer" target="_blank"><strong>Taesoon Chang</strong> on Twitter</a></p></div></div><div class="Post-module--post__comments--2T8dL"></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/posts/the-birth-of-movable-type/";window.webpackCompilationHash="d48dd4455d8e3f68c804";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-4672416bfd5b77998413.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-d32a813eaa36e4ddb601.js"],"component---src-templates-not-found-template-js":["/component---src-templates-not-found-template-js-0104e73952b6ef0004ca.js"],"component---src-templates-tags-list-template-js":["/component---src-templates-tags-list-template-js-bb361524cc28c8c0e902.js"],"component---src-templates-categories-list-template-js":["/component---src-templates-categories-list-template-js-23f14fe65649910947f2.js"],"component---src-templates-page-template-js":["/component---src-templates-page-template-js-cad06b7171c10ee8bbd7.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js-c43b72a84ba1e7cd4df6.js"],"component---src-templates-tag-template-js":["/component---src-templates-tag-template-js-170238ccbbedcc2902f1.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-0ccb0d051e5eec947e51.js"],"component---src-templates-index-template-js":["/component---src-templates-index-template-js-699b39e5ff89ed197293.js"]};/*]]>*/</script><script src="/component---src-templates-post-template-js-c43b72a84ba1e7cd4df6.js" async=""></script><script src="/commons-7a4ef11ea4a4cb085171.js" async=""></script><script src="/styles-a479cb5e6900c01cf4cf.js" async=""></script><script src="/app-4672416bfd5b77998413.js" async=""></script><script src="/webpack-runtime-795be18b6a6bd2a330b3.js" async=""></script></body></html>
+<h2 id="사칙연산-규칙"><a href="#%EC%82%AC%EC%B9%99%EC%97%B0%EC%82%B0-%EA%B7%9C%EC%B9%99" aria-label="사칙연산 규칙 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>사칙연산 규칙</h2>
+<p>일반적인 수학적 사칙연산의 규칙을 따른다.</p>
+<h1 id="literal-string-interpolation"><a href="#literal-string-interpolation" aria-label="literal string interpolation permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Literal string interpolation</h1>
+<p>사용하려면 다음의 문법을 지켜야 합니다</p>
+<ol>
+<li>먼저 따옴표 앞에 <strong>“f”</strong> 를 붙여야 합니다. f를 붙이면 파이썬은 f 다음에 오는 strin g 값을 literal string interpolation 이라고 인지하고, string 안에있는 변수들을 실제 값으로 치환 합니다.</li>
+<li>치환 하고 싶은 변수 (혹은 변수가 아니어도 됩니다. 예를 들어 함수 호출이 될 수도 있습니다) 를 <strong>중괄호</strong>{}를 사용해서 표시합니다.</li>
+</ol>
+<p><code>print( f"""wecol {date} at {inventor} live in {location}""")</code></p>
+<blockquote>
+<p>print(f"""{} """)</p>
+</blockquote>
+<h1 id="indention들여-쓰기"><a href="#indention%EB%93%A4%EC%97%AC-%EC%93%B0%EA%B8%B0" aria-label="indention들여 쓰기 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>indention(들여 쓰기)</h1>
+<p>하지만 파이썬에서는 들여쓰기는 요구사항 입니다. 들여쓰기를 통해 코드의 종속성을 나타냅니다.
+예를 들어. JavaScript나 자바등의 다른 언어들은 함수에 종속된 코드를 나타내기 위해서 중괄호 ({ }) 를 사용합니다. 하지만 파이썬에서는 중괄호를 사용하지 않고 들여쓰기를 사용해서 종속된 코드를 나타냅니다.</p>
+<p><img src="http://pythonstudy.xyz/images/basics/identation.png" alt="들여쓰기"></p>
+<h1 id="if-statement-조건문"><a href="#if-statement-%EC%A1%B0%EA%B1%B4%EB%AC%B8" aria-label="if statement 조건문 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>If statement (조건문)</h1>
+<blockquote>
+<p><code> if name == “차은우”:</code></p>
+<blockquote>
+<p><code> print(f”Hello {name}“) </code></p>
+</blockquote>
+</blockquote>
+<p><strong>==</strong> 는 같다 Equal의 뜻이다.</p>
+<h2 id="주의"><a href="#%EC%A3%BC%EC%9D%98" aria-label="주의 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>주의</h2>
+<blockquote>
+<p>if 구문과 연결되어 있는 코드들은 if 구문 보다 더 안쪽으로 간격이 들어와 있어야 합니다.</p>
+</blockquote>
+<h3 id="홀짝-구문하는-if문"><a href="#%ED%99%80%EC%A7%9D-%EA%B5%AC%EB%AC%B8%ED%95%98%EB%8A%94-if%EB%AC%B8" aria-label="홀짝 구문하는 if문 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>홀짝 구문하는 if문</h3>
+<p>나머지 연산자 %을 사용하면 된다.</p>
+<p><CODE> if a % 2 == 0:</code> 이면 짝수
+<CODE> if a % 2 != 0:</code> 이면 홀수</p>
+<ul>
+<li><strong>!=</strong> 는 같지 않다 not equal의 뜻이다.</li>
+<li><strong>></strong> 는 더 크다 greater than의 뜻이다.</li>
+<li><strong>&#x3C;</strong> 는 더 작다 less than의 뜻이다.</li>
+<li><strong>>=</strong>는 같거나 크다 greater than or equal to</li>
+<li><strong>&#x3C;=</strong>는 같거나 작다 less than or equal to</li>
+</ul>
+<h1 id="elif-and-else"><a href="#elif-and-else" aria-label="elif and else permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Elif and Else</h1>
+<h2 id="elif"><a href="#elif" aria-label="elif permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>elif</h2>
+<ul>
+<li>elif 는 if 구문을 보조 하는 역할 입니다. elif 는 else if 를 줄인뜻입니다.</li>
+<li>elif 는 if 구문과 연결되어 사용되며 if 구문이 먼저 선행 되고 그 다음에 위치하게 됩니다.</li>
+<li>elif 는 만일 if 구문이 False 이면 실행되며 if 구문이 False 일 경우 다른 condition을 테스트 한 후 실행됩니다.</li>
+</ul>
+<blockquote>
+<p>if car == “현대”:</p>
+<blockquote>
+<p>print(“현대는 국산차”)</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>elif car == “기아”:</p>
+<blockquote>
+<p>print(“기아는 국산차”)</p>
+</blockquote>
+</blockquote>
+<ul>
+<li>elif는 if문이 실행 된 뒤 다음을 진행 하는 코드이다.</li>
+</ul>
+<h2 id="else"><a href="#else" aria-label="else permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>else</h2>
+<ul>
+<li>else는 if 구문 (그리고 elif 구문이 있다면 elif 구문) 의 condition이 False인 경우 default 로 실행됩니다.</li>
+<li>else 는 if 구문과 elif 구문이 먼저 선행되고 마지막에 위치하게 되며 if / elif 구문의 코드가 실행 되지 않으면 마지막으로 default로 실행됩니다.</li>
+</ul>
+<p><img src="http://i.imgur.com/fqJOBUS.png" alt="IF/Elif/Else"></p></div></div></div><div class="Post-module--post__footer--1BvmJ"><div><p class="Meta-module--meta__date--3FNDv">Published <!-- -->17 Oct 2019</p></div><div class="Tags-module--tags--1oNz4"><ul class="Tags-module--tags__list--2UTD-"><li class="Tags-module--tags__list-item--b7tap"><a class="Tags-module--tags__list-item-link--1hQL0" href="/tag/python/">Python</a></li></ul></div><div class="Author-module--author--2kf8a"><p>World Wide Web<a class="Author-module--author__bio-twitter--MufFK" href="https://www.twitter.com/#" rel="noopener noreferrer" target="_blank"><strong>Taesoon Chang</strong> on Twitter</a></p></div></div><div class="Post-module--post__comments--2T8dL"></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/posts/the-birth-of-movable-type/";window.webpackCompilationHash="00b2df45acfb66ee79ce";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-4672416bfd5b77998413.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-d32a813eaa36e4ddb601.js"],"component---src-templates-not-found-template-js":["/component---src-templates-not-found-template-js-0104e73952b6ef0004ca.js"],"component---src-templates-tags-list-template-js":["/component---src-templates-tags-list-template-js-bb361524cc28c8c0e902.js"],"component---src-templates-categories-list-template-js":["/component---src-templates-categories-list-template-js-23f14fe65649910947f2.js"],"component---src-templates-page-template-js":["/component---src-templates-page-template-js-cad06b7171c10ee8bbd7.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js-c43b72a84ba1e7cd4df6.js"],"component---src-templates-tag-template-js":["/component---src-templates-tag-template-js-170238ccbbedcc2902f1.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-0ccb0d051e5eec947e51.js"],"component---src-templates-index-template-js":["/component---src-templates-index-template-js-699b39e5ff89ed197293.js"]};/*]]>*/</script><script src="/component---src-templates-post-template-js-c43b72a84ba1e7cd4df6.js" async=""></script><script src="/commons-7a4ef11ea4a4cb085171.js" async=""></script><script src="/styles-d4c29b8c93c6b065a016.js" async=""></script><script src="/app-4672416bfd5b77998413.js" async=""></script><script src="/webpack-runtime-795be18b6a6bd2a330b3.js" async=""></script></body></html>
