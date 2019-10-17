@@ -3,7 +3,7 @@ title: Python Apprenticeship Study Part.1
 date: "2019-10-16T23:30:03.284Z"
 template: "post"
 draft: false
-slug: "/posts/the-birth-of-movable-type/"
+slug: "/posts/python-part1/"
 category: "Python"
 tags:
   - "Python"
@@ -109,4 +109,4 @@ socialImage: "/media/gutenberg.jpg"
 - else는 if 구문 (그리고 elif 구문이 있다면 elif 구문) 의 condition이 False인 경우 default 로 실행됩니다.
 - else 는 if 구문과 elif 구문이 먼저 선행되고 마지막에 위치하게 되며 if / elif 구문의 코드가 실행 되지 않으면 마지막으로 default로 실행됩니다.
 
-![IF/Elif/Else](http://i.imgur.com/fqJOBUS.png)
+![1](http://i.imgur.com/fqJOBUS.png)
