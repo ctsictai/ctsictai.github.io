@@ -8,7 +8,7 @@ category: "Python"
 tags:
   - "Python"
 
-description: "변수 선언"
+description: "변수 선언/연산자/들여쓰기/if 조건문"
 socialImage: "/media/gutenberg.jpg"
 ---
 
