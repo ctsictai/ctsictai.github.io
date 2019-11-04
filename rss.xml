@@ -1,4 +1,82 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[CTS junior Web developer]]></title><description><![CDATA[Web developer Learning.]]></description><link>https://ctsictai.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 02 Nov 2019 17:23:14 GMT</lastBuildDate><item><title><![CDATA[Python Apprenticeship Study Part.9]]></title><description><![CDATA[List Comprehension]]></description><link>https://ctsictai.github.io//posts/python-part10/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part10/</guid><pubDate>Sat, 02 Nov 2019 23:50:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;list-comprehension&quot;&gt;&lt;a href=&quot;#list-comprehension&quot; aria-label=&quot;list comprehension permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;List Comprehension&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[CTS junior Web developer]]></title><description><![CDATA[Web developer Learning.]]></description><link>https://ctsictai.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 04 Nov 2019 06:35:04 GMT</lastBuildDate><item><title><![CDATA[Django Apprenticeship Study Part.2]]></title><description><![CDATA[Django tutorial]]></description><link>https://ctsictai.github.io//posts/django-part2/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/django-part2/</guid><pubDate>Mon, 04 Nov 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;장고-프로젝트-생성&quot;&gt;&lt;a href=&quot;#%EC%9E%A5%EA%B3%A0-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1&quot; aria-label=&quot;장고 프로젝트 생성 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;장고 프로젝트 생성&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;django-admin startproject ‘프로젝트명’&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Setting.py(관리 설정)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;⬧ BASE_DIR = 파이썬 및 장고 설치 경로를 찾을 수 있도록 하는 기본 경로를 설정해줌&lt;/p&gt;
+&lt;p&gt;⬧ Debug – 디버그 모드 설정 true면 디버그 하고 false 면 디버깅 안함 – 주로 테스팅/ 개발단계에서 true하고 지속적인 확인을 하고 false는 실제 서비스 배포할 때는 안함&lt;/p&gt;
+&lt;p&gt;⬧ ALLOWED_HOSTS – 장고 백엔드에 접근 할 수 있는 서버설정 보통 ‘*’ 설정하여 누구나 접근하도록 허용함&lt;/p&gt;
+&lt;p&gt;⬧ Installed&lt;em&gt;apps – pip 설치한 앱 또는 본인이 만든 app 추가(일종의 장고에 경로를 설정하는 개념이다.)
+프로젝트명\settings.py 에서 INSTALLED&lt;/em&gt;APPS에 앱명인 ‘*’를 추가해야&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;주석 처리  runserver에 영향 줌&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;djangocontribadmin어드민-사이트-사용&quot;&gt;&lt;a href=&quot;#djangocontribadmin%EC%96%B4%EB%93%9C%EB%AF%BC-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%82%AC%EC%9A%A9&quot; aria-label=&quot;djangocontribadmin어드민 사이트 사용 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;django.contrib.admin’,(어드민 사이트 사용)&lt;/h1&gt;
+&lt;h1 id=&quot;djangocontribauth-auth-장고-인증-로직-사용&quot;&gt;&lt;a href=&quot;#djangocontribauth-auth-%EC%9E%A5%EA%B3%A0-%EC%9D%B8%EC%A6%9D-%EB%A1%9C%EC%A7%81-%EC%82%AC%EC%9A%A9&quot; aria-label=&quot;djangocontribauth auth 장고 인증 로직 사용 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;django.contrib.auth’, (auth 장고 인증 로직 사용)&lt;/h1&gt;
+&lt;h1 id=&quot;djangomiddlewarecsrfcsrfviewmiddleware-토큰&quot;&gt;&lt;a href=&quot;#djangomiddlewarecsrfcsrfviewmiddleware-%ED%86%A0%ED%81%B0&quot; aria-label=&quot;djangomiddlewarecsrfcsrfviewmiddleware 토큰 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;django.middleware.csrf.CsrfViewMiddleware’ (토큰)&lt;/h1&gt;
+&lt;h1 id=&quot;djangocontribauthmiddlewareauthenticationmiddleware로그인-권한설정&quot;&gt;&lt;a href=&quot;#djangocontribauthmiddlewareauthenticationmiddleware%03%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EA%B6%8C%ED%95%9C%EC%84%A4%EC%A0%95&quot; aria-label=&quot;djangocontribauthmiddlewareauthenticationmiddleware로그인 권한설정 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;django.contrib.auth.middleware.AuthenticationMiddleware(로그인 권한설정)&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;주석 처리하는 것이 좋다 runserver에 영향을 줌!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;⬧ Templates – template 설정, 실제 뷰(html, 변수) - 3세대에서는 안 쓴다. 프론트엔드적인 부분으로 직접 웹브라우저에 구현하는 기능&lt;/p&gt;
+&lt;p&gt;⬧ Databases – 데이터베이스 엔진의 연결 설정(다양한 db 선택 가능)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;default -sqlite 쓰는 경우 default 값 그대로 써도 된다.&lt;/li&gt;
+&lt;li&gt;mysql(RDBMS)을 쓰는 경우 default 값을 변화 시켜야 한다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;DATABASES = {
+   &amp;#39;default&amp;#39;: {
+       &amp;#39;ENGINE&amp;#39;: &amp;#39;django.db.backends.mysql&amp;#39;,
+       &amp;#39;NAME&amp;#39;: &amp;#39;name&amp;#39;,
+       &amp;#39;USER&amp;#39;: &amp;#39;user&amp;#39;,
+       &amp;#39;PASSWORD&amp;#39;: &amp;#39;password&amp;#39;
+   }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;혹은 위의 코드를 다른 *.py를 만들어 따로 관리하고 import해서 사용하기도 한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;user_settings.py 에 위의 코드를 입력하고 settings.py 에서는 import 하여 사용하는 방법&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import user_settings.py
+DATABASES = user_settings.DATABASES&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;⬧ Time_Zone = Asia/Seoul로 설정 첫 대문자 주의!!&lt;/p&gt;
+&lt;p&gt;⬧ Static_ucal – 정적 파일의 URL(css, js, image, ect)&lt;/p&gt;
+&lt;h1 id=&quot;corscross-origin-resource-sharing&quot;&gt;&lt;a href=&quot;#corscross-origin-resource-sharing&quot; aria-label=&quot;corscross origin resource sharing permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;CORS(Cross-Origin Resource Sharing)&lt;/h1&gt;
+&lt;p&gt;웹 브라우저에서 외부 도메인 서버와 통신하기 위한 방식을 표준화한 스펙이다.&lt;br&gt;
+서버와 클라이언트가 정해진 해더를 통해 서로 요청이나 응답에 반응할지 결정하는 방식으로 교차 출처 자원 공유(cross-
+origin resource sharing)라는 이름으로 표준화가 되었다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;CORS 인스톨 → pip install Django-cors-headers&lt;/li&gt;
+&lt;li&gt;settings의 installed_apps에 corsheaders, 추가&lt;/li&gt;
+&lt;li&gt;middleware에 corsheaders.middleware.CorsMiddleware , 추가&lt;/li&gt;
+&lt;li&gt;settings.py 제일 밑에 추가 세팅&lt;/li&gt;
+&lt;li&gt;CORS 설치후 settings 에 수동으로 적용(default settings)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;##CORS
+CORS_ORIGIN_ALLOW_ALL=True
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_METHODS = (
+   &amp;amp;#39;DELETE&amp;amp;#39;,
+   &amp;amp;#39;GET&amp;amp;#39;,
+   &amp;amp;#39;OPTIONS&amp;amp;#39;,
+   &amp;amp;#39;PATCH&amp;amp;#39;,
+   &amp;amp;#39;POST&amp;amp;#39;,
+   &amp;amp;#39;PUT&amp;amp;#39;,
+
+)
+CORS_ALLOW_HEADERS = (
+   &amp;amp;#39;accept&amp;amp;#39;,
+   &amp;amp;#39;accept-encoding&amp;amp;#39;,
+   &amp;amp;#39;authorization&amp;amp;#39;,
+   &amp;amp;#39;content-type&amp;amp;#39;,
+   &amp;amp;#39;dnt&amp;amp;#39;,
+   &amp;amp;#39;origin&amp;amp;#39;,
+   &amp;amp;#39;user-agent&amp;amp;#39;,
+   &amp;amp;#39;x-csrftoken&amp;amp;#39;,
+   &amp;amp;#39;x-requested-with&amp;amp;#39;,
+)
+ORM(Object-relational&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.9]]></title><description><![CDATA[List Comprehension]]></description><link>https://ctsictai.github.io//posts/python-part10/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part10/</guid><pubDate>Sat, 02 Nov 2019 23:50:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;list-comprehension&quot;&gt;&lt;a href=&quot;#list-comprehension&quot; aria-label=&quot;list comprehension permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;List Comprehension&lt;/h1&gt;
 &lt;h2 id=&quot;기본-형식&quot;&gt;&lt;a href=&quot;#%EA%B8%B0%EB%B3%B8-%ED%98%95%EC%8B%9D&quot; aria-label=&quot;기본 형식 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;기본 형식&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;new&lt;em&gt;list = [expression(i) for i in old&lt;/em&gt;list if filter(i)]&lt;/strong&gt;&lt;/p&gt;
