@@ -226,12 +226,12 @@ def post(self, request):
     data = json.loads(request.body)
     login_user = User.object.get(id=data['id'])
     User.objects.create(
-      login_user.company          = data['company']
-      login_user.company_position = data['company_position']
-      login_user.university       = data['university']
-      login_user.major            = data['major']
-      login_user.main_address     = data['main_address']
-      login_user.sub_address      = data['sub_address']
+      login_user.company          = data['company'],
+      login_user.company_position = data['company_position'],
+      login_user.university       = data['university'],
+      login_user.major            = data['major'],
+      login_user.main_address     = data['main_address'],
+      login_user.sub_address      = data['sub_address'],
       login_user.introduction     = data['introduction']
     )
 ```
