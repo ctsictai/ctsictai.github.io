@@ -1,4 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[CTS junior Web developer]]></title><description><![CDATA[Web developer Learning.]]></description><link>https://ctsictai.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 05 Dec 2019 13:43:26 GMT</lastBuildDate><item><title><![CDATA[SqlAlchemy]]></title><description><![CDATA[Sqlalchemy]]></description><link>https://ctsictai.github.io//posts/sqlalchemy/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/sqlalchemy/</guid><pubDate>Thu, 05 Dec 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;sqlalchemy의-철학&quot;&gt;&lt;a href=&quot;#sqlalchemy%EC%9D%98-%EC%B2%A0%ED%95%99&quot; aria-label=&quot;sqlalchemy의 철학 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SqlAlchemy의 철학&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[CTS junior Web developer]]></title><description><![CDATA[Web developer Learning.]]></description><link>https://ctsictai.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 06 Dec 2019 14:12:29 GMT</lastBuildDate><item><title><![CDATA[Binary Search algorithm by python]]></title><description><![CDATA[Search Methodology]]></description><link>https://ctsictai.github.io//posts/CodeAlgorithm/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/CodeAlgorithm/</guid><pubDate>Fri, 06 Dec 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;binary-search&quot;&gt;&lt;a href=&quot;#binary-search&quot; aria-label=&quot;binary search permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Binary Search&lt;/h1&gt;
+&lt;p&gt;target을 찾는 방법 중 하나이다.&lt;/p&gt;
+&lt;p&gt;가장 쉬운 방법은 list를 처음부터 끝까지 target 값을 찾는 것이다.&lt;/p&gt;
+&lt;p&gt;근데 이 방법은 딱 봐도 너무 무식하고 공수가 많이 든다는 것을 알 수 있다.&lt;/p&gt;
+&lt;p&gt;그러면 좀 더 효율적으로 할 수 있는 논리적 방법이 없을까??&lt;/p&gt;
+&lt;p&gt;많은 찾아야 할 값들 중에서 대강 스캔을 해본 뒤 정말 관계가 없어보이거나 필요없어 보이는 부분을 과감히 제외한다. 그리고 나머지 부분에서 내가원하는 target을 찾는 방법을 쉽게 떠올릴 수 있다.&lt;/p&gt;
+&lt;p&gt;일반적으로도 내가 해야되는 수많은 선택지 중에서 일부를 과감히 버리게 된다.&lt;/p&gt;
+&lt;p&gt;이걸 단순 논리적으로 접근한 것이 바로 이진탐색(Binary Search)이다.&lt;/p&gt;
+&lt;h2 id=&quot;1-이진-탐색이란&quot;&gt;&lt;a href=&quot;#1-%EC%9D%B4%EC%A7%84-%ED%83%90%EC%83%89%EC%9D%B4%EB%9E%80&quot; aria-label=&quot;1 이진 탐색이란 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 이진 탐색이란?&lt;/h2&gt;
+&lt;p&gt;탐색할 리스트의 요소 개수를 절반으로 줄여가면서 탐색을 하는 방법을 말한다.&lt;/p&gt;
+&lt;p&gt;다만 이진 탐색(binary search)은 오름 차순으로 정렬된 배열에만 적용할 수 있다는 단점이 있습니다.&lt;/p&gt;
+&lt;p&gt;이진 탐색에서 중요한 요소는 low index와 high 혹은 max index와 반을 잘라 낼 수 있는 mid index이다.&lt;/p&gt;
+&lt;p&gt;크기가 n 인 리스트 data에서 target 이라는 특정 요소를 찾아낸다고 가정했을 때, 이진 탐색의 절차는 다음과 같다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;low =0, high = n−1 로 초기화 합니다.&lt;/li&gt;
+&lt;li&gt;mid 는 (log + high) 를 2 로 나눈 몫으로 결정합니다.&lt;/li&gt;
+&lt;li&gt;data[mid] 와 target 이 서로 같으면 목적을 달성했으므로 탐색을 종료합니다.&lt;/li&gt;
+&lt;li&gt;만약 target &amp;#x3C; data[mid] 이면 high = mid-1 로 업데이트 한 후, 2번으로 돌아갑니다. 만약 target &gt; data[mid] 라면 low = mid+1 로 업데이트 한 후, 2번으로 돌아갑니다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;4번을 자세히 보면 2번으로 계속 되돌아 가는 걸 볼 수 있다, —&gt; 재귀함수를 써야되는 근거가 된다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;시간복잡도로 이진 탐색을 보면 기존의 일괄탐색은 O(n)인 반면&lt;/li&gt;
+&lt;li&gt;이진탐색은 그의 반으로 줄어든다. O(logn)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;2-재귀함수를-이용한-이진-탐색-알고리즘&quot;&gt;&lt;a href=&quot;#2-%EC%9E%AC%EA%B7%80%ED%95%A8%EC%88%98%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%9D%B4%EC%A7%84-%ED%83%90%EC%83%89-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98&quot; aria-label=&quot;2 재귀함수를 이용한 이진 탐색 알고리즘 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. 재귀함수를 이용한 이진 탐색 알고리즘&lt;/h2&gt;
+&lt;p&gt;위에서 보았듯이 low index와 high index (mid index는 low와 high로 구할 수 있음), 찾을 대상인 list 그리고 찾을 목표 target이 필요한 인자임을 알 수 있다&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;def search(nums, target, low, high):
+    if low &amp;gt; high:
+        return False
+
+    mid = (low + high) // 2
+
+    if nums[mid] == target:
+        return mid
+    elif nums[mid] &amp;lt; target:
+        low = mid + 1
+    else:
+        high = mid - 1
+    return search(nums, target, low, high)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;리턴을 search로 해서 계속 재귀하는 함수이고 재귀함수에는 종료조건이 있어야 하는데 그게 바로 첫행에 있는 low&gt;high이다.&lt;/li&gt;
+&lt;li&gt;low &gt; high는 반으로 나누고 나누다가 결국 나눌 리스트 값이 존재하지 않는 경우이다. 이런경우 찾는 값이 없는 것이므로 False를 리턴하였다.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[SqlAlchemy]]></title><description><![CDATA[Sqlalchemy]]></description><link>https://ctsictai.github.io//posts/sqlalchemy/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/sqlalchemy/</guid><pubDate>Thu, 05 Dec 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;sqlalchemy의-철학&quot;&gt;&lt;a href=&quot;#sqlalchemy%EC%9D%98-%EC%B2%A0%ED%95%99&quot; aria-label=&quot;sqlalchemy의 철학 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SqlAlchemy의 철학&lt;/h1&gt;
 &lt;p&gt;SQL 데이터베이스는 크기와 성능이 중요해질수록 개체 컬렉션과 유사하게 동작합니다. 객체 컬렉션은 테이블과 행처럼 동작하지 않으므로 더 추상화가 중요합니다. SQLAlchemy는 이러한 두 가지 원칙을 모두 수용하려고합니다.&lt;/p&gt;
 &lt;p&gt;SQLAlchemy는 데이터베이스를 테이블 집합이 아닌 관계형 대수 엔진으로 간주합니다. 행은 테이블뿐만 아니라 조인 및 다른 select 문에서도 선택할 수 있습니다. 이들 유닛 중 어느 것이 더 큰 구조로 구성 될 수있다. SQLAlchemy의 표현식 언어는이 개념을 핵심으로합니다.&lt;/p&gt;
 &lt;p&gt;SQLAlchemy는 데이터 매퍼 패턴을 제공하는 선택적 구성 요소 인 ORM (Object-Relational Mapper)으로 가장 유명합니다. 여기서 클래스는 개방형 다중 방식으로 데이터베이스에 매핑 될 수 있으므로 개체 모델 및 데이터베이스 스키마를 처음부터 깨끗하게 분리 된 방식.&lt;/p&gt;
