@@ -1,4 +1,167 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[CTS junior Web developer]]></title><description><![CDATA[Web developer Learning.]]></description><link>https://ctsictai.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 12 Dec 2019 06:36:09 GMT</lastBuildDate><item><title><![CDATA[Django View part3]]></title><description><![CDATA[Views Try-Except & django give exceptions]]></description><link>https://ctsictai.github.io//posts/django-part10/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/django-part10/</guid><pubDate>Wed, 11 Dec 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;exception-handling&quot;&gt;&lt;a href=&quot;#exception-handling&quot; aria-label=&quot;exception handling permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Exception Handling&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[CTS junior Web developer]]></title><description><![CDATA[Web developer Learning.]]></description><link>https://ctsictai.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 12 Dec 2019 15:07:23 GMT</lastBuildDate><item><title><![CDATA[OAuth, Social Signin]]></title><description><![CDATA[Auth/Social_login]]></description><link>https://ctsictai.github.io//posts/django/socialsignin</link><guid isPermaLink="false">https://ctsictai.github.io//posts/django/socialsignin</guid><pubDate>Thu, 12 Dec 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;oauth20&quot;&gt;&lt;a href=&quot;#oauth20&quot; aria-label=&quot;oauth20 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;OAuth2.0&lt;/h1&gt;
+&lt;p&gt;주요 특징 및 개선점&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;간단해 졌다.&lt;br&gt;
+OAuth 1.0a에서는 https 가 필수가 아니었기 때문에 API를 호출할 때 signature를 생성해서 호출해야 했다. 때문에 OAuth 1.0a API를 테스트 하려면 curl등을 사용하기 힘들고 별도의 API 콘솔등을 사용해서 테스트 해야 했다. OAuth 2.0의 Bearer 토큰 인증 방식을 쓰면 더 이상 signature 가 필요 없기 때문에 API를 테스트하거나 예제를 만들 때 간단하게 curl등 직관적인 방법을 사용해서 문서화하고 개발 할 수 있게 되었다.&lt;/li&gt;
+&lt;li&gt;더 많은 인증 방법을 지원&lt;br&gt;
+OAuth 1.0a는 한가지 인증 방식을 제공한다. HMAC을 이용한 암호화 인증 방식이다. 하지만 OAuth 2.0은 시나리오별로 여러가지 인증 방식을 제공하기 때문에 웹브라우저, 모바일 등의 다양한 시나리오에 대응할 수 있게 해준다.&lt;/li&gt;
+&lt;li&gt;대형 서비스로의 확장성 지원&lt;br&gt;
+커다란 서비스를 만들기 위해서는 인증 서버를 분리할 수 있어야 하고 또한 인증 서버를 다중화 할 수 있어야 한다. OAuth 2.0에서는 실제 API 서비스를 하는 서버와 인증 역할을 하는 authorization server의 역할을 명확히 구분함으로서 인증서버의 분리와 다중화 등에 대한 고려가 되어있다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;다양한-인증방식&quot;&gt;&lt;a href=&quot;#%EB%8B%A4%EC%96%91%ED%95%9C-%EC%9D%B8%EC%A6%9D%EB%B0%A9%EC%8B%9D&quot; aria-label=&quot;다양한 인증방식 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;다양한 인증방식&lt;/h2&gt;
+&lt;h3 id=&quot;1-authorization-code-grant&quot;&gt;&lt;a href=&quot;#1-authorization-code-grant&quot; aria-label=&quot;1 authorization code grant permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Authorization Code Grant&lt;/h3&gt;
+&lt;p&gt;웹 서버에서 API를 호출하는 등의 시나리오에서 Confidential Client가 사용하는 방식이다. 서버사이드 코드가 필요한 인증 방식이며 인증 과정에서 client&lt;em&gt;secret 이 필요하다.
+로그인시에 페이지 URL에 response&lt;/em&gt;type=code 라고 넘긴다.&lt;/p&gt;
+&lt;h3 id=&quot;2-implicit-grant&quot;&gt;&lt;a href=&quot;#2-implicit-grant&quot; aria-label=&quot;2 implicit grant permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. Implicit Grant&lt;/h3&gt;
+&lt;p&gt;token과 scope에 대한 스펙 등은 다르지만 OAuth 1.0a과 가장 비슷한 인증방식이다. Public Client인 브라우저 기반의 어플리케이션(Javascript application)이나 모바일 어플리케이션에서 이 방식을 사용하면 된다. Client 증명서를 사용할 필요가 없으며 실제로 OAuth 2.0에서 가장 많이 사용되는 방식이다.
+로그인시에 페이지 URL에 response_type=token 라고 넘긴다.&lt;/p&gt;
+&lt;h2 id=&quot;다양한-토큰-지원&quot;&gt;&lt;a href=&quot;#%EB%8B%A4%EC%96%91%ED%95%9C-%ED%86%A0%ED%81%B0-%EC%A7%80%EC%9B%90&quot; aria-label=&quot;다양한 토큰 지원 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;다양한 토큰 지원&lt;/h2&gt;
+&lt;p&gt;OAuth 2.0은 기본적으로 Bearer 토큰, 즉 암호화하지 않은 그냥 토큰을 주고받는 것으로 인증을 한다. 기본적으로 HTTPS 를 사용하기 때문에 토큰을 안전하게 주고받는 것은 HTTPS의 암호화에 의존한다. 또한 복잡한 signature 등을 생성할 필요가 없기 때문에 curl이 API를 호출 할 때 간단하게 Header 에 아래와 같이 한 줄을 같이 보내므로서 API를 테스트해볼 수 있다.
+Authorization: Bearer&lt;/p&gt;
+&lt;h2 id=&quot;refresh-token&quot;&gt;&lt;a href=&quot;#refresh-token&quot; aria-label=&quot;refresh token permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Refresh token&lt;/h2&gt;
+&lt;p&gt;클라이언트가 같은 access token을 오래 사용하면 결국은 해킹에 노출될 위험이 높아진다. 그래서 OAuth 2.0에서는 refresh token 이라는 개념을 도입했다. 즉, 인증 토큰(access token)의 만료기간을 가능한 짧게 하고 만료가 되면 refresh token으로 access token을 새로 갱신하는 방법이다. 토큰의 상태를 관리해야 해서 개발이 복잡해 지는 단점이 있다.&lt;/p&gt;
+&lt;h2 id=&quot;api-권한-제어-scope&quot;&gt;&lt;a href=&quot;#api-%EA%B6%8C%ED%95%9C-%EC%A0%9C%EC%96%B4-scope&quot; aria-label=&quot;api 권한 제어 scope permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;API 권한 제어 (scope)&lt;/h2&gt;
+&lt;p&gt;OAuth 2.0은 써드파티 어플리케이션의 권한을 설정하기 위한 기능이다. scope의 이름이 스펙에 정의되어있지는 않으며 여러 개의 권한을 요청할 때에는 콤마등을 사용해서 로그인 시에 scope를 넘겨주게 된다.&lt;/p&gt;
+&lt;h1 id=&quot;소셜로그인&quot;&gt;&lt;a href=&quot;#%EC%86%8C%EC%85%9C%EB%A1%9C%EA%B7%B8%EC%9D%B8&quot; aria-label=&quot;소셜로그인 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;소셜로그인&lt;/h1&gt;
+&lt;p&gt;유저가 별도의 회원가입 없이 유저가 이용하고 있는 소셜 웹사이트(kakao, google 등)의 로그인정보를 사용하여 웹사이트에 로그인계정을 얻게되어 회원으로 접근할 수 있도록 하는 방법.&lt;/p&gt;
+&lt;h2 id=&quot;장점&quot;&gt;&lt;a href=&quot;#%EC%9E%A5%EC%A0%90&quot; aria-label=&quot;장점 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;장점&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;해외 소셜 로그인 업체를 이용하면 외국인들을 대상으로 하는 회원 서비스가 쉬워진다.&lt;/li&gt;
+&lt;li&gt;서버에 개인정보를 최소한으로 저장하여 DB 저장 공간을 아낄 수 있다.&lt;/li&gt;
+&lt;li&gt;많은 계정과 비밀번호를 일일히 기억할 필요 없이 소셜로그인으로 모두 통합되어 관리가 쉽다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;단점&quot;&gt;&lt;a href=&quot;#%EB%8B%A8%EC%A0%90&quot; aria-label=&quot;단점 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;단점&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;보안 해킹 이슈가 있다. 하나로 통합되어 가입/로그인 절차를 진행하므로 해킹에 취약하다&lt;/li&gt;
+&lt;li&gt;서버입장에서는 소셜 로그인 회원들을 관리하기가 까다로워졌다.(개인정보 취득이나 회원의 판별여부)&lt;/li&gt;
+&lt;li&gt;여러개의 소셜 로그인을 제공하는 경우 다중 소셜 로그인을 허용할 것인지 말 것인지 까다로운 문제에 봉착한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;장점은 유저입장에서의 장점이 많고 단점은 서버단에서의 관리적 입장에서의 단점이 많다. 그래서 유저 입장에서 본 결과 대부분의 사이트에서 소셜 로그인 기능을 제공하고 있는 것이다.&lt;/p&gt;
+&lt;h1 id=&quot;소셜로그인-전체-프로세스-로직&quot;&gt;&lt;a href=&quot;#%EC%86%8C%EC%85%9C%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EC%A0%84%EC%B2%B4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4-%EB%A1%9C%EC%A7%81&quot; aria-label=&quot;소셜로그인 전체 프로세스 로직 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;소셜로그인 전체 프로세스 로직&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;https://nachwon.github.io/img/facebook_login/flow.png&quot; alt=&quot;페이스북 로그인 로직&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;백엔드-로직순서&quot;&gt;&lt;a href=&quot;#%EB%B0%B1%EC%97%94%EB%93%9C-%EB%A1%9C%EC%A7%81%EC%88%9C%EC%84%9C&quot; aria-label=&quot;백엔드 로직순서 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;백엔드 로직순서&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;프론트엔드에서 유저의 소셜로그인에 필요한 access_token을 발급받아 백엔드 서버로 전달한다&lt;/li&gt;
+&lt;li&gt;받은 access_token을 가지고 해당 소셜 플랫폼 api로 필요한 회원정보를 요청&lt;/li&gt;
+&lt;li&gt;소셜 플랫폼에서 여러가지 개인 보호 정책등으로 걸러진 유저의 회원정보를 json 형식으로 받음&lt;/li&gt;
+&lt;li&gt;받은 개인정보를 유저를 식별할 수 있는 정보(id값(소셜플랫폼에서 제공하는))와 기타 추가적인 정보값을 DB에 있는지 확인하고 없으면 저장&lt;/li&gt;
+&lt;li&gt;Signin 로직 구현 —&gt; backend server에서 자체적으로 발급하는 토큰을 전달하면된다.(DB에 저장하던 말던 상관없이 위의 절차가 완료되면 백서버에서 발급하는 토큰을 전달한다.)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;소셜로그인을-쉽게-관리하기-위한-tip&quot;&gt;&lt;a href=&quot;#%EC%86%8C%EC%85%9C%EB%A1%9C%EA%B7%B8%EC%9D%B8%EC%9D%84-%EC%89%BD%EA%B2%8C-%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-tip&quot; aria-label=&quot;소셜로그인을 쉽게 관리하기 위한 tip permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;소셜로그인을 쉽게 관리하기 위한 Tip&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;소셜 플랫폼회사코드를 따로 테이블을 만들어서 관리한다.&lt;/li&gt;
+&lt;li&gt;이 때 유저테이블과의 관계는 1:N으로 소셜플랫폼하나에 여러 유저가 있을 수 있고 유저는 하나의 플랫폼을 가지므로!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;class SocialPlatform(models.Model):
+    platform_name = models.CharField(max_length=20, default=0)
+
+    class Meta:
+        db_table = &amp;quot;social_platform&amp;quot;
+
+class User(models.Model):
+    ....
+    social          = models.ForeignKey(SocialPlatform, on_delete=models.CASCADE, max_length=20, blank=True, default=1)
+    social_login_id = models.CharField(max_length=50, blank=True)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;소셜로그인을 회원을 구분 지을 수 있는 것은 소셜플랫폼 회사에서 제공하는 ‘id’이다.&lt;/li&gt;
+&lt;li&gt;‘id’가 예를들어 facebook id와 google id에서 겹칠 수 있는 문제가 발생한다. 그래서 소셜 플랫폼 제공하는 회사 코드도 만들어서 회사코드와 id로 소셜로그인 유저를 구분할 수 있게 된다.&lt;/li&gt;
+&lt;li&gt;소셜로그인의 가장 큰 핵심은 소셜로그인한 회원을 서비스 페이지에서 어떻게 구별할 것인가의 문제이다&lt;/li&gt;
+&lt;li&gt;실제 예제로 카카오를 예로 들어 설명한다.(나머지 소셜로그인도 비슷하게 진행된다.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;실제-소셜-로그인-예제카카오&quot;&gt;&lt;a href=&quot;#%EC%8B%A4%EC%A0%9C-%EC%86%8C%EC%85%9C-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EC%98%88%EC%A0%9C%EC%B9%B4%EC%B9%B4%EC%98%A4&quot; aria-label=&quot;실제 소셜 로그인 예제카카오 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;실제 소셜 로그인 예제(카카오)&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;class KakaoSigninView(View):
+   def post(self, request):
+       kakao_token  = request.headers[&amp;quot;Authorization&amp;quot;]
+       # request의 header에 bearer(암호화 되지 않는 토큰)형식으로 토큰을 프론트에서 받는다.
+       if not kakao_token:
+           return JsonResponse({&amp;quot;MESSAGE&amp;quot; : &amp;quot;INVALID_KAKAO_TOKEN&amp;quot;}, status=400)
+
+       headers      = ({&amp;#39;Authorization&amp;#39; : f&amp;quot;Bearer {kakao_token}&amp;quot;})
+       url          = &amp;quot;https://kapi.kakao.com/v1/user/me&amp;quot;
+       response     = requests.post(url, headers=headers, timeout=2) # header에서 프론트에서 받는 토큰과 정보를 요청할 api url주소를 통해 requests.post로 요청함
+
+       user_data    = response.json()
+       try:
+           if User.objects.filter(social_login_id=user_data[&amp;#39;id&amp;#39;]).exists(): # 소셜id는 소셜플랫폼회사에서 회원을 식별하는 주식별자이다. 이게 있다면 이 소셜플랫폼으로 회원가입하고 로그인을 적어도 1번 이상 했다는 얘기 --&amp;gt; 로그인 로직 구현
+               user = User.objects.get(social_login_id=user_data[&amp;#39;id&amp;#39;])
+               payload = {
+                   &amp;quot;user_id&amp;quot;       : user.id,
+                   &amp;quot;kakao_id&amp;quot;      : user.social_login_id,
+                   &amp;quot;user_is_maker&amp;quot; : user.is_maker,
+                   &amp;quot;exp&amp;quot;           : WEDIZ_SECRET[&amp;#39;exp_time&amp;#39;]
+                   }
+               jwt_encode = jwt.encode(payload, WEDIZ_SECRET[&amp;#39;secret&amp;#39;], algorithm=&amp;quot;HS256&amp;quot;) # 카카오에서 받은 토큰으로 사용자를 인증하고 홈페이지에서 사용할 엑세스토큰을 자체 발급한다.
+               return JsonResponse({&amp;quot;VALID_TOKEN&amp;quot; : jwt_encode.decode(&amp;#39;utf-8&amp;#39;)} , status=200)
+           else: # 한 번도 이 소셜플랫폼으로 로그인 한적이 없는 경우 회원가입 로직을 구현한 후 곧바로 로그인 까지 구현함
+               signup_user = User.objects.create(
+                   email     = user_data[&amp;#39;kakao_account&amp;#39;][&amp;#39;email&amp;#39;],
+                   social    = SocialPlatform.objects.get(id=2).id,#카카오 id가 2
+                   social_login_id = user_data[&amp;#39;id&amp;#39;]
+                   )
+               payload = {
+                   &amp;quot;user_id&amp;quot;       : signup_user.id,
+                   &amp;quot;kakao_id&amp;quot;      : signup_user.social_login_id,
+                   &amp;quot;user_is_maker&amp;quot; : signup_user.is_maker,
+                   &amp;quot;exp&amp;quot;           : WEDIZ_SECRET[&amp;#39;exp_time&amp;#39;]
+                   } # 로그인 로직
+               jwt_encode = jwt.encode(payload, WEDIZ_SECRET[&amp;#39;secret&amp;#39;], algorithm=&amp;quot;HS256&amp;quot;)
+               return JsonResponse({&amp;quot;VALID_TOKEN&amp;quot; : jwt_encode.decode(&amp;#39;utf-8&amp;#39;)}, status=200)
+       except ValueError:
+           return JsonResponse({&amp;quot;MESSAGE&amp;quot; : &amp;quot;INVALID_EMAIL&amp;quot;}, status=401)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;request의 header에 bearer(암호화 되지 않는 토큰)형식으로 토큰을 프론트에서 받는다.&lt;/li&gt;
+&lt;li&gt;header에 ‘authorization’ 키에 value를 프론트에 받는 토큰을 실어서 회원정보를 요청할 api url주소를 통해서 requests.post방식으로 카카오 api 서버에 요청함&lt;/li&gt;
+&lt;li&gt;소셜id는 소셜플랫폼회사에서 회원을 식별하는 주식별자이다. 이게 있다면 이 소셜플랫폼으로 회원가입하고 로그인을 적어도 1번 이상 했다는 얘기 —&gt; 로그인 로직 구현&lt;/li&gt;
+&lt;li&gt;카카오에서 받은 토큰으로 사용자를 인증하고 홈페이지에서 사용할 엑세스토큰을 자체 발급한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;카카오 response key / value&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;{
+  &amp;quot;id&amp;quot;:123456789,
+  &amp;quot;properties&amp;quot;:{
+     &amp;quot;nickname&amp;quot;:&amp;quot;홍길동카톡&amp;quot;,
+     &amp;quot;thumbnail_image&amp;quot;:&amp;quot;http://xxx.kakao.co.kr/.../aaa.jpg&amp;quot;,
+     &amp;quot;profile_image&amp;quot;:&amp;quot;http://xxx.kakao.co.kr/.../bbb.jpg&amp;quot;,
+     &amp;quot;custom_field1&amp;quot;:&amp;quot;23&amp;quot;,
+     &amp;quot;custom_field2&amp;quot;:&amp;quot;여&amp;quot;
+     ...
+  },
+  &amp;quot;kakao_account&amp;quot;: {
+    &amp;quot;profile_needs_agreement&amp;quot;: false,
+    &amp;quot;profile&amp;quot;: {
+      &amp;quot;nickname&amp;quot;: &amp;quot;홍길동&amp;quot;,
+      &amp;quot;thumbnail_image_url&amp;quot;: &amp;quot;http://yyy.kakao.com/.../img_110x110.jpg&amp;quot;,
+      &amp;quot;profile_image_url&amp;quot;: &amp;quot;http://yyy.kakao.com/dn/.../img_640x640.jpg&amp;quot;
+    },
+    &amp;quot;email_needs_agreement&amp;quot;:false,
+    &amp;quot;is_email_valid&amp;quot;: true,
+    &amp;quot;is_email_verified&amp;quot;: true,
+    &amp;quot;email&amp;quot;: &amp;quot;xxxxxxx@xxxxx.com&amp;quot;
+    &amp;quot;age_range_needs_agreement&amp;quot;:false,
+    &amp;quot;age_range&amp;quot;:&amp;quot;20~29&amp;quot;,
+    &amp;quot;birthday_needs_agreement&amp;quot;:false,
+    &amp;quot;birthday&amp;quot;:&amp;quot;1130&amp;quot;,
+    &amp;quot;gender_needs_agreement&amp;quot;:false,
+    &amp;quot;gender&amp;quot;:&amp;quot;female&amp;quot;
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;“is&lt;em&gt;email&lt;/em&gt;valid”: true - 카카오의 이메일이 유효한것인지 알려주는 값(유효하지 않을 수도 있다.) —&gt; 이걸 담보하기 위해서 이메일 검증 방법을 쓰기도 한다. 그건 다음에 살펴보도록 한다.&lt;/li&gt;
+&lt;li&gt;“is&lt;em&gt;email&lt;/em&gt;verified”: true - 카카오에서 인증된 이메일을 판별하는 인자&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;email&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;사용자 카카오계정의 이메일&lt;/li&gt;
+&lt;li&gt;카카오계정 이메일은 변경될 수 있습니다.&lt;/li&gt;
+&lt;li&gt;이메일 개인정보 제공동의를 하지 않은 사용자의 이메일은 제공되지 않습니다. email&lt;em&gt;needs&lt;/em&gt;agreement=true인데 email값이 내려오지 않는다면, 사용자의 정보 제공 동의가 필요한 경우입니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://wedizstoryimage.s3.ap-northeast-2.amazonaws.com/kakao_email.png&quot; alt=&quot;카카오 로그인 이메일 인증&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;나머지 필요한 정보가 있으면 response 값을 잘 보고 해당 키값을 통해 가져오면 된다.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Django View part3]]></title><description><![CDATA[Views Try-Except & django give exceptions]]></description><link>https://ctsictai.github.io//posts/django-part10/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/django-part10/</guid><pubDate>Wed, 11 Dec 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;exception-handling&quot;&gt;&lt;a href=&quot;#exception-handling&quot; aria-label=&quot;exception handling permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Exception Handling&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Exception : 정상적인 프로그램 흐름을 중단시키는 에러를 말합니다.&lt;/li&gt;
 &lt;li&gt;Exception Handling : 정상적인 프로그램 흐름을 중단하고 주변의 컨텍스트 또는 코드 블록에서 계속하기위한 메커니즘&lt;/li&gt;
@@ -213,84 +376,6 @@ except Exception as ex:
 &lt;li&gt;리턴을 search로 해서 계속 재귀하는 함수이고 재귀함수에는 종료조건이 있어야 하는데 그게 바로 첫행에 있는 low&gt;high이다.&lt;/li&gt;
 &lt;li&gt;low &gt; high는 반으로 나누고 나누다가 결국 나눌 리스트 값이 존재하지 않는 경우이다. 이런경우 찾는 값이 없는 것이므로 False를 리턴하였다.&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[SqlAlchemy]]></title><description><![CDATA[Sqlalchemy]]></description><link>https://ctsictai.github.io//posts/sqlalchemy/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/sqlalchemy/</guid><pubDate>Thu, 05 Dec 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;sqlalchemy의-철학&quot;&gt;&lt;a href=&quot;#sqlalchemy%EC%9D%98-%EC%B2%A0%ED%95%99&quot; aria-label=&quot;sqlalchemy의 철학 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SqlAlchemy의 철학&lt;/h1&gt;
-&lt;p&gt;SQL 데이터베이스는 크기와 성능이 중요해질수록 개체 컬렉션과 유사하게 동작합니다. 객체 컬렉션은 테이블과 행처럼 동작하지 않으므로 더 추상화가 중요합니다. SQLAlchemy는 이러한 두 가지 원칙을 모두 수용하려고합니다.&lt;/p&gt;
-&lt;p&gt;SQLAlchemy는 데이터베이스를 테이블 집합이 아닌 관계형 대수 엔진으로 간주합니다. 행은 테이블뿐만 아니라 조인 및 다른 select 문에서도 선택할 수 있습니다. 이들 유닛 중 어느 것이 더 큰 구조로 구성 될 수있다. SQLAlchemy의 표현식 언어는이 개념을 핵심으로합니다.&lt;/p&gt;
-&lt;p&gt;SQLAlchemy는 데이터 매퍼 패턴을 제공하는 선택적 구성 요소 인 ORM (Object-Relational Mapper)으로 가장 유명합니다. 여기서 클래스는 개방형 다중 방식으로 데이터베이스에 매핑 될 수 있으므로 개체 모델 및 데이터베이스 스키마를 처음부터 깨끗하게 분리 된 방식.&lt;/p&gt;
-&lt;p&gt;이러한 문제에 대한 SQLAlchemy의 전반적인 접근법은 소위 칭찬 지향적 접근법에 기반한 다른 대부분의 SQL / ORM 도구와 완전히 다릅니다. 자동화 벽 뒤에 SQL 및 객체 관계형 세부 정보를 숨기는 대신 일련의 구성 가능하고 투명한 도구 내에서 모든 프로세스가 완전히 노출됩니다. 라이브러리는 중복 작업을 자동화하는 작업을 수행하는 반면 개발자는 데이터베이스 구성 방법 및 SQL 작성 방법을 제어합니다.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.sqlalchemy.org/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;SQLALCHEMY 공홈 참조&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;1-설치&quot;&gt;&lt;a href=&quot;#1-%EC%84%A4%EC%B9%98&quot; aria-label=&quot;1 설치 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 설치&lt;/h1&gt;
-&lt;p&gt;&lt;code&gt; pip install sqlalchemy&lt;/code&gt;&lt;/p&gt;
-&lt;h1 id=&quot;2-db-연결&quot;&gt;&lt;a href=&quot;#2-db-%EC%97%B0%EA%B2%B0&quot; aria-label=&quot;2 db 연결 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. DB 연결&lt;/h1&gt;
-&lt;p&gt;DB에 연결을 하기 위한 추가 프로그램 설치가 필요하다&lt;/p&gt;
-&lt;h2 id=&quot;2-1-dbapi-설치&quot;&gt;&lt;a href=&quot;#2-1-dbapi-%EC%84%A4%EC%B9%98&quot; aria-label=&quot;2 1 dbapi 설치 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2-1. DBAPI 설치&lt;/h2&gt;
-&lt;p&gt;DBAPI는 동일한 API를 사용하여 다양한 데이터베이스에서 작동하도록 권장하는 표준입니다.&lt;/p&gt;
-&lt;p&gt;MySQL : PyMySQL, MySQL-Connector, CyMySQL, MySQL-Python (default)&lt;/p&gt;
-&lt;p&gt;&lt;code&gt; pip install pymysql&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&quot;2-2-create-engine&quot;&gt;&lt;a href=&quot;#2-2-create-engine&quot; aria-label=&quot;2 2 create engine permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2-2. Create engine&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;h3 id=&quot;databasespy---settings-file&quot;&gt;&lt;a href=&quot;#databasespy---settings-file&quot; aria-label=&quot;databasespy   settings file permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;databases.py - settings file&lt;/h3&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;from sqlalchemy import create_engine
-engine = create_engine(&amp;#39;mysql+pymysql://username:password@localhost/db명&amp;#39;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;엔진을 통해 mysql db 서버와 연결하는 기초 공사를 하는 중이다.
-(아직 연결 안됨)&lt;/p&gt;
-&lt;h2 id=&quot;2-3-진짜-연결&quot;&gt;&lt;a href=&quot;#2-3-%EC%A7%84%EC%A7%9C-%EC%97%B0%EA%B2%B0&quot; aria-label=&quot;2 3 진짜 연결 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2-3. 진짜 연결&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;from sqlalchemy import create_engine
-engine = create_engine(&amp;#39;mysql+pymysql://username:password@localhost/db명&amp;#39;)
-engine.connect()
-
-print(engine)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Engine(&amp;#39;mysql+pymysql://username:password@localhost/db명&amp;#39;)&lt;/code&gt;
-이 화면이 뜨면 정상 연결이 되었다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&quot;3-매핑-선언&quot;&gt;&lt;a href=&quot;#3-%EB%A7%A4%ED%95%91-%EC%84%A0%EC%96%B8&quot; aria-label=&quot;3 매핑 선언 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. 매핑 선언&lt;/h1&gt;
-&lt;p&gt;ORM에서는 처음에 데이터베이스 테이블을 생성하고 사용할 수 있도록 설정한 뒤 다음 직접 정의한 클래스에 맵핑을 해야한다.(안 그러면 ORM 명령어가 DB단에 들어가지 않는다)&lt;/p&gt;
-&lt;p&gt;sqlalchemy에서는 두가지가 동시에 이뤄지는데 Declarative 란걸 이용해 클래스를 생성하고 실제 디비 테이블에 연결을 한다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;from sqlalchemy.ext.declarative import declarative_base
-Base = declarative_base()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&quot;4-실제-모델-테이블-형성&quot;&gt;&lt;a href=&quot;#4-%EC%8B%A4%EC%A0%9C-%EB%AA%A8%EB%8D%B8-%ED%85%8C%EC%9D%B4%EB%B8%94-%ED%98%95%EC%84%B1&quot; aria-label=&quot;4 실제 모델 테이블 형성 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;4. 실제 모델 테이블 형성&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;h3 id=&quot;modelspy에서&quot;&gt;&lt;a href=&quot;#modelspy%EC%97%90%EC%84%9C&quot; aria-label=&quot;modelspy에서 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;models.py에서&lt;/h3&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;from sqlalchemy import Column, Integer, String
-
-class User(Base):
-    __tablename__ = &amp;#39;users&amp;#39;
-
-    id = Column(Integer, primary_key=True)
-    name = Column(String)
-    fullname = Column(String)
-    password = Column(String)
-
-    def __init__(self, name, fullname, password):
-        self.name = name
-        self.fullname = fullname
-        self.password = password
-
-    def __repr__(self):
-        return &amp;quot;&amp;lt;User(&amp;#39;%s&amp;#39;, &amp;#39;%s&amp;#39;, &amp;#39;%s&amp;#39;)&amp;gt;&amp;quot; % (self.name, self.fullname, self.password)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;DB의 필드를 만들려면 직접 컬럼 클래스를 import 해야 한다.&lt;/li&gt;
-&lt;li&gt;필드의 타입을 지정하려면 타입에 해당하는 클래스들을 import해야 한다.
-(ex) 숫자 타입 이라면 Integer | 문자타입이라면 String etc on..&lt;/li&gt;
-&lt;li&gt;위 User 클래스는 &lt;strong&gt;tablename&lt;/strong&gt;에서 정의한 테이블에 네임에 맵핑된다.&lt;/li&gt;
-&lt;li&gt;primary key인 id와 name, fullname, password 컬럼을 가진다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;repr&lt;/strong&gt;은 해당 클래스에 대해 string 값으로 대표되는 값을 표현해준다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Declarative system으로 만들어진 이 클래스는 table metadata를 가지게 되는데 이게 사용자정의 클래스와 테이블을 연결해주는 구실을 한다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&quot;5-세션-이용&quot;&gt;&lt;a href=&quot;#5-%EC%84%B8%EC%85%98-%EC%9D%B4%EC%9A%A9&quot; aria-label=&quot;5 세션 이용 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;5. 세션 이용&lt;/h1&gt;
-&lt;p&gt;ORM은 데이터베이스를 session을 이용해 다룰 수 있는데 처음 앱을 작성할 때 create_engine()과 같은 레벨에서 Session 클래스를 factory 패턴으로 생성할 수 있다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Base.metadata.create_all(engine)
-Session = sessionmaker()
-Session.configure(bind=engine)
-session = Session()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;1행에서 engine을 통해 메타데이터에 접근함
-2행에서 다른 트랜잭션을 위한 것들은 sessionmaker()에서 호출될 때 정의하는 것(자세한 사항은 추후 업뎃)
-3행에서 세션에 엔진을 묶어 엔진 실행시 세션클래스에서 새 객체를 만들게 한다
-4행에서 Session 클래스 편하게 쓰기 위해 인스턴스화&lt;/p&gt;</content:encoded></item><item><title><![CDATA[SqlAlchemy]]></title><description><![CDATA[Sqlalchemy]]></description><link>https://ctsictai.github.io//posts/sqlalchemy/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/sqlalchemy/</guid><pubDate>Thu, 05 Dec 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;sqlalchemy의-철학&quot;&gt;&lt;a href=&quot;#sqlalchemy%EC%9D%98-%EC%B2%A0%ED%95%99&quot; aria-label=&quot;sqlalchemy의 철학 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SqlAlchemy의 철학&lt;/h1&gt;
 &lt;p&gt;SQL 데이터베이스는 크기와 성능이 중요해질수록 개체 컬렉션과 유사하게 동작합니다. 객체 컬렉션은 테이블과 행처럼 동작하지 않으므로 더 추상화가 중요합니다. SQLAlchemy는 이러한 두 가지 원칙을 모두 수용하려고합니다.&lt;/p&gt;
 &lt;p&gt;SQLAlchemy는 데이터베이스를 테이블 집합이 아닌 관계형 대수 엔진으로 간주합니다. 행은 테이블뿐만 아니라 조인 및 다른 select 문에서도 선택할 수 있습니다. 이들 유닛 중 어느 것이 더 큰 구조로 구성 될 수있다. SQLAlchemy의 표현식 언어는이 개념을 핵심으로합니다.&lt;/p&gt;
 &lt;p&gt;SQLAlchemy는 데이터 매퍼 패턴을 제공하는 선택적 구성 요소 인 ORM (Object-Relational Mapper)으로 가장 유명합니다. 여기서 클래스는 개방형 다중 방식으로 데이터베이스에 매핑 될 수 있으므로 개체 모델 및 데이터베이스 스키마를 처음부터 깨끗하게 분리 된 방식.&lt;/p&gt;
@@ -1540,166 +1625,7 @@ Local =&gt; Enclosing =&gt; Global =&gt; Built-in&lt;/p&gt;
 &lt;p&gt;그러므로 만일 동일한 이름의 변수들이 서로 다른 scope에서 선언이 되면 더 좁은 범위에 있는 변수(혹은 함수)가 더 넓은 범위에 있는 변수를 가리는 (shadowing)효과가 나타납니다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;변수 이름 중복이 안되도록 네이밍에 신경써야 한다.&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.6]]></title><description><![CDATA[Class]]></description><link>https://ctsictai.github.io//posts/python-part6/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part6/</guid><pubDate>Tue, 22 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;클래스&quot;&gt;&lt;a href=&quot;#%ED%81%B4%EB%9E%98%EC%8A%A4&quot; aria-label=&quot;클래스 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;클래스&lt;/h1&gt;
-&lt;h2 id=&quot;개요&quot;&gt;&lt;a href=&quot;#%EA%B0%9C%EC%9A%94&quot; aria-label=&quot;개요 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;개요&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;클래스는 객체의 구조와 행동을 정의합니다.&lt;/li&gt;
-&lt;li&gt;객체의 클래스는 초기화를 통해 제어합니다.&lt;/li&gt;
-&lt;li&gt;클래스는 복잡한 문제를 다루기 쉽도록 만듭니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;객체와-인스턴스-차이&quot;&gt;&lt;a href=&quot;#%EA%B0%9D%EC%B2%B4%EC%99%80-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EC%B0%A8%EC%9D%B4&quot; aria-label=&quot;객체와 인스턴스 차이 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;객체와 인스턴스 차이&lt;/h3&gt;
-&lt;p&gt;클래스로 만든 객체를 인스턴스라고도 한다.&lt;br&gt;
-인스턴스라는 말은 특정 객체가 어떤 클래스의 객체인지를 관계 위주로 설명할 때 사용한다.&lt;/p&gt;
-&lt;h2 id=&quot;클래스-변수속성&quot;&gt;&lt;a href=&quot;#%ED%81%B4%EB%9E%98%EC%8A%A4-%EB%B3%80%EC%88%98%EC%86%8D%EC%84%B1&quot; aria-label=&quot;클래스 변수속성 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;클래스 변수(속성)&lt;/h2&gt;
-&lt;p&gt;클래스 정의에서 메서드 밖에 존재하는 변수를 클래스 변수(class variable)라 하는데, 이는 해당 &lt;strong&gt;클래스를 사용하는 모두에게 공용&lt;/strong&gt;으로 사용되는 변수이다. 클래스 변수는 클래스 내외부에서 &lt;strong&gt;“클래스명.변수명”&lt;/strong&gt; 으로 엑세스 할 수 있다.&lt;/p&gt;
-&lt;h2 id=&quot;인스턴스-변수속성&quot;&gt;&lt;a href=&quot;#%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EB%B3%80%EC%88%98%EC%86%8D%EC%84%B1&quot; aria-label=&quot;인스턴스 변수속성 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;인스턴스 변수(속성)&lt;/h2&gt;
-&lt;p&gt;하나의 클래스로부터 여러 객체 인스턴스를 생성해서 사용할 수 있다. 클래스 변수가 하나의 클래스에 하나만 존재하는 반면, 인스턴스 변수는 각 객체 인스턴스마다 별도로 존재한다.&lt;/p&gt;
-&lt;p&gt;클래스 정의에서 메서드 안에서 사용되면서 &lt;strong&gt;“self.변수명”&lt;/strong&gt;처럼 사용되는 변수를 인스턴스 변수(instance variable)라 하는데, 이는 각 객체별로 서로 다른 값을 갖는 변수이다.&lt;/p&gt;
-&lt;p&gt;인스턴스 변수는 클래스 내부에서는 self.width 과 같이 “self.” 을 사용하여 엑세스하고, 클래스 밖에서는 &lt;strong&gt;“객체변수.인스턴스변수”&lt;/strong&gt;와 같이 엑세스 한다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;만약 특정 변수명이나 메서드를 private으로 만들어야 한다면 두개의 밑줄(__)을 이름 앞에 붙이면 된다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;파이썬의-attribute-찾는-과정&quot;&gt;&lt;a href=&quot;#%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9D%98-attribute-%EC%B0%BE%EB%8A%94-%EA%B3%BC%EC%A0%95&quot; aria-label=&quot;파이썬의 attribute 찾는 과정 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;파이썬의 attribute 찾는 과정&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;파이썬에서 한 객체의 attribute를 읽을 경우에는 먼저 그 객체에서 attribute를 찾아보고,&lt;/li&gt;
-&lt;li&gt;없으면 그 객체의 소속 클래스에서 찾고,&lt;/li&gt;
-&lt;li&gt;다시 없으며 상위 Base 클래스에서 찾고,&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;그래도 없으면 에러를 발생시킨다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;클래스 변수를 엑세스할 때는 클래스명을 사용하는 것이 좋다.&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;메서드method&quot;&gt;&lt;a href=&quot;#%EB%A9%94%EC%84%9C%EB%93%9Cmethod&quot; aria-label=&quot;메서드method permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;메서드(Method)&lt;/h2&gt;
-&lt;p&gt;클래스 내에 생성된 함수들을 말한다.&lt;/p&gt;
-&lt;p&gt;Class Col:&lt;/p&gt;
-&lt;p&gt; def col_mtd(*kwargs):
-수행할 문장 …&lt;/p&gt;
-&lt;p&gt;a = Col()&lt;br&gt;
-a.setdata(4,2) 인스턴스를 실행하면&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://wikidocs.net/images/page/12392/setdata.png&quot; alt=&quot;메서드와 매개변수&quot;&gt;&lt;/p&gt;
-&lt;p&gt;인스턴스 메서드(instance method), 클래스 메서드(class method), 정적 메서드(static method)가 있다.&lt;/p&gt;
-&lt;p&gt;가장 흔히 쓰이는 인스턴스 메서드는 인스턴스 변수에 엑세스할 수 있도록 메서드의 첫번째 파라미터에 항상 객체 자신을 의미하는 “self”라는 파라미터를 갖는다.&lt;/p&gt;
-&lt;p&gt;인스턴스 메서드는 여러 파라미터를 가질 수 있지만, 첫번째 파라미터는 항상 self 를 갖는다.&lt;/p&gt;
-&lt;h3 id=&quot;initializer-초기자&quot;&gt;&lt;a href=&quot;#initializer-%EC%B4%88%EA%B8%B0%EC%9E%90&quot; aria-label=&quot;initializer 초기자 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Initializer (초기자)&lt;/h3&gt;
-&lt;p&gt;클래스로부터 새 객체를 생성할 때마다 실행되는 특별한 메서드로 &lt;strong&gt;init&lt;/strong&gt;() 이라는 메서드가 있는데, 이를 흔히 클래스 Initializer 라 부른다&lt;/p&gt;
-&lt;p&gt;Initializer는 클래스로부터 객체를 만들 때, 인스턴스 변수를 초기화하거나 객체의 초기상태를 만들기 위한 문장들을 실행하는 곳이다&lt;/p&gt;
-&lt;p&gt;입력 파라미터들을 각각 &lt;em&gt;self.param1&lt;/em&gt;와 &lt;em&gt;self.param2&lt;/em&gt;라는 인스턴스변수에 할당하여 객체 내에서 계속 사용할 수 있도록 준비한다.&lt;/p&gt;
-&lt;p&gt;self는 어떠한 실체를 가르키는 단어입니다.&lt;/p&gt;
-&lt;p&gt;ex) Car class에서 “self” 는 Car class의 객체인 hyundai나 bmw를 가르키는 것이다.&lt;/p&gt;
-&lt;p&gt;self는 class의 실체(instance)인 객체(object)를 가르킵니다&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;그리고 클래스를 실체화 할때 파이썬이 해당 객체(self)를 자동으로 &lt;strong&gt;init&lt;/strong&gt; 함수에 넘겨줍니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;init&lt;/strong&gt; 메소드는 클래스가 실체화 될때 자동으로 호출이 된다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;init&lt;/strong&gt; 메소드의 self 파라미터는 클래스가 실체화된 객체를 넘겨주어야 하며, 파이썬이 자동으로 넘겨준다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;init&lt;/strong&gt; 메소드의 self 파라미터는 항상 정의되어야 있어야 하며 맨 처음 파라미터로 정의 되어야 한다 (그래야 파이썬이 알아서 넘겨줄 수 있으므로)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;☞ Class Method - @classmethod&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;클래스에서 &lt;strong&gt;init&lt;/strong&gt; 말고도 다른 메소드를 원하는 대로 추가할 수 있습니다.&lt;/p&gt;
-&lt;p&gt;메서드 안에서 클래스 인스턴스 만들 수도 있습니다.
-Method와 attribute(속성)의 차이는 명사와 동사의 차이라고 생각하시면 됩니다.&lt;/p&gt;
-&lt;p&gt;속성은 해당 객체의 이름 등의 정해진 성질인 반면에 메소드는 move, eat 등 객체가 행할 수 있는 어떠한 action같은 느낌이라고 생각할 수 있습니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;☞ static Method - @staticmethod&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;정적메소드라 함은 클래스에서 직접 접근할 수 있는 메소드입니다.&lt;/p&gt;
-&lt;p&gt;staticmethod는 특별히 추가되는 인자가 없습니다 (self)
-부모클래스의 클래스속성 값을 가져오고 class instance 속성은 가져오지 않습니다.&lt;/p&gt;
-&lt;p&gt;그래서 보통 정적 메서드는 인스턴스 속성, 인스턴스 메서드가 필요 없을 때 사용합니다.&lt;/p&gt;
-&lt;p&gt;정적 메서드는 인스턴스의 상태를 변화시키지 않는 메서드를 만들 때 사용합니다.&lt;/p&gt;
-&lt;h2 id=&quot;상속이란&quot;&gt;&lt;a href=&quot;#%EC%83%81%EC%86%8D%EC%9D%B4%EB%9E%80&quot; aria-label=&quot;상속이란 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;상속이란?&lt;/h2&gt;
-&lt;p&gt;클래스에서 상속이란, 물려주는 클래스(Parent Class, Super class)의 내용(속성과 메소드)을 물려받는 클래스(Child class, sub class)가 가지게 되는 것입니다.&lt;/p&gt;
-&lt;h3 id=&quot;메서드-오버라이딩&quot;&gt;&lt;a href=&quot;#%EB%A9%94%EC%84%9C%EB%93%9C-%EC%98%A4%EB%B2%84%EB%9D%BC%EC%9D%B4%EB%94%A9&quot; aria-label=&quot;메서드 오버라이딩 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;메서드 오버라이딩&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;일반적인 메소드 오버라이딩
-메소드 오버라이딩은 부모 클래스의 메소드를 자식 클래스에서 재정의 하는 것입니다.&lt;/li&gt;
-&lt;li&gt;부모 메소드 호출하기
-부모클래스의 메소드도 수행하고, 자식클래스의 메소드의 내용도 함께 출력하기를 원할 수 있습니다.&lt;br&gt;
-그럴때는 super() 라는 키워드를 사용하면 자식클래스 내에서 코드에서도 부모클래스를 호출할 수 있습니다.&lt;/li&gt;
-&lt;li&gt;다중상속
-파이썬은 C++과 같이 다중상속이 가능합니다. 두 개 이상의 부모 클래스로부터 상속이 가능하다는 것.&lt;/li&gt;
-&lt;li&gt;. mro() 메소드&lt;br&gt;
-mro() - 클래스를 작성하면 상속 관계를 확인할 수 있는 메소드&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&amp;#x3C;객체&gt;.&amp;#x3C;메소드&gt; - 이를 dot notation 이라고 합니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;클래스-상속-사용하기&quot;&gt;&lt;a href=&quot;#%ED%81%B4%EB%9E%98%EC%8A%A4-%EC%83%81%EC%86%8D-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0&quot; aria-label=&quot;클래스 상속 사용하기 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;클래스 상속 사용하기&lt;/h3&gt;
-&lt;p&gt;여기서 기능을 물려주는 클래스를 기반 클래스(base class), 상속을 받아 새롭게 만드는 클래스를 파생 클래스(derived class)라고 합니다.&lt;/p&gt;
-&lt;p&gt;보통 기반 클래스는 부모 클래스(parent class), 슈퍼 클래스(superclass)라고 부르고, 파생 클래스는 자식 클래스(child class), 서브 클래스(subclass)라고도 부릅니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://dojang.io/pluginfile.php/13905/mod_page/content/2/036001.png&quot; alt=&quot;기반-파생 클래스&quot;&gt;&lt;/p&gt;
-&lt;p&gt;클래스 상속은 다음과 같이 클래스를 만들 때 ( )(괄호)를 붙이고 안에 기반 클래스 이름을 넣습니다.&lt;/p&gt;
-&lt;p&gt;class 기반클래스이름:  &lt;/p&gt;
-&lt;p&gt; 실행할 코드&lt;/p&gt;
-&lt;p&gt;class 파생클래스이름(기반클래스이름):&lt;/p&gt;
-&lt;p&gt; 실행할 코드&lt;/p&gt;
-&lt;p&gt;ex) 기반 클래스 - 파생클래스 예제&lt;/p&gt;
-&lt;p&gt;class Person:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;def greeting(self):
-    print(&amp;#39;안녕하세요.&amp;#39;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;class Student(Person):&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;def study(self):
-    print(&amp;#39;공부하기&amp;#39;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;james = Student()&lt;/li&gt;
-&lt;li&gt;james.greeting() # 안녕하세요.: 기반 클래스 Person의 메서드 호출&lt;/li&gt;
-&lt;li&gt;james.study() # 공부하기: 파생 클래스 Student에 추가한 study 메서드&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Student 클래스를 만들 때 class Student(Person):과 같이 ( )(괄호) 안에 기반 클래스인 Person 클래스를 넣었습니다. 이렇게 하면 Person 클래스의 기능을 물려받은 Student 클래스가 됩니다.&lt;/p&gt;
-&lt;p&gt;Student 클래스에는 greeting 메서드가 없지만 Person 클래스를 상속받았으므로 greeting 메서드를 호출할 수 있습니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://dojang.io/pluginfile.php/13905/mod_page/content/2/036003.png&quot; alt=&quot;클래스상속&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;상속-관계-확인하기&quot;&gt;&lt;a href=&quot;#%EC%83%81%EC%86%8D-%EA%B4%80%EA%B3%84-%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0&quot; aria-label=&quot;상속 관계 확인하기 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;상속 관계 확인하기&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;issubclass(파생클래스, 기반클래스)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;기반 클래스의 파생 클래스가 맞으면 True, 아니면 False를 반환합니다.&lt;/p&gt;
-&lt;h3 id=&quot;기반-클래스의-속성-사용하기&quot;&gt;&lt;a href=&quot;#%EA%B8%B0%EB%B0%98-%ED%81%B4%EB%9E%98%EC%8A%A4%EC%9D%98-%EC%86%8D%EC%84%B1-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0&quot; aria-label=&quot;기반 클래스의 속성 사용하기 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;기반 클래스의 속성 사용하기&lt;/h3&gt;
-&lt;p&gt;기반 클래스에 들어있는 인스턴스 속성을 사용해보겠습니다.&lt;/p&gt;
-&lt;p&gt;다음과 같이 Person 클래스에 hello 속성이 있고, Person 클래스를 상속받아 Student 클래스를 만듭니다. 그다음에 Student로 인스턴스를 만들고 hello 속성에 접근해봅니다.&lt;/p&gt;
-&lt;p&gt;class Person:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;def __init__(self):
-    print(&amp;#39;Person __init__&amp;#39;)
-    self.hello = &amp;#39;안녕하세요.&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;class Student(Person):&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;def __init__(self):
-    print(&amp;#39;Student __init__&amp;#39;)
-    self.school = &amp;#39;파이썬 코딩 도장&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;james = Student()&lt;/li&gt;
-&lt;li&gt;print(james.school)&lt;/li&gt;
-&lt;li&gt;print(james.hello) # 기반 클래스의 속성을 출력하려고 하면 에러가 발생함&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;super로-기반-클래스-초기화-하기&quot;&gt;&lt;a href=&quot;#super%EB%A1%9C-%EA%B8%B0%EB%B0%98-%ED%81%B4%EB%9E%98%EC%8A%A4-%EC%B4%88%EA%B8%B0%ED%99%94-%ED%95%98%EA%B8%B0&quot; aria-label=&quot;super로 기반 클래스 초기화 하기 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;super()로 기반 클래스 초기화 하기&lt;/h3&gt;
-&lt;p&gt;이때는 super()를 사용해서 기반 클래스의 &lt;strong&gt;init&lt;/strong&gt; 메서드를 호출해줍니다. 다음과 같이 super() 뒤에 .(점)을 붙여서 메서드를 호출하는 방식입니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;super().메서드()&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;class Person:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;def __init__(self):
-    print(&amp;#39;Person __init__&amp;#39;)
-    self.hello = &amp;#39;안녕하세요.&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;class Student(Person):&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;def __init__(self):
-    print(&amp;#39;Student __init__&amp;#39;)
-    super().__init__()
-    # super()로 기반 클래스의 __init__ 메서드 호출
-    self.school = &amp;#39;파이썬 코딩 도장&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;james = Student()&lt;/li&gt;
-&lt;li&gt;print(james.school)&lt;/li&gt;
-&lt;li&gt;print(james.hello)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;실행을 해보면 기반 클래스 Person의 속성인 hello가 잘 출력됩니다.&lt;/p&gt;
-&lt;p&gt;super().&lt;strong&gt;init&lt;/strong&gt;()와 같이 기반 클래스 Person의 &lt;strong&gt;init&lt;/strong&gt; 메서드를 호출해주면 기반 클래스가 초기화되어서 속성이 만들어집니다. 실행 결과를 보면 ‘Student &lt;strong&gt;init&lt;/strong&gt;‘과 ‘Person &lt;strong&gt;init&lt;/strong&gt;‘이 모두 출력되었습니다.&lt;/p&gt;
-&lt;p&gt;기반 클래스 Person의 속성 hello를 찾는 과정을 그림으로 나타내면 다음과 같은 모양이 됩니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://dojang.io/pluginfile.php/13907/mod_page/content/3/036004.png&quot; alt=&quot;기반클래스 속성찾기 로직&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;기반-클래스를-초기화하지-않아도-되는-경우&quot;&gt;&lt;a href=&quot;#%EA%B8%B0%EB%B0%98-%ED%81%B4%EB%9E%98%EC%8A%A4%EB%A5%BC-%EC%B4%88%EA%B8%B0%ED%99%94%ED%95%98%EC%A7%80-%EC%95%8A%EC%95%84%EB%8F%84-%EB%90%98%EB%8A%94-%EA%B2%BD%EC%9A%B0&quot; aria-label=&quot;기반 클래스를 초기화하지 않아도 되는 경우 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;기반 클래스를 초기화하지 않아도 되는 경우&lt;/h3&gt;
-&lt;p&gt;만약 파생 클래스에서 &lt;strong&gt;init&lt;/strong&gt; 메서드를 생략한다면 기반 클래스의 &lt;strong&gt;init&lt;/strong&gt;이 자동으로 호출되므로 super()는 사용하지 않아도 됩니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.8]]></title><description><![CDATA[예외처리]]></description><link>https://ctsictai.github.io//posts/python-part8/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part8/</guid><pubDate>Tue, 22 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;예외처리&quot;&gt;&lt;a href=&quot;#%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC&quot; aria-label=&quot;예외처리 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;예외처리&lt;/h1&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.8]]></title><description><![CDATA[예외처리]]></description><link>https://ctsictai.github.io//posts/python-part8/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part8/</guid><pubDate>Tue, 22 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;예외처리&quot;&gt;&lt;a href=&quot;#%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC&quot; aria-label=&quot;예외처리 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;예외처리&lt;/h1&gt;
 &lt;h1 id=&quot;1-try---exception&quot;&gt;&lt;a href=&quot;#1-try---exception&quot; aria-label=&quot;1 try   exception permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. TRY - EXCEPTION&lt;/h1&gt;
 &lt;p&gt;try에 실행할 코드를 넣고 except에 예외가 발생했을 때 처리하는 코드를 넣습니다.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -2045,7 +1971,166 @@ def greeting():&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;결과값&lt;br&gt;
 print(greeting())&lt;br&gt;
-Hello, 정우성&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.5]]></title><description><![CDATA[While/Function/Module&Package/Closure/Reduce]]></description><link>https://ctsictai.github.io//posts/python-part5/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part5/</guid><pubDate>Mon, 21 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;while문&quot;&gt;&lt;a href=&quot;#while%EB%AC%B8&quot; aria-label=&quot;while문 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;While문&lt;/h1&gt;
+Hello, 정우성&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.6]]></title><description><![CDATA[Class]]></description><link>https://ctsictai.github.io//posts/python-part6/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part6/</guid><pubDate>Tue, 22 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;클래스&quot;&gt;&lt;a href=&quot;#%ED%81%B4%EB%9E%98%EC%8A%A4&quot; aria-label=&quot;클래스 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;클래스&lt;/h1&gt;
+&lt;h2 id=&quot;개요&quot;&gt;&lt;a href=&quot;#%EA%B0%9C%EC%9A%94&quot; aria-label=&quot;개요 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;개요&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;클래스는 객체의 구조와 행동을 정의합니다.&lt;/li&gt;
+&lt;li&gt;객체의 클래스는 초기화를 통해 제어합니다.&lt;/li&gt;
+&lt;li&gt;클래스는 복잡한 문제를 다루기 쉽도록 만듭니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;객체와-인스턴스-차이&quot;&gt;&lt;a href=&quot;#%EA%B0%9D%EC%B2%B4%EC%99%80-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EC%B0%A8%EC%9D%B4&quot; aria-label=&quot;객체와 인스턴스 차이 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;객체와 인스턴스 차이&lt;/h3&gt;
+&lt;p&gt;클래스로 만든 객체를 인스턴스라고도 한다.&lt;br&gt;
+인스턴스라는 말은 특정 객체가 어떤 클래스의 객체인지를 관계 위주로 설명할 때 사용한다.&lt;/p&gt;
+&lt;h2 id=&quot;클래스-변수속성&quot;&gt;&lt;a href=&quot;#%ED%81%B4%EB%9E%98%EC%8A%A4-%EB%B3%80%EC%88%98%EC%86%8D%EC%84%B1&quot; aria-label=&quot;클래스 변수속성 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;클래스 변수(속성)&lt;/h2&gt;
+&lt;p&gt;클래스 정의에서 메서드 밖에 존재하는 변수를 클래스 변수(class variable)라 하는데, 이는 해당 &lt;strong&gt;클래스를 사용하는 모두에게 공용&lt;/strong&gt;으로 사용되는 변수이다. 클래스 변수는 클래스 내외부에서 &lt;strong&gt;“클래스명.변수명”&lt;/strong&gt; 으로 엑세스 할 수 있다.&lt;/p&gt;
+&lt;h2 id=&quot;인스턴스-변수속성&quot;&gt;&lt;a href=&quot;#%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EB%B3%80%EC%88%98%EC%86%8D%EC%84%B1&quot; aria-label=&quot;인스턴스 변수속성 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;인스턴스 변수(속성)&lt;/h2&gt;
+&lt;p&gt;하나의 클래스로부터 여러 객체 인스턴스를 생성해서 사용할 수 있다. 클래스 변수가 하나의 클래스에 하나만 존재하는 반면, 인스턴스 변수는 각 객체 인스턴스마다 별도로 존재한다.&lt;/p&gt;
+&lt;p&gt;클래스 정의에서 메서드 안에서 사용되면서 &lt;strong&gt;“self.변수명”&lt;/strong&gt;처럼 사용되는 변수를 인스턴스 변수(instance variable)라 하는데, 이는 각 객체별로 서로 다른 값을 갖는 변수이다.&lt;/p&gt;
+&lt;p&gt;인스턴스 변수는 클래스 내부에서는 self.width 과 같이 “self.” 을 사용하여 엑세스하고, 클래스 밖에서는 &lt;strong&gt;“객체변수.인스턴스변수”&lt;/strong&gt;와 같이 엑세스 한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;만약 특정 변수명이나 메서드를 private으로 만들어야 한다면 두개의 밑줄(__)을 이름 앞에 붙이면 된다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;파이썬의-attribute-찾는-과정&quot;&gt;&lt;a href=&quot;#%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9D%98-attribute-%EC%B0%BE%EB%8A%94-%EA%B3%BC%EC%A0%95&quot; aria-label=&quot;파이썬의 attribute 찾는 과정 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;파이썬의 attribute 찾는 과정&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;파이썬에서 한 객체의 attribute를 읽을 경우에는 먼저 그 객체에서 attribute를 찾아보고,&lt;/li&gt;
+&lt;li&gt;없으면 그 객체의 소속 클래스에서 찾고,&lt;/li&gt;
+&lt;li&gt;다시 없으며 상위 Base 클래스에서 찾고,&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;그래도 없으면 에러를 발생시킨다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;클래스 변수를 엑세스할 때는 클래스명을 사용하는 것이 좋다.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;메서드method&quot;&gt;&lt;a href=&quot;#%EB%A9%94%EC%84%9C%EB%93%9Cmethod&quot; aria-label=&quot;메서드method permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;메서드(Method)&lt;/h2&gt;
+&lt;p&gt;클래스 내에 생성된 함수들을 말한다.&lt;/p&gt;
+&lt;p&gt;Class Col:&lt;/p&gt;
+&lt;p&gt; def col_mtd(*kwargs):
+수행할 문장 …&lt;/p&gt;
+&lt;p&gt;a = Col()&lt;br&gt;
+a.setdata(4,2) 인스턴스를 실행하면&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://wikidocs.net/images/page/12392/setdata.png&quot; alt=&quot;메서드와 매개변수&quot;&gt;&lt;/p&gt;
+&lt;p&gt;인스턴스 메서드(instance method), 클래스 메서드(class method), 정적 메서드(static method)가 있다.&lt;/p&gt;
+&lt;p&gt;가장 흔히 쓰이는 인스턴스 메서드는 인스턴스 변수에 엑세스할 수 있도록 메서드의 첫번째 파라미터에 항상 객체 자신을 의미하는 “self”라는 파라미터를 갖는다.&lt;/p&gt;
+&lt;p&gt;인스턴스 메서드는 여러 파라미터를 가질 수 있지만, 첫번째 파라미터는 항상 self 를 갖는다.&lt;/p&gt;
+&lt;h3 id=&quot;initializer-초기자&quot;&gt;&lt;a href=&quot;#initializer-%EC%B4%88%EA%B8%B0%EC%9E%90&quot; aria-label=&quot;initializer 초기자 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Initializer (초기자)&lt;/h3&gt;
+&lt;p&gt;클래스로부터 새 객체를 생성할 때마다 실행되는 특별한 메서드로 &lt;strong&gt;init&lt;/strong&gt;() 이라는 메서드가 있는데, 이를 흔히 클래스 Initializer 라 부른다&lt;/p&gt;
+&lt;p&gt;Initializer는 클래스로부터 객체를 만들 때, 인스턴스 변수를 초기화하거나 객체의 초기상태를 만들기 위한 문장들을 실행하는 곳이다&lt;/p&gt;
+&lt;p&gt;입력 파라미터들을 각각 &lt;em&gt;self.param1&lt;/em&gt;와 &lt;em&gt;self.param2&lt;/em&gt;라는 인스턴스변수에 할당하여 객체 내에서 계속 사용할 수 있도록 준비한다.&lt;/p&gt;
+&lt;p&gt;self는 어떠한 실체를 가르키는 단어입니다.&lt;/p&gt;
+&lt;p&gt;ex) Car class에서 “self” 는 Car class의 객체인 hyundai나 bmw를 가르키는 것이다.&lt;/p&gt;
+&lt;p&gt;self는 class의 실체(instance)인 객체(object)를 가르킵니다&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;그리고 클래스를 실체화 할때 파이썬이 해당 객체(self)를 자동으로 &lt;strong&gt;init&lt;/strong&gt; 함수에 넘겨줍니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;init&lt;/strong&gt; 메소드는 클래스가 실체화 될때 자동으로 호출이 된다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;init&lt;/strong&gt; 메소드의 self 파라미터는 클래스가 실체화된 객체를 넘겨주어야 하며, 파이썬이 자동으로 넘겨준다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;init&lt;/strong&gt; 메소드의 self 파라미터는 항상 정의되어야 있어야 하며 맨 처음 파라미터로 정의 되어야 한다 (그래야 파이썬이 알아서 넘겨줄 수 있으므로)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;☞ Class Method - @classmethod&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;클래스에서 &lt;strong&gt;init&lt;/strong&gt; 말고도 다른 메소드를 원하는 대로 추가할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;메서드 안에서 클래스 인스턴스 만들 수도 있습니다.
+Method와 attribute(속성)의 차이는 명사와 동사의 차이라고 생각하시면 됩니다.&lt;/p&gt;
+&lt;p&gt;속성은 해당 객체의 이름 등의 정해진 성질인 반면에 메소드는 move, eat 등 객체가 행할 수 있는 어떠한 action같은 느낌이라고 생각할 수 있습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;☞ static Method - @staticmethod&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;정적메소드라 함은 클래스에서 직접 접근할 수 있는 메소드입니다.&lt;/p&gt;
+&lt;p&gt;staticmethod는 특별히 추가되는 인자가 없습니다 (self)
+부모클래스의 클래스속성 값을 가져오고 class instance 속성은 가져오지 않습니다.&lt;/p&gt;
+&lt;p&gt;그래서 보통 정적 메서드는 인스턴스 속성, 인스턴스 메서드가 필요 없을 때 사용합니다.&lt;/p&gt;
+&lt;p&gt;정적 메서드는 인스턴스의 상태를 변화시키지 않는 메서드를 만들 때 사용합니다.&lt;/p&gt;
+&lt;h2 id=&quot;상속이란&quot;&gt;&lt;a href=&quot;#%EC%83%81%EC%86%8D%EC%9D%B4%EB%9E%80&quot; aria-label=&quot;상속이란 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;상속이란?&lt;/h2&gt;
+&lt;p&gt;클래스에서 상속이란, 물려주는 클래스(Parent Class, Super class)의 내용(속성과 메소드)을 물려받는 클래스(Child class, sub class)가 가지게 되는 것입니다.&lt;/p&gt;
+&lt;h3 id=&quot;메서드-오버라이딩&quot;&gt;&lt;a href=&quot;#%EB%A9%94%EC%84%9C%EB%93%9C-%EC%98%A4%EB%B2%84%EB%9D%BC%EC%9D%B4%EB%94%A9&quot; aria-label=&quot;메서드 오버라이딩 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;메서드 오버라이딩&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;일반적인 메소드 오버라이딩
+메소드 오버라이딩은 부모 클래스의 메소드를 자식 클래스에서 재정의 하는 것입니다.&lt;/li&gt;
+&lt;li&gt;부모 메소드 호출하기
+부모클래스의 메소드도 수행하고, 자식클래스의 메소드의 내용도 함께 출력하기를 원할 수 있습니다.&lt;br&gt;
+그럴때는 super() 라는 키워드를 사용하면 자식클래스 내에서 코드에서도 부모클래스를 호출할 수 있습니다.&lt;/li&gt;
+&lt;li&gt;다중상속
+파이썬은 C++과 같이 다중상속이 가능합니다. 두 개 이상의 부모 클래스로부터 상속이 가능하다는 것.&lt;/li&gt;
+&lt;li&gt;. mro() 메소드&lt;br&gt;
+mro() - 클래스를 작성하면 상속 관계를 확인할 수 있는 메소드&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;#x3C;객체&gt;.&amp;#x3C;메소드&gt; - 이를 dot notation 이라고 합니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;클래스-상속-사용하기&quot;&gt;&lt;a href=&quot;#%ED%81%B4%EB%9E%98%EC%8A%A4-%EC%83%81%EC%86%8D-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0&quot; aria-label=&quot;클래스 상속 사용하기 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;클래스 상속 사용하기&lt;/h3&gt;
+&lt;p&gt;여기서 기능을 물려주는 클래스를 기반 클래스(base class), 상속을 받아 새롭게 만드는 클래스를 파생 클래스(derived class)라고 합니다.&lt;/p&gt;
+&lt;p&gt;보통 기반 클래스는 부모 클래스(parent class), 슈퍼 클래스(superclass)라고 부르고, 파생 클래스는 자식 클래스(child class), 서브 클래스(subclass)라고도 부릅니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://dojang.io/pluginfile.php/13905/mod_page/content/2/036001.png&quot; alt=&quot;기반-파생 클래스&quot;&gt;&lt;/p&gt;
+&lt;p&gt;클래스 상속은 다음과 같이 클래스를 만들 때 ( )(괄호)를 붙이고 안에 기반 클래스 이름을 넣습니다.&lt;/p&gt;
+&lt;p&gt;class 기반클래스이름:  &lt;/p&gt;
+&lt;p&gt; 실행할 코드&lt;/p&gt;
+&lt;p&gt;class 파생클래스이름(기반클래스이름):&lt;/p&gt;
+&lt;p&gt; 실행할 코드&lt;/p&gt;
+&lt;p&gt;ex) 기반 클래스 - 파생클래스 예제&lt;/p&gt;
+&lt;p&gt;class Person:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;def greeting(self):
+    print(&amp;#39;안녕하세요.&amp;#39;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;class Student(Person):&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;def study(self):
+    print(&amp;#39;공부하기&amp;#39;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;james = Student()&lt;/li&gt;
+&lt;li&gt;james.greeting() # 안녕하세요.: 기반 클래스 Person의 메서드 호출&lt;/li&gt;
+&lt;li&gt;james.study() # 공부하기: 파생 클래스 Student에 추가한 study 메서드&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Student 클래스를 만들 때 class Student(Person):과 같이 ( )(괄호) 안에 기반 클래스인 Person 클래스를 넣었습니다. 이렇게 하면 Person 클래스의 기능을 물려받은 Student 클래스가 됩니다.&lt;/p&gt;
+&lt;p&gt;Student 클래스에는 greeting 메서드가 없지만 Person 클래스를 상속받았으므로 greeting 메서드를 호출할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://dojang.io/pluginfile.php/13905/mod_page/content/2/036003.png&quot; alt=&quot;클래스상속&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;상속-관계-확인하기&quot;&gt;&lt;a href=&quot;#%EC%83%81%EC%86%8D-%EA%B4%80%EA%B3%84-%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0&quot; aria-label=&quot;상속 관계 확인하기 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;상속 관계 확인하기&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;issubclass(파생클래스, 기반클래스)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;기반 클래스의 파생 클래스가 맞으면 True, 아니면 False를 반환합니다.&lt;/p&gt;
+&lt;h3 id=&quot;기반-클래스의-속성-사용하기&quot;&gt;&lt;a href=&quot;#%EA%B8%B0%EB%B0%98-%ED%81%B4%EB%9E%98%EC%8A%A4%EC%9D%98-%EC%86%8D%EC%84%B1-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0&quot; aria-label=&quot;기반 클래스의 속성 사용하기 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;기반 클래스의 속성 사용하기&lt;/h3&gt;
+&lt;p&gt;기반 클래스에 들어있는 인스턴스 속성을 사용해보겠습니다.&lt;/p&gt;
+&lt;p&gt;다음과 같이 Person 클래스에 hello 속성이 있고, Person 클래스를 상속받아 Student 클래스를 만듭니다. 그다음에 Student로 인스턴스를 만들고 hello 속성에 접근해봅니다.&lt;/p&gt;
+&lt;p&gt;class Person:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;def __init__(self):
+    print(&amp;#39;Person __init__&amp;#39;)
+    self.hello = &amp;#39;안녕하세요.&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;class Student(Person):&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;def __init__(self):
+    print(&amp;#39;Student __init__&amp;#39;)
+    self.school = &amp;#39;파이썬 코딩 도장&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;james = Student()&lt;/li&gt;
+&lt;li&gt;print(james.school)&lt;/li&gt;
+&lt;li&gt;print(james.hello) # 기반 클래스의 속성을 출력하려고 하면 에러가 발생함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;super로-기반-클래스-초기화-하기&quot;&gt;&lt;a href=&quot;#super%EB%A1%9C-%EA%B8%B0%EB%B0%98-%ED%81%B4%EB%9E%98%EC%8A%A4-%EC%B4%88%EA%B8%B0%ED%99%94-%ED%95%98%EA%B8%B0&quot; aria-label=&quot;super로 기반 클래스 초기화 하기 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;super()로 기반 클래스 초기화 하기&lt;/h3&gt;
+&lt;p&gt;이때는 super()를 사용해서 기반 클래스의 &lt;strong&gt;init&lt;/strong&gt; 메서드를 호출해줍니다. 다음과 같이 super() 뒤에 .(점)을 붙여서 메서드를 호출하는 방식입니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;super().메서드()&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;class Person:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;def __init__(self):
+    print(&amp;#39;Person __init__&amp;#39;)
+    self.hello = &amp;#39;안녕하세요.&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;class Student(Person):&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;def __init__(self):
+    print(&amp;#39;Student __init__&amp;#39;)
+    super().__init__()
+    # super()로 기반 클래스의 __init__ 메서드 호출
+    self.school = &amp;#39;파이썬 코딩 도장&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;james = Student()&lt;/li&gt;
+&lt;li&gt;print(james.school)&lt;/li&gt;
+&lt;li&gt;print(james.hello)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;실행을 해보면 기반 클래스 Person의 속성인 hello가 잘 출력됩니다.&lt;/p&gt;
+&lt;p&gt;super().&lt;strong&gt;init&lt;/strong&gt;()와 같이 기반 클래스 Person의 &lt;strong&gt;init&lt;/strong&gt; 메서드를 호출해주면 기반 클래스가 초기화되어서 속성이 만들어집니다. 실행 결과를 보면 ‘Student &lt;strong&gt;init&lt;/strong&gt;‘과 ‘Person &lt;strong&gt;init&lt;/strong&gt;‘이 모두 출력되었습니다.&lt;/p&gt;
+&lt;p&gt;기반 클래스 Person의 속성 hello를 찾는 과정을 그림으로 나타내면 다음과 같은 모양이 됩니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://dojang.io/pluginfile.php/13907/mod_page/content/3/036004.png&quot; alt=&quot;기반클래스 속성찾기 로직&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;기반-클래스를-초기화하지-않아도-되는-경우&quot;&gt;&lt;a href=&quot;#%EA%B8%B0%EB%B0%98-%ED%81%B4%EB%9E%98%EC%8A%A4%EB%A5%BC-%EC%B4%88%EA%B8%B0%ED%99%94%ED%95%98%EC%A7%80-%EC%95%8A%EC%95%84%EB%8F%84-%EB%90%98%EB%8A%94-%EA%B2%BD%EC%9A%B0&quot; aria-label=&quot;기반 클래스를 초기화하지 않아도 되는 경우 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;기반 클래스를 초기화하지 않아도 되는 경우&lt;/h3&gt;
+&lt;p&gt;만약 파생 클래스에서 &lt;strong&gt;init&lt;/strong&gt; 메서드를 생략한다면 기반 클래스의 &lt;strong&gt;init&lt;/strong&gt;이 자동으로 호출되므로 super()는 사용하지 않아도 됩니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.5]]></title><description><![CDATA[While/Function/Module&Package/Closure/Reduce]]></description><link>https://ctsictai.github.io//posts/python-part5/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part5/</guid><pubDate>Mon, 21 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;while문&quot;&gt;&lt;a href=&quot;#while%EB%AC%B8&quot; aria-label=&quot;while문 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;While문&lt;/h1&gt;
 &lt;p&gt;while 구문은 특정 조건문이 True 일동안 코드블록을 반복 실행 합니다.&lt;/p&gt;
 &lt;h2 id=&quot;while-else&quot;&gt;&lt;a href=&quot;#while-else&quot; aria-label=&quot;while else permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;While Else&lt;/h2&gt;
 &lt;p&gt;파이썬의 while문은 else 문이 추가 될 수 있습니다.&lt;br&gt;
