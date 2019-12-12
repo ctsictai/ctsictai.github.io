@@ -1,4 +1,176 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[CTS junior Web developer]]></title><description><![CDATA[Web developer Learning.]]></description><link>https://ctsictai.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 06 Dec 2019 14:12:29 GMT</lastBuildDate><item><title><![CDATA[Binary Search algorithm by python]]></title><description><![CDATA[Search Methodology]]></description><link>https://ctsictai.github.io//posts/CodeAlgorithm/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/CodeAlgorithm/</guid><pubDate>Fri, 06 Dec 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;binary-search&quot;&gt;&lt;a href=&quot;#binary-search&quot; aria-label=&quot;binary search permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Binary Search&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[CTS junior Web developer]]></title><description><![CDATA[Web developer Learning.]]></description><link>https://ctsictai.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 12 Dec 2019 06:36:09 GMT</lastBuildDate><item><title><![CDATA[Django View part3]]></title><description><![CDATA[Views Try-Except & django give exceptions]]></description><link>https://ctsictai.github.io//posts/django-part10/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/django-part10/</guid><pubDate>Wed, 11 Dec 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;exception-handling&quot;&gt;&lt;a href=&quot;#exception-handling&quot; aria-label=&quot;exception handling permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Exception Handling&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Exception : 정상적인 프로그램 흐름을 중단시키는 에러를 말합니다.&lt;/li&gt;
+&lt;li&gt;Exception Handling : 정상적인 프로그램 흐름을 중단하고 주변의 컨텍스트 또는 코드 블록에서 계속하기위한 메커니즘&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;try--except---exception-handling-method&quot;&gt;&lt;a href=&quot;#try--except---exception-handling-method&quot; aria-label=&quot;try  except   exception handling method permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Try / Except - Exception Handling Method&lt;/h1&gt;
+&lt;p&gt;try 블록 수행 중 오류가 발생하면 except 블록이 수행된다. 하지만 try 블록에서 오류가 발생하지 않는다면 except 블록은 수행되지 않는다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;try-except 코드 예시&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;try:
+    ...
+except [발생 오류[as 오류 메시지 변수]]:
+    ...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;try finally
+finally절은 try문 수행 도중 예외 발생 여부에 상관없이 항상 수행된다. 보통 finally절은 사용한 리소스를 close해야 할 때에 많이 사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;f = int(s)
+try:
+    # 무언가를 수행한다.
+finally:
+    f.close()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;f변수는 int()함수인데 try문에 어떠한 로직을 실행하고 exception에 관계없이 finally 절에서 f.close()로 로직을 마무리 할 수 있다.&lt;/p&gt;
+&lt;h2 id=&quot;여러개의-오류-처리시&quot;&gt;&lt;a href=&quot;#%EC%97%AC%EB%9F%AC%EA%B0%9C%EC%9D%98-%EC%98%A4%EB%A5%98-%EC%B2%98%EB%A6%AC%EC%8B%9C&quot; aria-label=&quot;여러개의 오류 처리시 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;여러개의 오류 처리시&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;try:
+    ...
+except 발생 오류1:
+   ...
+except 발생 오류2:
+   ...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;실제 코드 예시&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;class SigninView(View):
+    def post(self, request):
+        data = json.loads(request.body)
+
+        try:
+            validate_email(data[&amp;quot;email&amp;quot;])
+            user_data      = User.objects.get(email=data[&amp;quot;email&amp;quot;])
+            user_password  = user_data.password.encode(&amp;#39;utf-8&amp;#39;)
+            byted_password = data[&amp;#39;password&amp;#39;].encode(&amp;#39;utf-8&amp;#39;)
+
+            if bcrypt.checkpw(byted_password, user_password):
+                payload = {
+                        &amp;quot;user_id&amp;quot;       : user_data.id,
+                        &amp;quot;user_is_maker&amp;quot; : user_data.is_maker,
+                        &amp;quot;exp&amp;quot;           : WEDIZ_SECRET[&amp;#39;exp_time&amp;#39;],
+                        }
+                jwt_encode = jwt.encode(payload, WEDIZ_SECRET[&amp;#39;secret&amp;#39;], algorithm=&amp;quot;HS256&amp;quot;)
+                token = jwt_encode.decode(&amp;quot;utf-8&amp;quot;)
+                return JsonResponse({&amp;quot;VALID_TOKEN&amp;quot; : token}, status=200)
+
+            else:
+                return JsonResponse({&amp;quot;MESSAGE&amp;quot; : &amp;quot;INVALID_PASSWORD&amp;quot;}, status=401)
+        except User.DoesNotExist:
+            return JsonResponse({&amp;quot;MESSAGE&amp;quot; : &amp;quot;INVALID_USER&amp;quot;}, status=401)
+        except KeyError:
+            return JsonResponse({&amp;quot;MESSAGE&amp;quot; : &amp;quot;INVALID_INPUT&amp;quot;}, status=400)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;try - except에서 if문으로 한번 더 binary decision 로직을 구현하였다.&lt;/li&gt;
+&lt;li&gt;signin 로직이다. 이메일과 패스워드를 비교하여 일치하는 지 여부를 판별한다.&lt;/li&gt;
+&lt;li&gt;except에서는 유저가 존재하지 않는 경우&lt;/li&gt;
+&lt;li&gt;jsonresponse에서 key가 잘못된 경우에 예외처리로 처리하였다.&lt;/li&gt;
+&lt;li&gt;예외가 2개 이상인 경우 except를 예외 처리 수 만큼 붙여주면 된다.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;jsonresponse는 프론트에 http 통신으로 보내는 응답값이므로 json형식에 맞는 body 설정과 status설정을 해줘야 한다. status는 http status code를 뜻한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;except는 예외처리이므로 보통 http status 400번대 에러가 status로 가장 많이 발생한다.&lt;/li&gt;
+&lt;li&gt;서비스 상에서는 발생할 수 있는 모든 예외처리를 하는 것이 맞다.
+그래서 500번대 에러도 예외처리로 처리하면 좋다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;예외-발생-시키기&quot;&gt;&lt;a href=&quot;#%EC%98%88%EC%99%B8-%EB%B0%9C%EC%83%9D-%EC%8B%9C%ED%82%A4%EA%B8%B0&quot; aria-label=&quot;예외 발생 시키기 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;예외 발생 시키기&lt;/h1&gt;
+&lt;p&gt;프로그래밍을 하다 보면 종종 오류를 일부러 발생시켜야 할 경우도 생긴다. 파이썬은 raise 명령어를 사용해 오류를 강제로 발생시킬 수 있다.&lt;/p&gt;
+&lt;p&gt;예를 들어 부모 밑에 자식을 무조건 생성하고 싶을 때에 예외를 일부러 발생시켜 자식을 같이 생성하라고 강제할 수 있다. 그 때 개략적으로 코드를 아래와 같이 구성한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;class Parent:
+    def child(self):
+        raise NotImplementedError&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;그러면 실제로 자식없는 부모를 생성하면 어떻게 될까?&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;class Jang(Parent):
+    pass
+
+jand = Jang()
+jang.child()
+
+Traceback (most recent call last):
+  File &amp;quot;...&amp;quot;, line 33, in &amp;lt;module&amp;gt;
+    jang.child()
+  File &amp;quot;...&amp;quot;, line 26, in fly
+    raise NotImplementedError
+NotImplementedError&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Parent 클래스에 속해있는 child 함수를 구현하지 않으면 raise를 통해 에러가 도출 되도록 설계되어 있기 때문이다. 에러를 발생시키지 않으려면 child 함수를 구현해야한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;메소드 오버라이딩을 해야한다(상속받는 함수 재구현)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;class Jang(Parent):
+    def child(self):
+        print(&amp;quot;자식입니다&amp;quot;)
+
+jand = Jang()
+jang.child()
+
+자식입니다&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;예외이름을-잘-모르는-경우&quot;&gt;&lt;a href=&quot;#%EC%98%88%EC%99%B8%EC%9D%B4%EB%A6%84%EC%9D%84-%EC%9E%98-%EB%AA%A8%EB%A5%B4%EB%8A%94-%EA%B2%BD%EC%9A%B0&quot; aria-label=&quot;예외이름을 잘 모르는 경우 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;예외이름을 잘 모르는 경우&lt;/h1&gt;
+&lt;p&gt;장고나 파이썬에서 제공하는 기본적인 예외들이 있다. 이 경우에는 이 예외를 import해서 가져다가 쓰면되지만 이 경우에 해당되지 않거나 초보자는 잘 모를 때가 있다. 그럴 때 쓸 수 있는 방법이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;try:
+    test = []
+    print(test[0])
+
+except Exception as ex:
+    print(&amp;#39;에러가 발생 했습니다&amp;#39;, ex)
+
+    에러가 발생 했습니다 list index out of range&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;최후의 수단으로 어쩔수 없을 때 쓰는 것이 좋다&lt;/li&gt;
+&lt;li&gt;왠만한 예외는 장고나 파이썬에서 제공하고 있으므로 import해서 쓰자&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;장고에서-제공하는-예외&quot;&gt;&lt;a href=&quot;#%EC%9E%A5%EA%B3%A0%EC%97%90%EC%84%9C-%EC%A0%9C%EA%B3%B5%ED%95%98%EB%8A%94-%EC%98%88%EC%99%B8&quot; aria-label=&quot;장고에서 제공하는 예외 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;장고에서 제공하는 예외&lt;/h1&gt;
+&lt;p&gt;장고의 예외는 django.core.exceptions에서 import 해야한다.&lt;br&gt;
+많은 종류가 있지만 제가 생각하기에 사용빈도가 높거나 중요한 것 위주로 리뷰해본다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;from django.core.exceptions import ObjectDoesNotExist, .....&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;1-objectdoesnotexist&quot;&gt;&lt;a href=&quot;#1-objectdoesnotexist&quot; aria-label=&quot;1 objectdoesnotexist permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. ObjectDoesNotExist&lt;/h2&gt;
+&lt;p&gt;DoesNotExist 예외 클래스의 기본 클래스이다. ObjectDoesNotExist는 전체 모델에 적용할 수 있는 일반적인 예외처리이다.&lt;/p&gt;
+&lt;h2 id=&quot;2-doesnotexist&quot;&gt;&lt;a href=&quot;#2-doesnotexist&quot; aria-label=&quot;2 doesnotexist permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. DoesNotExist&lt;/h2&gt;
+&lt;p&gt;ObjectDoesNotExist 자식 클래스로써 특정 클래스에 속성으로 사용되어 진다.&lt;br&gt;
+&lt;strong&gt;EX)&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;except User.DoesNotExist:
+    return JsonResponse({&amp;quot;MESSAGE&amp;quot; : &amp;quot;YOU_ARE_NOT_USER&amp;quot;}, status=401)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;3-multipleobjectsreturned&quot;&gt;&lt;a href=&quot;#3-multipleobjectsreturned&quot; aria-label=&quot;3 multipleobjectsreturned permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. MultipleObjectsReturned&lt;/h2&gt;
+&lt;p&gt;예외 명 그대로 한 개의 쿼리셋 오브젝트가 리턴되야 하는데 다수의 쿼리셋 오브젝트가 리턴될 때 발생되는 예외처리이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;주로 쿼리셋 &lt;strong&gt;get()&lt;/strong&gt; 함수를 사용할 때 발생하는 예외로서 get은 한 개의 쿼리셋 오브젝트를 리턴해야 하는데 2개 이상 리턴되는 경우 예외를 발생시킨다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;4-improperlyconfigured&quot;&gt;&lt;a href=&quot;#4-improperlyconfigured&quot; aria-label=&quot;4 improperlyconfigured permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;4. ImproperlyConfigured&lt;/h2&gt;
+&lt;p&gt;장고가 어떻게 든 잘못 구성된 경우 예외가 발생 settings.py 부정확하거나 파싱 할 수 있습니다&lt;/p&gt;
+&lt;h2 id=&quot;5-validationerror&quot;&gt;&lt;a href=&quot;#5-validationerror&quot; aria-label=&quot;5 validationerror permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;5. ValidationError&lt;/h2&gt;
+&lt;p&gt;ValidationError데이터 형식 모델 필드 유효성 검사를 실패 할 경우 예외가 발생합니다. 자세한 사항은 양식 및 필드 유효성 검증 , 모델 필드 유효성 검증을 참고해야 한다. 다음에 다뤄보도록 하겠다&lt;/p&gt;
+&lt;h2 id=&quot;6-transactionmanagementerror&quot;&gt;&lt;a href=&quot;#6-transactionmanagementerror&quot; aria-label=&quot;6 transactionmanagementerror permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;6. TransactionManagementError&lt;/h2&gt;
+&lt;p&gt;데이터 베이스 트랜잭션에 대한 모든 문제에 대해 발생하는 예외로서
+&lt;code class=&quot;language-text&quot;&gt;django.db.transaction&lt;/code&gt; 에서 import해야한다.&lt;/p&gt;
+&lt;h2 id=&quot;7-데이터베이스예외-중-integrityerror&quot;&gt;&lt;a href=&quot;#7-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%EC%98%88%EC%99%B8-%EC%A4%91-integrityerror&quot; aria-label=&quot;7 데이터베이스예외 중 integrityerror permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;7. 데이터베이스예외 중 IntegrityError&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;django.db&lt;/code&gt; 에서 import한다.&lt;br&gt;
+외래 키 검사 실패, 중복 키 등과 같이 데이터베이스의 관계 무결성에 영향을주는 경우 예외가 발생합니다.&lt;/p&gt;
+&lt;h2 id=&quot;7-2-데이터베이스예외-중-programmingerror&quot;&gt;&lt;a href=&quot;#7-2-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%EC%98%88%EC%99%B8-%EC%A4%91-programmingerror&quot; aria-label=&quot;7 2 데이터베이스예외 중 programmingerror permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;7-2. 데이터베이스예외 중 ProgrammingError&lt;/h2&gt;
+&lt;p&gt;이 예외는 SQL에 구문 오류가 있거나 테이블을 찾을 수 없는 경우와 같이 프로그래밍 오류에서 발생합니다.&lt;/p&gt;
+&lt;h1 id=&quot;python에서-제공하는-예외들&quot;&gt;&lt;a href=&quot;#python%EC%97%90%EC%84%9C-%EC%A0%9C%EA%B3%B5%ED%95%98%EB%8A%94-%EC%98%88%EC%99%B8%EB%93%A4&quot; aria-label=&quot;python에서 제공하는 예외들 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Python에서 제공하는 예외들&lt;/h1&gt;
+&lt;h2 id=&quot;1-exception&quot;&gt;&lt;a href=&quot;#1-exception&quot; aria-label=&quot;1 exception permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Exception&lt;/h2&gt;
+&lt;p&gt;가장 기본이 되는 예외처리 클래스&lt;br&gt;
+모든 시스템 종료 외의 내장 예외는 이 클래스 파생됩니다. 모든 사용자 정의 예외도 이 클래스에서 파생되어야 한다.&lt;/p&gt;
+&lt;h2 id=&quot;2-attributeerror&quot;&gt;&lt;a href=&quot;#2-attributeerror&quot; aria-label=&quot;2 attributeerror permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. AttributeError&lt;/h2&gt;
+&lt;p&gt;어트리뷰트 참조나 대입이 실패할 때 발생(속성 참조 실패)&lt;br&gt;
+보통 view 로직에서 발생한다.&lt;/p&gt;
+&lt;h2 id=&quot;3-importerror&quot;&gt;&lt;a href=&quot;#3-importerror&quot; aria-label=&quot;3 importerror permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. ImportError&lt;/h2&gt;
+&lt;p&gt;import 문이 모듈을 로드하는 데 문제가 있을 때 발생합니다.&lt;br&gt;
+또한 from … import 에서 임포트 하려는 이름을 찾을 수 없을 때도 발생합니다.&lt;/p&gt;
+&lt;h2 id=&quot;4-keyerror&quot;&gt;&lt;a href=&quot;#4-keyerror&quot; aria-label=&quot;4 keyerror permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;4. KeyError&lt;/h2&gt;
+&lt;p&gt;매핑 (딕셔너리) 키가 기존 키 집합에서 발견되지 않을 때 발생한다.&lt;/p&gt;
+&lt;h2 id=&quot;5-syntaxerror&quot;&gt;&lt;a href=&quot;#5-syntaxerror&quot; aria-label=&quot;5 syntaxerror permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;5. SyntaxError&lt;/h2&gt;
+&lt;p&gt;parser가 문법 오류를 만날 때 발생합니다. import 문에서, 내장 함수 exec() 나 eval() 호출에서, 초기 스크립트나 (대화형으로) 표준 입력을 읽을 때 발생할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;세부 사항을 쉽게 확인할 수 있도록, 이 클래스의 인스턴스에는 filename, lineno, offset 및 text 어트리뷰트가 있습니다. 예외 인스턴스의 str()은 메시지만 돌려줍니다.&lt;/p&gt;
+&lt;h2 id=&quot;6-typeerror&quot;&gt;&lt;a href=&quot;#6-typeerror&quot; aria-label=&quot;6 typeerror permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;6. TypeError&lt;/h2&gt;
+&lt;p&gt;연산이나 함수가 부적절한 형의 객체에 적용될 때 발생합니다. 연관된 값은 형 불일치에 대한 세부 정보를 제공하는 문자열입니다.&lt;/p&gt;
+&lt;p&gt;이 예외는 객체에 시도된 연산이 지원되지 않으며 그럴 의도도 없음을 나타내기 위해 사용자 코드가 발생시킬 수 있습니다. 만약 객체가 주어진 연산을 지원할 의사는 있지만, 아직 구현을 제공하지 않는 경우라면, NotImplementedError 를 발생시키는 것이 적합합니다.&lt;/p&gt;
+&lt;p&gt;잘못된 type의 인자를 전달하면 (가령 int 를 기대하는데 list를 전달하기), TypeError 를 일으켜야 합니다. 하지만 잘못된 값을 갖는 인자를 전달하면 (가령 범위를 넘어서는 숫자) ValueError 를 일으켜야 합니다.&lt;/p&gt;
+&lt;h2 id=&quot;7-valueerror&quot;&gt;&lt;a href=&quot;#7-valueerror&quot; aria-label=&quot;7 valueerror permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;7. ValueError&lt;/h2&gt;
+&lt;p&gt;연산이나 함수가 올바른 형이지만 부적절한 값을 가진 인자를 받았고, 상황이 IndexError 처럼 더 구체적인 예외로 설명되지 않는 경우 발생합니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Binary Search algorithm by python]]></title><description><![CDATA[Search Methodology]]></description><link>https://ctsictai.github.io//posts/CodeAlgorithm/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/CodeAlgorithm/</guid><pubDate>Fri, 06 Dec 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;binary-search&quot;&gt;&lt;a href=&quot;#binary-search&quot; aria-label=&quot;binary search permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Binary Search&lt;/h1&gt;
 &lt;p&gt;target을 찾는 방법 중 하나이다.&lt;/p&gt;
 &lt;p&gt;가장 쉬운 방법은 list를 처음부터 끝까지 target 값을 찾는 것이다.&lt;/p&gt;
 &lt;p&gt;근데 이 방법은 딱 봐도 너무 무식하고 공수가 많이 든다는 것을 알 수 있다.&lt;/p&gt;
@@ -41,6 +213,84 @@
 &lt;li&gt;리턴을 search로 해서 계속 재귀하는 함수이고 재귀함수에는 종료조건이 있어야 하는데 그게 바로 첫행에 있는 low&gt;high이다.&lt;/li&gt;
 &lt;li&gt;low &gt; high는 반으로 나누고 나누다가 결국 나눌 리스트 값이 존재하지 않는 경우이다. 이런경우 찾는 값이 없는 것이므로 False를 리턴하였다.&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[SqlAlchemy]]></title><description><![CDATA[Sqlalchemy]]></description><link>https://ctsictai.github.io//posts/sqlalchemy/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/sqlalchemy/</guid><pubDate>Thu, 05 Dec 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;sqlalchemy의-철학&quot;&gt;&lt;a href=&quot;#sqlalchemy%EC%9D%98-%EC%B2%A0%ED%95%99&quot; aria-label=&quot;sqlalchemy의 철학 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SqlAlchemy의 철학&lt;/h1&gt;
+&lt;p&gt;SQL 데이터베이스는 크기와 성능이 중요해질수록 개체 컬렉션과 유사하게 동작합니다. 객체 컬렉션은 테이블과 행처럼 동작하지 않으므로 더 추상화가 중요합니다. SQLAlchemy는 이러한 두 가지 원칙을 모두 수용하려고합니다.&lt;/p&gt;
+&lt;p&gt;SQLAlchemy는 데이터베이스를 테이블 집합이 아닌 관계형 대수 엔진으로 간주합니다. 행은 테이블뿐만 아니라 조인 및 다른 select 문에서도 선택할 수 있습니다. 이들 유닛 중 어느 것이 더 큰 구조로 구성 될 수있다. SQLAlchemy의 표현식 언어는이 개념을 핵심으로합니다.&lt;/p&gt;
+&lt;p&gt;SQLAlchemy는 데이터 매퍼 패턴을 제공하는 선택적 구성 요소 인 ORM (Object-Relational Mapper)으로 가장 유명합니다. 여기서 클래스는 개방형 다중 방식으로 데이터베이스에 매핑 될 수 있으므로 개체 모델 및 데이터베이스 스키마를 처음부터 깨끗하게 분리 된 방식.&lt;/p&gt;
+&lt;p&gt;이러한 문제에 대한 SQLAlchemy의 전반적인 접근법은 소위 칭찬 지향적 접근법에 기반한 다른 대부분의 SQL / ORM 도구와 완전히 다릅니다. 자동화 벽 뒤에 SQL 및 객체 관계형 세부 정보를 숨기는 대신 일련의 구성 가능하고 투명한 도구 내에서 모든 프로세스가 완전히 노출됩니다. 라이브러리는 중복 작업을 자동화하는 작업을 수행하는 반면 개발자는 데이터베이스 구성 방법 및 SQL 작성 방법을 제어합니다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.sqlalchemy.org/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;SQLALCHEMY 공홈 참조&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;1-설치&quot;&gt;&lt;a href=&quot;#1-%EC%84%A4%EC%B9%98&quot; aria-label=&quot;1 설치 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 설치&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt; pip install sqlalchemy&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&quot;2-db-연결&quot;&gt;&lt;a href=&quot;#2-db-%EC%97%B0%EA%B2%B0&quot; aria-label=&quot;2 db 연결 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. DB 연결&lt;/h1&gt;
+&lt;p&gt;DB에 연결을 하기 위한 추가 프로그램 설치가 필요하다&lt;/p&gt;
+&lt;h2 id=&quot;2-1-dbapi-설치&quot;&gt;&lt;a href=&quot;#2-1-dbapi-%EC%84%A4%EC%B9%98&quot; aria-label=&quot;2 1 dbapi 설치 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2-1. DBAPI 설치&lt;/h2&gt;
+&lt;p&gt;DBAPI는 동일한 API를 사용하여 다양한 데이터베이스에서 작동하도록 권장하는 표준입니다.&lt;/p&gt;
+&lt;p&gt;MySQL : PyMySQL, MySQL-Connector, CyMySQL, MySQL-Python (default)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt; pip install pymysql&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;2-2-create-engine&quot;&gt;&lt;a href=&quot;#2-2-create-engine&quot; aria-label=&quot;2 2 create engine permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2-2. Create engine&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&quot;databasespy---settings-file&quot;&gt;&lt;a href=&quot;#databasespy---settings-file&quot; aria-label=&quot;databasespy   settings file permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;databases.py - settings file&lt;/h3&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;from sqlalchemy import create_engine
+engine = create_engine(&amp;#39;mysql+pymysql://username:password@localhost/db명&amp;#39;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;엔진을 통해 mysql db 서버와 연결하는 기초 공사를 하는 중이다.
+(아직 연결 안됨)&lt;/p&gt;
+&lt;h2 id=&quot;2-3-진짜-연결&quot;&gt;&lt;a href=&quot;#2-3-%EC%A7%84%EC%A7%9C-%EC%97%B0%EA%B2%B0&quot; aria-label=&quot;2 3 진짜 연결 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2-3. 진짜 연결&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;from sqlalchemy import create_engine
+engine = create_engine(&amp;#39;mysql+pymysql://username:password@localhost/db명&amp;#39;)
+engine.connect()
+
+print(engine)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Engine(&amp;#39;mysql+pymysql://username:password@localhost/db명&amp;#39;)&lt;/code&gt;
+이 화면이 뜨면 정상 연결이 되었다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;3-매핑-선언&quot;&gt;&lt;a href=&quot;#3-%EB%A7%A4%ED%95%91-%EC%84%A0%EC%96%B8&quot; aria-label=&quot;3 매핑 선언 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. 매핑 선언&lt;/h1&gt;
+&lt;p&gt;ORM에서는 처음에 데이터베이스 테이블을 생성하고 사용할 수 있도록 설정한 뒤 다음 직접 정의한 클래스에 맵핑을 해야한다.(안 그러면 ORM 명령어가 DB단에 들어가지 않는다)&lt;/p&gt;
+&lt;p&gt;sqlalchemy에서는 두가지가 동시에 이뤄지는데 Declarative 란걸 이용해 클래스를 생성하고 실제 디비 테이블에 연결을 한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;from sqlalchemy.ext.declarative import declarative_base
+Base = declarative_base()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;4-실제-모델-테이블-형성&quot;&gt;&lt;a href=&quot;#4-%EC%8B%A4%EC%A0%9C-%EB%AA%A8%EB%8D%B8-%ED%85%8C%EC%9D%B4%EB%B8%94-%ED%98%95%EC%84%B1&quot; aria-label=&quot;4 실제 모델 테이블 형성 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;4. 실제 모델 테이블 형성&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&quot;modelspy에서&quot;&gt;&lt;a href=&quot;#modelspy%EC%97%90%EC%84%9C&quot; aria-label=&quot;modelspy에서 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;models.py에서&lt;/h3&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;from sqlalchemy import Column, Integer, String
+
+class User(Base):
+    __tablename__ = &amp;#39;users&amp;#39;
+
+    id = Column(Integer, primary_key=True)
+    name = Column(String)
+    fullname = Column(String)
+    password = Column(String)
+
+    def __init__(self, name, fullname, password):
+        self.name = name
+        self.fullname = fullname
+        self.password = password
+
+    def __repr__(self):
+        return &amp;quot;&amp;lt;User(&amp;#39;%s&amp;#39;, &amp;#39;%s&amp;#39;, &amp;#39;%s&amp;#39;)&amp;gt;&amp;quot; % (self.name, self.fullname, self.password)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;DB의 필드를 만들려면 직접 컬럼 클래스를 import 해야 한다.&lt;/li&gt;
+&lt;li&gt;필드의 타입을 지정하려면 타입에 해당하는 클래스들을 import해야 한다.
+(ex) 숫자 타입 이라면 Integer | 문자타입이라면 String etc on..&lt;/li&gt;
+&lt;li&gt;위 User 클래스는 &lt;strong&gt;tablename&lt;/strong&gt;에서 정의한 테이블에 네임에 맵핑된다.&lt;/li&gt;
+&lt;li&gt;primary key인 id와 name, fullname, password 컬럼을 가진다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;repr&lt;/strong&gt;은 해당 클래스에 대해 string 값으로 대표되는 값을 표현해준다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Declarative system으로 만들어진 이 클래스는 table metadata를 가지게 되는데 이게 사용자정의 클래스와 테이블을 연결해주는 구실을 한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;5-세션-이용&quot;&gt;&lt;a href=&quot;#5-%EC%84%B8%EC%85%98-%EC%9D%B4%EC%9A%A9&quot; aria-label=&quot;5 세션 이용 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;5. 세션 이용&lt;/h1&gt;
+&lt;p&gt;ORM은 데이터베이스를 session을 이용해 다룰 수 있는데 처음 앱을 작성할 때 create_engine()과 같은 레벨에서 Session 클래스를 factory 패턴으로 생성할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Base.metadata.create_all(engine)
+Session = sessionmaker()
+Session.configure(bind=engine)
+session = Session()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;1행에서 engine을 통해 메타데이터에 접근함
+2행에서 다른 트랜잭션을 위한 것들은 sessionmaker()에서 호출될 때 정의하는 것(자세한 사항은 추후 업뎃)
+3행에서 세션에 엔진을 묶어 엔진 실행시 세션클래스에서 새 객체를 만들게 한다
+4행에서 Session 클래스 편하게 쓰기 위해 인스턴스화&lt;/p&gt;</content:encoded></item><item><title><![CDATA[SqlAlchemy]]></title><description><![CDATA[Sqlalchemy]]></description><link>https://ctsictai.github.io//posts/sqlalchemy/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/sqlalchemy/</guid><pubDate>Thu, 05 Dec 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;sqlalchemy의-철학&quot;&gt;&lt;a href=&quot;#sqlalchemy%EC%9D%98-%EC%B2%A0%ED%95%99&quot; aria-label=&quot;sqlalchemy의 철학 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SqlAlchemy의 철학&lt;/h1&gt;
 &lt;p&gt;SQL 데이터베이스는 크기와 성능이 중요해질수록 개체 컬렉션과 유사하게 동작합니다. 객체 컬렉션은 테이블과 행처럼 동작하지 않으므로 더 추상화가 중요합니다. SQLAlchemy는 이러한 두 가지 원칙을 모두 수용하려고합니다.&lt;/p&gt;
 &lt;p&gt;SQLAlchemy는 데이터베이스를 테이블 집합이 아닌 관계형 대수 엔진으로 간주합니다. 행은 테이블뿐만 아니라 조인 및 다른 select 문에서도 선택할 수 있습니다. 이들 유닛 중 어느 것이 더 큰 구조로 구성 될 수있다. SQLAlchemy의 표현식 언어는이 개념을 핵심으로합니다.&lt;/p&gt;
 &lt;p&gt;SQLAlchemy는 데이터 매퍼 패턴을 제공하는 선택적 구성 요소 인 ORM (Object-Relational Mapper)으로 가장 유명합니다. 여기서 클래스는 개방형 다중 방식으로 데이터베이스에 매핑 될 수 있으므로 개체 모델 및 데이터베이스 스키마를 처음부터 깨끗하게 분리 된 방식.&lt;/p&gt;
@@ -462,6 +712,79 @@ http —help 를 실행하면 각 플래그별 상세한 설명을 볼 수 있�
 &lt;li&gt;bcrypt라는 암호화 알고리즘을 사용해 password를 보호하기 위한 보안 장치를 사용하였다.&lt;/li&gt;
 &lt;li&gt;DB에 필요한 데이터를 받아 저장하였다.&lt;/li&gt;
 &lt;li&gt;다 대 다 관계로 묶인 테이블의 default data 지정하고 Join table 생성한다.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Data Structure & Algorithm]]></title><description><![CDATA[Data Structure & Algorithm]]></description><link>https://ctsictai.github.io//posts/datastructure/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/datastructure/</guid><pubDate>Sun, 17 Nov 2019 21:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;자료구조와-알고리즘&quot;&gt;&lt;a href=&quot;#%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98&quot; aria-label=&quot;자료구조와 알고리즘 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;자료구조와 알고리즘&lt;/h1&gt;
+&lt;p&gt;데이터를 저장하는 스트럭쳐
+자료구조를 잘 선택해야 코드의 복잡성을 줄일 수 있다.&lt;/p&gt;
+&lt;h1 id=&quot;배열&quot;&gt;&lt;a href=&quot;#%EB%B0%B0%EC%97%B4&quot; aria-label=&quot;배열 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;배열&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;순서가 있는 데이터를 저장할 때 유리&lt;/li&gt;
+&lt;li&gt;물리적 주소가 순서대로 저장되는 구조&lt;/li&gt;
+&lt;li&gt;메모리를 할당하기 위해 어느정도 빈 물리적 공간을 확보해야 한다.&lt;/li&gt;
+&lt;li&gt;시간복잡도 O(N) - 배열의 길이 만큼 찾는 시간이 늘어나는 구조이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/992BD84F5B230A4425&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;자료-액세스-시-주소를-얻는-방식-&quot;&gt;&lt;a href=&quot;#%EC%9E%90%EB%A3%8C-%EC%95%A1%EC%84%B8%EC%8A%A4-%EC%8B%9C-%EC%A3%BC%EC%86%8C%EB%A5%BC-%EC%96%BB%EB%8A%94-%EB%B0%A9%EC%8B%9D-&quot; aria-label=&quot;자료 액세스 시 주소를 얻는 방식  permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;자료 액세스 시 주소를 얻는 방식 :&lt;/h3&gt;
+&lt;p&gt;배열의 시작주소 + 자료형의크기×인덱스값의 주소를 액세스&lt;/p&gt;
+&lt;p&gt;ex)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;sample[3]의 값을 액세스 하는 경우&lt;/li&gt;
+&lt;li&gt;배열의시작주소(1000) + int의크기(4) × 인덱스값(3) = 1012&lt;/li&gt;
+&lt;li&gt;1012의 주소에 있는 값 액세스 : 44&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;장점&quot;&gt;&lt;a href=&quot;#%EC%9E%A5%EC%A0%90&quot; aria-label=&quot;장점 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;장점&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;인덱스를 통해 모든 데이터에 직접 액세스하기 때문에 액세스 속도가 빠르다.&lt;/li&gt;
+&lt;li&gt;포인터 등 부가적인 정보가 없어 기록 밀도가 1이다.(메타데이터가 없다. - ex) key)&lt;/li&gt;
+&lt;li&gt;가장 간단하며 사용하기 쉽다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;단점&quot;&gt;&lt;a href=&quot;#%EB%8B%A8%EC%A0%90&quot; aria-label=&quot;단점 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;단점&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;삽입, 삭제가 어렵다(삽입, 삭제가 어렵기 때문에 삽입삭제가 없는 경우에만 사용한다.)&lt;/li&gt;
+&lt;li&gt;중간에 데이터를 삽입하거나 삭제할 경우
+뒤의 데이터를 모두 한칸씩 당겨와야 하기 때문에 부하가 많이 걸린다.
+(만약 삭제하지 않고 그냥 둔다면 인덱스를 이용한 주소값 계산을 할 수 없기 때문에 자료를 연속된 공간에 두기 위해 이동이 필요함)&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;예를들어 위의 예제에서 sample[2]를 삭제하면 그 뒤의 값들을 한칸씩 당겨와야한다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/997BDF375B230ED928&quot;&gt;
+&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/99B8E5375B230EE732&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;메모리에 종속적이다
+연속된 메모리에 저장 되므로 종속적일 수 밖에 없다.&lt;/li&gt;
+&lt;li&gt;메모리 사이즈가 부족해진 경우에 큰 공수가 필요하다&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;re-sizing기법 사용&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;- 지금 있는 메모리를 copy한 후 더 큰 빈 메모리 공간을 확보하여 순서대로 자료를 저장하는 방법
+- 공수가 매우 많이 필요한 작업이다.
+- 이 것 때문에 배열구조를 만들기전에 미리 빈 메모리 공간을 예측하여 확보하는 것이 좋다&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;튜플python&quot;&gt;&lt;a href=&quot;#%ED%8A%9C%ED%94%8Cpython&quot; aria-label=&quot;튜플python permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;튜플(python)&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;배열에서와는 다르게 변경이 불가능한 자료구조이다.&lt;/li&gt;
+&lt;li&gt;그래서 변경이 없는 좌표 데이터를 나타내기 좋은 자료구조&lt;/li&gt;
+&lt;li&gt;배열과 같이 인덱싱 사용 가능하다.&lt;/li&gt;
+&lt;li&gt;튜플의 시간복잡도는 배열과 같게 O(N)이다.&lt;/li&gt;
+&lt;li&gt;튜플이 없다면 클래스로 선언해서 클래스 호출로 가능(javascript)&lt;/li&gt;
+&lt;li&gt;2개 ~ 5개 값을 리턴할 때 사용하기 적절하다.(너무 많으면 오히려 좋지 않다)&lt;/li&gt;
+&lt;li&gt;named_tuple - 인덱스에 key값을 줄 수 있음&lt;/li&gt;
+&lt;li&gt;test code에 튜플 사용할 수 있으면 좋다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;set&quot;&gt;&lt;a href=&quot;#set&quot; aria-label=&quot;set permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;set&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;순서가 없다&lt;/li&gt;
+&lt;li&gt;중복을 허용하지 않는다&lt;/li&gt;
+&lt;li&gt;집합 자료를 표현하는데 적합하다&lt;/li&gt;
+&lt;li&gt;시간복잡도 O (log N)&lt;/li&gt;
+&lt;li&gt;set 중복을 어떤 로직으로 없앨까???&lt;/li&gt;
+&lt;li&gt;값을 치환한다 왜 할까??&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;clss (1,1) == clss(1,1) 는 맞을까?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;클래스는 부모 객체 object가 있어서 아무것도 정해놓지 않으면 부모 클래스인 object를 상속받아서 default 값으로 주소값으로 비교한다.&lt;/li&gt;
+&lt;li&gt;그래서 clss (1,1) == clss(1,1) 는 다르다 - 주소값이 다르기 때문에 그래서 문맥상 같다라는 것을 표현하기 위해 클래스의 함수를 정의하여 로직상으로 같게 한다.&lt;/li&gt;
+&lt;li&gt;set에서는 특정 값에 대해서 hash 값으로 변환하여 hash값에 맞는 메모리 주소에 할당하기 때문에 특정 값이 중복으로 들어온다면 똑같은 hash 값을 가져서 새로운 값으로 값이 치환된다.&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Django Apprenticeship Study Part.6]]></title><description><![CDATA[Django's handling image file ]]></description><link>https://ctsictai.github.io//posts/django-part6/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/django-part6/</guid><pubDate>Sun, 17 Nov 2019 21:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;django에서-aws_s3에-image-업로드-하는-방법&quot;&gt;&lt;a href=&quot;#django%EC%97%90%EC%84%9C-aws_s3%EC%97%90-image-%EC%97%85%EB%A1%9C%EB%93%9C-%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;django에서 aws_s3에 image 업로드 하는 방법 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Django에서 AWS_S3에 Image 업로드 하는 방법&lt;/h1&gt;
 &lt;h2 id=&quot;1aws-iam-user-셋업&quot;&gt;&lt;a href=&quot;#1aws-iam-user-%EC%85%8B%EC%97%85&quot; aria-label=&quot;1aws iam user 셋업 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1.AWS IAM user 셋업&lt;/h2&gt;
 &lt;h2 id=&quot;2aws-s3-bucket-셋업&quot;&gt;&lt;a href=&quot;#2aws-s3-bucket-%EC%85%8B%EC%97%85&quot; aria-label=&quot;2aws s3 bucket 셋업 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2.AWS S3 bucket 셋업&lt;/h2&gt;
@@ -601,79 +924,6 @@ class FileView(View):
 &lt;li&gt;aws&lt;em&gt;acces&lt;/em&gt;key&lt;em&gt;id와 aws&lt;/em&gt;secret&lt;em&gt;access&lt;/em&gt;key 값은 IAM user 생성 후 다운 받았던 csv 파일에 나와 있다.&lt;/li&gt;
 &lt;li&gt;upload_fileobj 함수의 두번 째 인자는 파일을 업로드 하기 희망하는 버킷이름(내가 방금전에 생성한 버킷)&lt;/li&gt;
 &lt;li&gt;장고에서는 전송된 파일이 request.FILES를 통해 전달된다.&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Data Structure & Algorithm]]></title><description><![CDATA[Data Structure & Algorithm]]></description><link>https://ctsictai.github.io//posts/datastructure/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/datastructure/</guid><pubDate>Sun, 17 Nov 2019 21:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;자료구조와-알고리즘&quot;&gt;&lt;a href=&quot;#%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98&quot; aria-label=&quot;자료구조와 알고리즘 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;자료구조와 알고리즘&lt;/h1&gt;
-&lt;p&gt;데이터를 저장하는 스트럭쳐
-자료구조를 잘 선택해야 코드의 복잡성을 줄일 수 있다.&lt;/p&gt;
-&lt;h1 id=&quot;배열&quot;&gt;&lt;a href=&quot;#%EB%B0%B0%EC%97%B4&quot; aria-label=&quot;배열 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;배열&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;순서가 있는 데이터를 저장할 때 유리&lt;/li&gt;
-&lt;li&gt;물리적 주소가 순서대로 저장되는 구조&lt;/li&gt;
-&lt;li&gt;메모리를 할당하기 위해 어느정도 빈 물리적 공간을 확보해야 한다.&lt;/li&gt;
-&lt;li&gt;시간복잡도 O(N) - 배열의 길이 만큼 찾는 시간이 늘어나는 구조이다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/992BD84F5B230A4425&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;자료-액세스-시-주소를-얻는-방식-&quot;&gt;&lt;a href=&quot;#%EC%9E%90%EB%A3%8C-%EC%95%A1%EC%84%B8%EC%8A%A4-%EC%8B%9C-%EC%A3%BC%EC%86%8C%EB%A5%BC-%EC%96%BB%EB%8A%94-%EB%B0%A9%EC%8B%9D-&quot; aria-label=&quot;자료 액세스 시 주소를 얻는 방식  permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;자료 액세스 시 주소를 얻는 방식 :&lt;/h3&gt;
-&lt;p&gt;배열의 시작주소 + 자료형의크기×인덱스값의 주소를 액세스&lt;/p&gt;
-&lt;p&gt;ex)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;sample[3]의 값을 액세스 하는 경우&lt;/li&gt;
-&lt;li&gt;배열의시작주소(1000) + int의크기(4) × 인덱스값(3) = 1012&lt;/li&gt;
-&lt;li&gt;1012의 주소에 있는 값 액세스 : 44&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;장점&quot;&gt;&lt;a href=&quot;#%EC%9E%A5%EC%A0%90&quot; aria-label=&quot;장점 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;장점&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;인덱스를 통해 모든 데이터에 직접 액세스하기 때문에 액세스 속도가 빠르다.&lt;/li&gt;
-&lt;li&gt;포인터 등 부가적인 정보가 없어 기록 밀도가 1이다.(메타데이터가 없다. - ex) key)&lt;/li&gt;
-&lt;li&gt;가장 간단하며 사용하기 쉽다.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;단점&quot;&gt;&lt;a href=&quot;#%EB%8B%A8%EC%A0%90&quot; aria-label=&quot;단점 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;단점&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;삽입, 삭제가 어렵다(삽입, 삭제가 어렵기 때문에 삽입삭제가 없는 경우에만 사용한다.)&lt;/li&gt;
-&lt;li&gt;중간에 데이터를 삽입하거나 삭제할 경우
-뒤의 데이터를 모두 한칸씩 당겨와야 하기 때문에 부하가 많이 걸린다.
-(만약 삭제하지 않고 그냥 둔다면 인덱스를 이용한 주소값 계산을 할 수 없기 때문에 자료를 연속된 공간에 두기 위해 이동이 필요함)&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;예를들어 위의 예제에서 sample[2]를 삭제하면 그 뒤의 값들을 한칸씩 당겨와야한다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/997BDF375B230ED928&quot;&gt;
-&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/99B8E5375B230EE732&quot;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;메모리에 종속적이다
-연속된 메모리에 저장 되므로 종속적일 수 밖에 없다.&lt;/li&gt;
-&lt;li&gt;메모리 사이즈가 부족해진 경우에 큰 공수가 필요하다&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;re-sizing기법 사용&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;- 지금 있는 메모리를 copy한 후 더 큰 빈 메모리 공간을 확보하여 순서대로 자료를 저장하는 방법
-- 공수가 매우 많이 필요한 작업이다.
-- 이 것 때문에 배열구조를 만들기전에 미리 빈 메모리 공간을 예측하여 확보하는 것이 좋다&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&quot;튜플python&quot;&gt;&lt;a href=&quot;#%ED%8A%9C%ED%94%8Cpython&quot; aria-label=&quot;튜플python permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;튜플(python)&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;배열에서와는 다르게 변경이 불가능한 자료구조이다.&lt;/li&gt;
-&lt;li&gt;그래서 변경이 없는 좌표 데이터를 나타내기 좋은 자료구조&lt;/li&gt;
-&lt;li&gt;배열과 같이 인덱싱 사용 가능하다.&lt;/li&gt;
-&lt;li&gt;튜플의 시간복잡도는 배열과 같게 O(N)이다.&lt;/li&gt;
-&lt;li&gt;튜플이 없다면 클래스로 선언해서 클래스 호출로 가능(javascript)&lt;/li&gt;
-&lt;li&gt;2개 ~ 5개 값을 리턴할 때 사용하기 적절하다.(너무 많으면 오히려 좋지 않다)&lt;/li&gt;
-&lt;li&gt;named_tuple - 인덱스에 key값을 줄 수 있음&lt;/li&gt;
-&lt;li&gt;test code에 튜플 사용할 수 있으면 좋다&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;set&quot;&gt;&lt;a href=&quot;#set&quot; aria-label=&quot;set permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;set&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;순서가 없다&lt;/li&gt;
-&lt;li&gt;중복을 허용하지 않는다&lt;/li&gt;
-&lt;li&gt;집합 자료를 표현하는데 적합하다&lt;/li&gt;
-&lt;li&gt;시간복잡도 O (log N)&lt;/li&gt;
-&lt;li&gt;set 중복을 어떤 로직으로 없앨까???&lt;/li&gt;
-&lt;li&gt;값을 치환한다 왜 할까??&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;clss (1,1) == clss(1,1) 는 맞을까?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;클래스는 부모 객체 object가 있어서 아무것도 정해놓지 않으면 부모 클래스인 object를 상속받아서 default 값으로 주소값으로 비교한다.&lt;/li&gt;
-&lt;li&gt;그래서 clss (1,1) == clss(1,1) 는 다르다 - 주소값이 다르기 때문에 그래서 문맥상 같다라는 것을 표현하기 위해 클래스의 함수를 정의하여 로직상으로 같게 한다.&lt;/li&gt;
-&lt;li&gt;set에서는 특정 값에 대해서 hash 값으로 변환하여 hash값에 맞는 메모리 주소에 할당하기 때문에 특정 값이 중복으로 들어온다면 똑같은 hash 값을 가져서 새로운 값으로 값이 치환된다.&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Django Apprenticeship Study Part.5]]></title><description><![CDATA[Django basic concept & Database & django orm basic concept/SQL]]></description><link>https://ctsictai.github.io//posts/django-part5/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/django-part5/</guid><pubDate>Wed, 13 Nov 2019 21:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;백엔드의-기본-개념-다시-짚기&quot;&gt;&lt;a href=&quot;#%EB%B0%B1%EC%97%94%EB%93%9C%EC%9D%98-%EA%B8%B0%EB%B3%B8-%EA%B0%9C%EB%85%90-%EB%8B%A4%EC%8B%9C-%EC%A7%9A%EA%B8%B0&quot; aria-label=&quot;백엔드의 기본 개념 다시 짚기 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;백엔드의 기본 개념 다시 짚기&lt;/h1&gt;
 &lt;p&gt;백엔드 toy 프로젝트도 진행 한 번 해보면서 부족한 점을 많이 느꼈지만 의외로 내가 기초 개념들이 부족하다는 것을 다시 한번 느끼고 정리하고 가려고 한다.&lt;/p&gt;
 &lt;h2 id=&quot;백엔드-개발시-주의점&quot;&gt;&lt;a href=&quot;#%EB%B0%B1%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%EC%8B%9C-%EC%A3%BC%EC%9D%98%EC%A0%90&quot; aria-label=&quot;백엔드 개발시 주의점 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;백엔드 개발시 주의점&lt;/h2&gt;
@@ -1236,7 +1486,61 @@ Pip freeze를 통해 나오는 pip(package/library etc on)들을 requirements.tx
 requirements에 명시해 놓은 패키지 모듈 all 설치&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;가상환경에 장고 설치 및 필요한 pip 설치하기 – pip version python version 확인 후
-Pip or pip3 install Django (ver python3.7)로 설치하면 됨&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.6]]></title><description><![CDATA[Class]]></description><link>https://ctsictai.github.io//posts/python-part6/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part6/</guid><pubDate>Tue, 22 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;클래스&quot;&gt;&lt;a href=&quot;#%ED%81%B4%EB%9E%98%EC%8A%A4&quot; aria-label=&quot;클래스 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;클래스&lt;/h1&gt;
+Pip or pip3 install Django (ver python3.7)로 설치하면 됨&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.7]]></title><description><![CDATA[Scope]]></description><link>https://ctsictai.github.io//posts/python-part7/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part7/</guid><pubDate>Tue, 22 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;scope&quot;&gt;&lt;a href=&quot;#scope&quot; aria-label=&quot;scope permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SCOPE&lt;/h1&gt;
+&lt;p&gt;프로그래밍 언어에서 Scope는 어떠한 객체가 유효한 범위를 뜻한다.
+해당 범위를 벗어난다면 객체는 사용할 수 없다.&lt;/p&gt;
+&lt;p&gt;Python에서 scope은 항상 객체가 선언된 지점에서 위로는 상위 객체 까지, 아래로는 모든 하위 객체들과 그 안에까지가 범위 입니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://wellsr.com/python/assets/images/2018-09-07-scopes-diagram.png&quot; alt=&quot;SCOPE&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;local-scope&quot;&gt;&lt;a href=&quot;#local-scope&quot; aria-label=&quot;local scope permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Local Scope&lt;/h2&gt;
+&lt;p&gt;Local scope을 가지고 있는 변수나 함수 혹은 객체는 이름 그대로 특정 범위에서만 유효합니다.&lt;br&gt;
+주로 함수 안에서 선언된 변수나 함수가 local scope을 가지고 있습니다. 그리고 이러한 변수들은 해당 함수 안에서만 유효합니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;def func():&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;a = 4&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;print(a) --&amp;gt; local scope --&amp;gt; 정상 출력&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;print(a) —&gt; 함수를 벗어남(유효범위 밖) —&gt; 에러 메세지 출력&lt;/p&gt;
+&lt;h2 id=&quot;enclosing-scope&quot;&gt;&lt;a href=&quot;#enclosing-scope&quot; aria-label=&quot;enclosing scope permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Enclosing Scope&lt;/h2&gt;
+&lt;p&gt;Nested function가 있을 때 적용되는 scope.&lt;br&gt;
+부모 함수에서 선언된 변수는 중첩함수 안에서도 유효한 범위를 가지고 있습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;def func():&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;a = 4&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;print(a) --&amp;gt; local scope --&amp;gt; 정상 출력&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;def inner():&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;b = 1&lt;br&gt;
+print(a+b) —&gt; a는 enclosing b는 local scope —&gt; 정상 출력
+print(b) —&gt; b는 inner함수에서만 작동하므로 —&gt; 에러&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;global-scope&quot;&gt;&lt;a href=&quot;#global-scope&quot; aria-label=&quot;global scope permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Global Scope&lt;/h2&gt;
+&lt;p&gt;Global scope은 함수 안에서 선언된것이 아닌 함수 밖에서 선언된 변수나 함수를 이야기 합니다.&lt;br&gt;
+변수나 함수는 선언된 지점과 동일한 level의 지역, 그리고 더 안쪽의 지역들까지 범위가 유효합니다.&lt;/p&gt;
+&lt;p&gt;그리고 global scope을 가지고 있는 변수와 함수들은 선언된 지점이 해당 파일에서 가장 바깥쪽에서 선언되므로 해당 파일에서 선언된 지점 아래로는 다 유효한 범위를 가지고 있습니다. 그래서 “Global” scope 이라고 하는 것입니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/9990474B5B4607D014&quot; alt=&quot;global vs local&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;built-in-scope&quot;&gt;&lt;a href=&quot;#built-in-scope&quot; aria-label=&quot;built in scope permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Built-in Scope&lt;/h2&gt;
+&lt;p&gt;Built-in scope은 scope중 가장 광범위한 scope입니다.&lt;br&gt;
+파이썬안에 내장되어 있는, 파이썬이 제공하는 함수 또는 속성들이 built-in scope를 가지고 있습니다.&lt;/p&gt;
+&lt;p&gt;그리고 built-in scope는 따로 선언이 없이도 모든 파이썬 파일에서 유효한 범위를 가지고 있습니다.&lt;br&gt;
+예를 들어, list등과 같은 자료구조의 element 총 개수를 리턴하는 len 함수가 바로 built-in scope를 가지고 있습니다.&lt;/p&gt;
+&lt;h2 id=&quot;shadowing&quot;&gt;&lt;a href=&quot;#shadowing&quot; aria-label=&quot;shadowing permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Shadowing&lt;/h2&gt;
+&lt;p&gt;파이썬은 변수나 함수의 정의를 찾을때 다음 순서의 scope들 안에서 찾습니다.&lt;br&gt;
+Local =&gt; Enclosing =&gt; Global =&gt; Built-in&lt;/p&gt;
+&lt;p&gt;그러므로 만일 동일한 이름의 변수들이 서로 다른 scope에서 선언이 되면 더 좁은 범위에 있는 변수(혹은 함수)가 더 넓은 범위에 있는 변수를 가리는 (shadowing)효과가 나타납니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;변수 이름 중복이 안되도록 네이밍에 신경써야 한다.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.6]]></title><description><![CDATA[Class]]></description><link>https://ctsictai.github.io//posts/python-part6/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part6/</guid><pubDate>Tue, 22 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;클래스&quot;&gt;&lt;a href=&quot;#%ED%81%B4%EB%9E%98%EC%8A%A4&quot; aria-label=&quot;클래스 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;클래스&lt;/h1&gt;
 &lt;h2 id=&quot;개요&quot;&gt;&lt;a href=&quot;#%EA%B0%9C%EC%9A%94&quot; aria-label=&quot;개요 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;개요&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;클래스는 객체의 구조와 행동을 정의합니다.&lt;/li&gt;
@@ -1585,61 +1889,7 @@ except 안에서 raise를 사용하면 현재 예외를 다시 발생시킵니�
 assert는 지정된 조건식이 거짓일 때 AssertionError 예외를 발생시키며 조건식이 참이면 그냥 넘어갑니다. 보통 assert는 나와서는 안 되는 조건을 검사할 때 사용합니다.&lt;/p&gt;
 &lt;p&gt;x = int(input(‘3의 배수를 입력하세요: ‘))&lt;br&gt;
 assert x % 3 == 0, ‘3의 배수가 아닙니다.’ # 3의 배수가 아니면 예외 발생, 3의 배수이면 그냥 넘어감&lt;br&gt;
-print(x)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.7]]></title><description><![CDATA[Scope]]></description><link>https://ctsictai.github.io//posts/python-part7/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part7/</guid><pubDate>Tue, 22 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;scope&quot;&gt;&lt;a href=&quot;#scope&quot; aria-label=&quot;scope permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SCOPE&lt;/h1&gt;
-&lt;p&gt;프로그래밍 언어에서 Scope는 어떠한 객체가 유효한 범위를 뜻한다.
-해당 범위를 벗어난다면 객체는 사용할 수 없다.&lt;/p&gt;
-&lt;p&gt;Python에서 scope은 항상 객체가 선언된 지점에서 위로는 상위 객체 까지, 아래로는 모든 하위 객체들과 그 안에까지가 범위 입니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://wellsr.com/python/assets/images/2018-09-07-scopes-diagram.png&quot; alt=&quot;SCOPE&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;local-scope&quot;&gt;&lt;a href=&quot;#local-scope&quot; aria-label=&quot;local scope permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Local Scope&lt;/h2&gt;
-&lt;p&gt;Local scope을 가지고 있는 변수나 함수 혹은 객체는 이름 그대로 특정 범위에서만 유효합니다.&lt;br&gt;
-주로 함수 안에서 선언된 변수나 함수가 local scope을 가지고 있습니다. 그리고 이러한 변수들은 해당 함수 안에서만 유효합니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;def func():&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;a = 4&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;print(a) --&amp;gt; local scope --&amp;gt; 정상 출력&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;print(a) —&gt; 함수를 벗어남(유효범위 밖) —&gt; 에러 메세지 출력&lt;/p&gt;
-&lt;h2 id=&quot;enclosing-scope&quot;&gt;&lt;a href=&quot;#enclosing-scope&quot; aria-label=&quot;enclosing scope permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Enclosing Scope&lt;/h2&gt;
-&lt;p&gt;Nested function가 있을 때 적용되는 scope.&lt;br&gt;
-부모 함수에서 선언된 변수는 중첩함수 안에서도 유효한 범위를 가지고 있습니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;def func():&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;a = 4&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;print(a) --&amp;gt; local scope --&amp;gt; 정상 출력&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;def inner():&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;b = 1&lt;br&gt;
-print(a+b) —&gt; a는 enclosing b는 local scope —&gt; 정상 출력
-print(b) —&gt; b는 inner함수에서만 작동하므로 —&gt; 에러&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;global-scope&quot;&gt;&lt;a href=&quot;#global-scope&quot; aria-label=&quot;global scope permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Global Scope&lt;/h2&gt;
-&lt;p&gt;Global scope은 함수 안에서 선언된것이 아닌 함수 밖에서 선언된 변수나 함수를 이야기 합니다.&lt;br&gt;
-변수나 함수는 선언된 지점과 동일한 level의 지역, 그리고 더 안쪽의 지역들까지 범위가 유효합니다.&lt;/p&gt;
-&lt;p&gt;그리고 global scope을 가지고 있는 변수와 함수들은 선언된 지점이 해당 파일에서 가장 바깥쪽에서 선언되므로 해당 파일에서 선언된 지점 아래로는 다 유효한 범위를 가지고 있습니다. 그래서 “Global” scope 이라고 하는 것입니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/9990474B5B4607D014&quot; alt=&quot;global vs local&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;built-in-scope&quot;&gt;&lt;a href=&quot;#built-in-scope&quot; aria-label=&quot;built in scope permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Built-in Scope&lt;/h2&gt;
-&lt;p&gt;Built-in scope은 scope중 가장 광범위한 scope입니다.&lt;br&gt;
-파이썬안에 내장되어 있는, 파이썬이 제공하는 함수 또는 속성들이 built-in scope를 가지고 있습니다.&lt;/p&gt;
-&lt;p&gt;그리고 built-in scope는 따로 선언이 없이도 모든 파이썬 파일에서 유효한 범위를 가지고 있습니다.&lt;br&gt;
-예를 들어, list등과 같은 자료구조의 element 총 개수를 리턴하는 len 함수가 바로 built-in scope를 가지고 있습니다.&lt;/p&gt;
-&lt;h2 id=&quot;shadowing&quot;&gt;&lt;a href=&quot;#shadowing&quot; aria-label=&quot;shadowing permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Shadowing&lt;/h2&gt;
-&lt;p&gt;파이썬은 변수나 함수의 정의를 찾을때 다음 순서의 scope들 안에서 찾습니다.&lt;br&gt;
-Local =&gt; Enclosing =&gt; Global =&gt; Built-in&lt;/p&gt;
-&lt;p&gt;그러므로 만일 동일한 이름의 변수들이 서로 다른 scope에서 선언이 되면 더 좁은 범위에 있는 변수(혹은 함수)가 더 넓은 범위에 있는 변수를 가리는 (shadowing)효과가 나타납니다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;변수 이름 중복이 안되도록 네이밍에 신경써야 한다.&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.9]]></title><description><![CDATA[Decorator]]></description><link>https://ctsictai.github.io//posts/python-part9/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part9/</guid><pubDate>Tue, 22 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;decorator&quot;&gt;&lt;a href=&quot;#decorator&quot; aria-label=&quot;decorator permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Decorator&lt;/h1&gt;
+print(x)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.9]]></title><description><![CDATA[Decorator]]></description><link>https://ctsictai.github.io//posts/python-part9/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part9/</guid><pubDate>Tue, 22 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;decorator&quot;&gt;&lt;a href=&quot;#decorator&quot; aria-label=&quot;decorator permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Decorator&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;@decorator명&lt;/strong&gt; —&gt; 데코레이터 선언&lt;/p&gt;
 &lt;p&gt;함수 앞뒤에 기능을 추가해서 손쉽게 함수를 활용할 수 있는 기법&lt;br&gt;
 여러 함수에 동일한 기능을 @데코레이터 하나로 간편하게 추가할 수 있다.&lt;br&gt;
