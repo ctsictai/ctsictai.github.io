@@ -1,4 +1,70 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[CTS junior Web developer]]></title><description><![CDATA[Web developer Learning.]]></description><link>https://ctsictai.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 13 Dec 2019 04:12:54 GMT</lastBuildDate><item><title><![CDATA[Token System]]></title><description><![CDATA[Token system & user auth management at webpage in django]]></description><link>https://ctsictai.github.io//posts/django/userauthmethod/token</link><guid isPermaLink="false">https://ctsictai.github.io//posts/django/userauthmethod/token</guid><pubDate>Fri, 13 Dec 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;사용자-인증-정보-관리&quot;&gt;&lt;a href=&quot;#%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%9D%B8%EC%A6%9D-%EC%A0%95%EB%B3%B4-%EA%B4%80%EB%A6%AC&quot; aria-label=&quot;사용자 인증 정보 관리 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;사용자 인증 정보 관리&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[CTS junior Web developer]]></title><description><![CDATA[Web developer Learning.]]></description><link>https://ctsictai.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 31 Dec 2019 09:50:56 GMT</lastBuildDate><item><title><![CDATA[Token System]]></title><description><![CDATA[Sorting Code Algorithm]]></description><link>https://ctsictai.github.io//posts/algorithm/sorting/1</link><guid isPermaLink="false">https://ctsictai.github.io//posts/algorithm/sorting/1</guid><pubDate>Tue, 31 Dec 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;프로그래머스-정렬-1번-문제&quot;&gt;&lt;a href=&quot;#%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EC%A0%95%EB%A0%AC-1%EB%B2%88-%EB%AC%B8%EC%A0%9C&quot; aria-label=&quot;프로그래머스 정렬 1번 문제 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;프로그래머스 정렬 1번 문제&lt;/h1&gt;
+&lt;p&gt;배열 array의 i번째 숫자부터 j번째 숫자까지 자르고 정렬했을 때, k번째에 있는 수를 구하려 합니다.&lt;/p&gt;
+&lt;p&gt;예를 들어 array가 [1, 5, 2, 6, 3, 7, 4], i = 2, j = 5, k = 3이라면&lt;/p&gt;
+&lt;p&gt;array의 2번째부터 5번째까지 자르면 [5, 2, 6, 3]입니다.&lt;br&gt;
+1에서 나온 배열을 정렬하면 [2, 3, 5, 6]입니다.&lt;br&gt;
+2에서 나온 배열의 3번째 숫자는 5입니다.&lt;br&gt;
+배열 array, [i, j, k]를 원소로 가진 2차원 배열 commands가 매개변수로 주어질 때, commands의 모든 원소에 대해 앞서 설명한 연산을 적용했을 때 나온 결과를 배열에 담아 return 하도록 solution 함수를 작성해주세요.&lt;/p&gt;
+&lt;h3 id=&quot;제한사항&quot;&gt;&lt;a href=&quot;#%EC%A0%9C%ED%95%9C%EC%82%AC%ED%95%AD&quot; aria-label=&quot;제한사항 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;제한사항&lt;/h3&gt;
+&lt;p&gt;array의 길이는 1 이상 100 이하입니다.
+array의 각 원소는 1 이상 100 이하입니다.
+commands의 길이는 1 이상 50 이하입니다.
+commands의 각 원소는 길이가 3입니다.&lt;/p&gt;
+&lt;h3 id=&quot;입출력-예&quot;&gt;&lt;a href=&quot;#%EC%9E%85%EC%B6%9C%EB%A0%A5-%EC%98%88&quot; aria-label=&quot;입출력 예 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;입출력 예&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;array&lt;/th&gt;
+&lt;th&gt;commands&lt;/th&gt;
+&lt;th&gt;return&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;[1, 5, 2, 6, 3, 7, 4]&lt;/td&gt;
+&lt;td&gt;[[2, 5, 3], [4, 4, 1], [1, 7, 3]]&lt;/td&gt;
+&lt;td&gt;[5, 6, 3]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&quot;입출력-예-설명&quot;&gt;&lt;a href=&quot;#%EC%9E%85%EC%B6%9C%EB%A0%A5-%EC%98%88-%EC%84%A4%EB%AA%85&quot; aria-label=&quot;입출력 예 설명 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;입출력 예 설명&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;[1, 5, 2, 6, 3, 7, 4]를 2번째부터 5번째까지 자른 후 정렬합니다. [2, 3, 5, 6]의 세 번째 숫자는 5입니다.&lt;/li&gt;
+&lt;li&gt;[1, 5, 2, 6, 3, 7, 4]를 4번째부터 4번째까지 자른 후 정렬합니다. [6]의 첫 번째 숫자는 6입니다.&lt;/li&gt;
+&lt;li&gt;[1, 5, 2, 6, 3, 7, 4]를 1번째부터 7번째까지 자릅니다. [1, 2, 3, 4, 5, 6, 7]의 세 번째 숫자는 3입니다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;기본-로직&quot;&gt;&lt;a href=&quot;#%EA%B8%B0%EB%B3%B8-%EB%A1%9C%EC%A7%81&quot; aria-label=&quot;기본 로직 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;기본 로직&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;배열 array를 슬라이스([:]) 하고 정렬(sorted)을 한다&lt;/li&gt;
+&lt;li&gt;정렬한 list에서 commands에 해당되는 인덱스의 값을 리턴한다.&lt;/li&gt;
+&lt;li&gt;리턴한 값을 answer list에 추가한다(append)&lt;/li&gt;
+&lt;li&gt;commands의 길이가 최대 50까지 이므로 반복문이 필요하다. (나는 while문으로 접근하였다.)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;문제-풀이&quot;&gt;&lt;a href=&quot;#%EB%AC%B8%EC%A0%9C-%ED%92%80%EC%9D%B4&quot; aria-label=&quot;문제 풀이 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;문제 풀이&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;def solution(array, commands):
+    answer = []
+    i = 0
+    while i &amp;lt;= len(commands)-1:
+        ele = sorted(array[commands[i][0]-1:commands[i][1]])
+        m = ele[commands[i][2]-1]
+        answer.append(m)
+        i += 1
+
+    return answer&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;while문으로 commands의 리스트 길이만큼 돌린다.&lt;/li&gt;
+&lt;li&gt;배열 array를 슬라이스 하고 정렬까지 완료&lt;/li&gt;
+&lt;li&gt;정렬한 list에서 command에 있는 인덱스값으로 요소값 리턴&lt;/li&gt;
+&lt;li&gt;리턴한 요소값을 answer list에 요소 추가&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이렇게 풀었지만 더 간단히 푸는 방법이 있었다????&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;def solution(array, commands):
+    return list(map(lambda x: sorted(array[x[0]-1:x[1]])[x[2]-1], commands))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;list에서 map과 람다함수를 이용해서 한 줄로 깔끔하게 풀어낸 모습이다.&lt;/li&gt;
+&lt;li&gt;람다함수의 x는 map의 인자중 map을 돌릴 리스트에 해당하는 commands가 된다.&lt;/li&gt;
+&lt;li&gt;commands라는 list 요소를 lamda 함수 조건대로 변환해준다.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Token System]]></title><description><![CDATA[Token system & user auth management at webpage in django]]></description><link>https://ctsictai.github.io//posts/django/userauthmethod/token</link><guid isPermaLink="false">https://ctsictai.github.io//posts/django/userauthmethod/token</guid><pubDate>Fri, 13 Dec 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;사용자-인증-정보-관리&quot;&gt;&lt;a href=&quot;#%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%9D%B8%EC%A6%9D-%EC%A0%95%EB%B3%B4-%EA%B4%80%EB%A6%AC&quot; aria-label=&quot;사용자 인증 정보 관리 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;사용자 인증 정보 관리&lt;/h1&gt;
 &lt;p&gt;token system을 이해하기 위해서는 선행되어서 이해해야 할 중요한 것이 바로 사용자 인증 정보 관리이다.
 token system이라는 것은 사용자 인증 정보 관리를 한 방편이기 때문이다.&lt;/p&gt;
 &lt;p&gt;사용자 인증정보 관리라는 것은 서비스 페이지를 이용한 유저가 DB에 저장되어 있는 회원 유저이고 로그인한 상태인지를 계속 인지하고 관리하는 것을 말한다.&lt;/p&gt;
@@ -1707,7 +1773,61 @@ Pip freeze를 통해 나오는 pip(package/library etc on)들을 requirements.tx
 requirements에 명시해 놓은 패키지 모듈 all 설치&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;가상환경에 장고 설치 및 필요한 pip 설치하기 – pip version python version 확인 후
-Pip or pip3 install Django (ver python3.7)로 설치하면 됨&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.6]]></title><description><![CDATA[Class]]></description><link>https://ctsictai.github.io//posts/python-part6/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part6/</guid><pubDate>Tue, 22 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;클래스&quot;&gt;&lt;a href=&quot;#%ED%81%B4%EB%9E%98%EC%8A%A4&quot; aria-label=&quot;클래스 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;클래스&lt;/h1&gt;
+Pip or pip3 install Django (ver python3.7)로 설치하면 됨&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.7]]></title><description><![CDATA[Scope]]></description><link>https://ctsictai.github.io//posts/python-part7/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part7/</guid><pubDate>Tue, 22 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;scope&quot;&gt;&lt;a href=&quot;#scope&quot; aria-label=&quot;scope permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SCOPE&lt;/h1&gt;
+&lt;p&gt;프로그래밍 언어에서 Scope는 어떠한 객체가 유효한 범위를 뜻한다.
+해당 범위를 벗어난다면 객체는 사용할 수 없다.&lt;/p&gt;
+&lt;p&gt;Python에서 scope은 항상 객체가 선언된 지점에서 위로는 상위 객체 까지, 아래로는 모든 하위 객체들과 그 안에까지가 범위 입니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://wellsr.com/python/assets/images/2018-09-07-scopes-diagram.png&quot; alt=&quot;SCOPE&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;local-scope&quot;&gt;&lt;a href=&quot;#local-scope&quot; aria-label=&quot;local scope permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Local Scope&lt;/h2&gt;
+&lt;p&gt;Local scope을 가지고 있는 변수나 함수 혹은 객체는 이름 그대로 특정 범위에서만 유효합니다.&lt;br&gt;
+주로 함수 안에서 선언된 변수나 함수가 local scope을 가지고 있습니다. 그리고 이러한 변수들은 해당 함수 안에서만 유효합니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;def func():&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;a = 4&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;print(a) --&amp;gt; local scope --&amp;gt; 정상 출력&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;print(a) —&gt; 함수를 벗어남(유효범위 밖) —&gt; 에러 메세지 출력&lt;/p&gt;
+&lt;h2 id=&quot;enclosing-scope&quot;&gt;&lt;a href=&quot;#enclosing-scope&quot; aria-label=&quot;enclosing scope permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Enclosing Scope&lt;/h2&gt;
+&lt;p&gt;Nested function가 있을 때 적용되는 scope.&lt;br&gt;
+부모 함수에서 선언된 변수는 중첩함수 안에서도 유효한 범위를 가지고 있습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;def func():&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;a = 4&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;print(a) --&amp;gt; local scope --&amp;gt; 정상 출력&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;def inner():&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;b = 1&lt;br&gt;
+print(a+b) —&gt; a는 enclosing b는 local scope —&gt; 정상 출력
+print(b) —&gt; b는 inner함수에서만 작동하므로 —&gt; 에러&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;global-scope&quot;&gt;&lt;a href=&quot;#global-scope&quot; aria-label=&quot;global scope permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Global Scope&lt;/h2&gt;
+&lt;p&gt;Global scope은 함수 안에서 선언된것이 아닌 함수 밖에서 선언된 변수나 함수를 이야기 합니다.&lt;br&gt;
+변수나 함수는 선언된 지점과 동일한 level의 지역, 그리고 더 안쪽의 지역들까지 범위가 유효합니다.&lt;/p&gt;
+&lt;p&gt;그리고 global scope을 가지고 있는 변수와 함수들은 선언된 지점이 해당 파일에서 가장 바깥쪽에서 선언되므로 해당 파일에서 선언된 지점 아래로는 다 유효한 범위를 가지고 있습니다. 그래서 “Global” scope 이라고 하는 것입니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/9990474B5B4607D014&quot; alt=&quot;global vs local&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;built-in-scope&quot;&gt;&lt;a href=&quot;#built-in-scope&quot; aria-label=&quot;built in scope permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Built-in Scope&lt;/h2&gt;
+&lt;p&gt;Built-in scope은 scope중 가장 광범위한 scope입니다.&lt;br&gt;
+파이썬안에 내장되어 있는, 파이썬이 제공하는 함수 또는 속성들이 built-in scope를 가지고 있습니다.&lt;/p&gt;
+&lt;p&gt;그리고 built-in scope는 따로 선언이 없이도 모든 파이썬 파일에서 유효한 범위를 가지고 있습니다.&lt;br&gt;
+예를 들어, list등과 같은 자료구조의 element 총 개수를 리턴하는 len 함수가 바로 built-in scope를 가지고 있습니다.&lt;/p&gt;
+&lt;h2 id=&quot;shadowing&quot;&gt;&lt;a href=&quot;#shadowing&quot; aria-label=&quot;shadowing permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Shadowing&lt;/h2&gt;
+&lt;p&gt;파이썬은 변수나 함수의 정의를 찾을때 다음 순서의 scope들 안에서 찾습니다.&lt;br&gt;
+Local =&gt; Enclosing =&gt; Global =&gt; Built-in&lt;/p&gt;
+&lt;p&gt;그러므로 만일 동일한 이름의 변수들이 서로 다른 scope에서 선언이 되면 더 좁은 범위에 있는 변수(혹은 함수)가 더 넓은 범위에 있는 변수를 가리는 (shadowing)효과가 나타납니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;변수 이름 중복이 안되도록 네이밍에 신경써야 한다.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.6]]></title><description><![CDATA[Class]]></description><link>https://ctsictai.github.io//posts/python-part6/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part6/</guid><pubDate>Tue, 22 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;클래스&quot;&gt;&lt;a href=&quot;#%ED%81%B4%EB%9E%98%EC%8A%A4&quot; aria-label=&quot;클래스 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;클래스&lt;/h1&gt;
 &lt;h2 id=&quot;개요&quot;&gt;&lt;a href=&quot;#%EA%B0%9C%EC%9A%94&quot; aria-label=&quot;개요 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;개요&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;클래스는 객체의 구조와 행동을 정의합니다.&lt;/li&gt;
@@ -1866,61 +1986,7 @@ mro() - 클래스를 작성하면 상속 관계를 확인할 수 있는 메소�
 &lt;p&gt;기반 클래스 Person의 속성 hello를 찾는 과정을 그림으로 나타내면 다음과 같은 모양이 됩니다.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://dojang.io/pluginfile.php/13907/mod_page/content/3/036004.png&quot; alt=&quot;기반클래스 속성찾기 로직&quot;&gt;&lt;/p&gt;
 &lt;h3 id=&quot;기반-클래스를-초기화하지-않아도-되는-경우&quot;&gt;&lt;a href=&quot;#%EA%B8%B0%EB%B0%98-%ED%81%B4%EB%9E%98%EC%8A%A4%EB%A5%BC-%EC%B4%88%EA%B8%B0%ED%99%94%ED%95%98%EC%A7%80-%EC%95%8A%EC%95%84%EB%8F%84-%EB%90%98%EB%8A%94-%EA%B2%BD%EC%9A%B0&quot; aria-label=&quot;기반 클래스를 초기화하지 않아도 되는 경우 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;기반 클래스를 초기화하지 않아도 되는 경우&lt;/h3&gt;
-&lt;p&gt;만약 파생 클래스에서 &lt;strong&gt;init&lt;/strong&gt; 메서드를 생략한다면 기반 클래스의 &lt;strong&gt;init&lt;/strong&gt;이 자동으로 호출되므로 super()는 사용하지 않아도 됩니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.7]]></title><description><![CDATA[Scope]]></description><link>https://ctsictai.github.io//posts/python-part7/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part7/</guid><pubDate>Tue, 22 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;scope&quot;&gt;&lt;a href=&quot;#scope&quot; aria-label=&quot;scope permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SCOPE&lt;/h1&gt;
-&lt;p&gt;프로그래밍 언어에서 Scope는 어떠한 객체가 유효한 범위를 뜻한다.
-해당 범위를 벗어난다면 객체는 사용할 수 없다.&lt;/p&gt;
-&lt;p&gt;Python에서 scope은 항상 객체가 선언된 지점에서 위로는 상위 객체 까지, 아래로는 모든 하위 객체들과 그 안에까지가 범위 입니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://wellsr.com/python/assets/images/2018-09-07-scopes-diagram.png&quot; alt=&quot;SCOPE&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;local-scope&quot;&gt;&lt;a href=&quot;#local-scope&quot; aria-label=&quot;local scope permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Local Scope&lt;/h2&gt;
-&lt;p&gt;Local scope을 가지고 있는 변수나 함수 혹은 객체는 이름 그대로 특정 범위에서만 유효합니다.&lt;br&gt;
-주로 함수 안에서 선언된 변수나 함수가 local scope을 가지고 있습니다. 그리고 이러한 변수들은 해당 함수 안에서만 유효합니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;def func():&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;a = 4&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;print(a) --&amp;gt; local scope --&amp;gt; 정상 출력&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;print(a) —&gt; 함수를 벗어남(유효범위 밖) —&gt; 에러 메세지 출력&lt;/p&gt;
-&lt;h2 id=&quot;enclosing-scope&quot;&gt;&lt;a href=&quot;#enclosing-scope&quot; aria-label=&quot;enclosing scope permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Enclosing Scope&lt;/h2&gt;
-&lt;p&gt;Nested function가 있을 때 적용되는 scope.&lt;br&gt;
-부모 함수에서 선언된 변수는 중첩함수 안에서도 유효한 범위를 가지고 있습니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;def func():&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;a = 4&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;print(a) --&amp;gt; local scope --&amp;gt; 정상 출력&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;def inner():&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;b = 1&lt;br&gt;
-print(a+b) —&gt; a는 enclosing b는 local scope —&gt; 정상 출력
-print(b) —&gt; b는 inner함수에서만 작동하므로 —&gt; 에러&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;global-scope&quot;&gt;&lt;a href=&quot;#global-scope&quot; aria-label=&quot;global scope permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Global Scope&lt;/h2&gt;
-&lt;p&gt;Global scope은 함수 안에서 선언된것이 아닌 함수 밖에서 선언된 변수나 함수를 이야기 합니다.&lt;br&gt;
-변수나 함수는 선언된 지점과 동일한 level의 지역, 그리고 더 안쪽의 지역들까지 범위가 유효합니다.&lt;/p&gt;
-&lt;p&gt;그리고 global scope을 가지고 있는 변수와 함수들은 선언된 지점이 해당 파일에서 가장 바깥쪽에서 선언되므로 해당 파일에서 선언된 지점 아래로는 다 유효한 범위를 가지고 있습니다. 그래서 “Global” scope 이라고 하는 것입니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/9990474B5B4607D014&quot; alt=&quot;global vs local&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;built-in-scope&quot;&gt;&lt;a href=&quot;#built-in-scope&quot; aria-label=&quot;built in scope permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Built-in Scope&lt;/h2&gt;
-&lt;p&gt;Built-in scope은 scope중 가장 광범위한 scope입니다.&lt;br&gt;
-파이썬안에 내장되어 있는, 파이썬이 제공하는 함수 또는 속성들이 built-in scope를 가지고 있습니다.&lt;/p&gt;
-&lt;p&gt;그리고 built-in scope는 따로 선언이 없이도 모든 파이썬 파일에서 유효한 범위를 가지고 있습니다.&lt;br&gt;
-예를 들어, list등과 같은 자료구조의 element 총 개수를 리턴하는 len 함수가 바로 built-in scope를 가지고 있습니다.&lt;/p&gt;
-&lt;h2 id=&quot;shadowing&quot;&gt;&lt;a href=&quot;#shadowing&quot; aria-label=&quot;shadowing permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Shadowing&lt;/h2&gt;
-&lt;p&gt;파이썬은 변수나 함수의 정의를 찾을때 다음 순서의 scope들 안에서 찾습니다.&lt;br&gt;
-Local =&gt; Enclosing =&gt; Global =&gt; Built-in&lt;/p&gt;
-&lt;p&gt;그러므로 만일 동일한 이름의 변수들이 서로 다른 scope에서 선언이 되면 더 좁은 범위에 있는 변수(혹은 함수)가 더 넓은 범위에 있는 변수를 가리는 (shadowing)효과가 나타납니다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;변수 이름 중복이 안되도록 네이밍에 신경써야 한다.&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.8]]></title><description><![CDATA[예외처리]]></description><link>https://ctsictai.github.io//posts/python-part8/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part8/</guid><pubDate>Tue, 22 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;예외처리&quot;&gt;&lt;a href=&quot;#%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC&quot; aria-label=&quot;예외처리 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;예외처리&lt;/h1&gt;
+&lt;p&gt;만약 파생 클래스에서 &lt;strong&gt;init&lt;/strong&gt; 메서드를 생략한다면 기반 클래스의 &lt;strong&gt;init&lt;/strong&gt;이 자동으로 호출되므로 super()는 사용하지 않아도 됩니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.8]]></title><description><![CDATA[예외처리]]></description><link>https://ctsictai.github.io//posts/python-part8/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part8/</guid><pubDate>Tue, 22 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;예외처리&quot;&gt;&lt;a href=&quot;#%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC&quot; aria-label=&quot;예외처리 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;예외처리&lt;/h1&gt;
 &lt;h1 id=&quot;1-try---exception&quot;&gt;&lt;a href=&quot;#1-try---exception&quot; aria-label=&quot;1 try   exception permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. TRY - EXCEPTION&lt;/h1&gt;
 &lt;p&gt;try에 실행할 코드를 넣고 except에 예외가 발생했을 때 처리하는 코드를 넣습니다.&lt;/p&gt;
 &lt;blockquote&gt;
