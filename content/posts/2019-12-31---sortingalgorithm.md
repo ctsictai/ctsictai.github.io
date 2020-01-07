@@ -1,15 +1,15 @@
 ---
-title: Sorting Algorithm Pyhton
+title: Sorting Algorithm python
 date: "2019-12-31T23:30:03.284Z"
 template: "post"
 draft: false
 slug: "/posts/algorithm/sorting/1"
-category: "Python, Sorting, "Algorithm"
+category: "Python, Sorting"
 tags:
-  - "Python, Sorting, Algorithm"
+  - "Python, Sorting"
 
-description: "Sorting Code Algorithm"
-socialImage: "/media/image-2.jpg"
+description: "Sorting by Python"
+socialImage: "/media/gutenberg.jpg"
 ---
 
 # 프로그래머스 정렬 1번 문제
