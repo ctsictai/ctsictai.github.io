@@ -1,4 +1,81 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[CTS junior Web developer]]></title><description><![CDATA[Web developer Learning.]]></description><link>https://ctsictai.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 07 Jan 2020 13:10:32 GMT</lastBuildDate><item><title><![CDATA[Sorting Algorithm python]]></title><description><![CDATA[Sorting by Python]]></description><link>https://ctsictai.github.io//posts/algorithm/sorting/1</link><guid isPermaLink="false">https://ctsictai.github.io//posts/algorithm/sorting/1</guid><pubDate>Tue, 31 Dec 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;프로그래머스-정렬-1번-문제&quot;&gt;&lt;a href=&quot;#%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EC%A0%95%EB%A0%AC-1%EB%B2%88-%EB%AC%B8%EC%A0%9C&quot; aria-label=&quot;프로그래머스 정렬 1번 문제 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;프로그래머스 정렬 1번 문제&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[CTS junior Web developer]]></title><description><![CDATA[Web developer Learning.]]></description><link>https://ctsictai.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 08 Jan 2020 14:13:29 GMT</lastBuildDate><item><title><![CDATA[Decorator]]></title><description><![CDATA[decorator example]]></description><link>https://ctsictai.github.io//posts/python/django/decorator</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python/django/decorator</guid><pubDate>Tue, 07 Jan 2020 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;데코레이터란&quot;&gt;&lt;a href=&quot;#%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0%EB%9E%80&quot; aria-label=&quot;데코레이터란 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;데코레이터란?&lt;/h1&gt;
+&lt;p&gt;함수(메서드)를 장식하는 개념으로 함수 앞뒤에 기능을 추가해서 손쉽게 함수를 활용할 수 있는 기법이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;class Calc:
+    @staticmethod    # 데코레이터
+    def add(a, b):
+        print(a + b)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;그러면-왜-쓸까&quot;&gt;&lt;a href=&quot;#%EA%B7%B8%EB%9F%AC%EB%A9%B4-%EC%99%9C-%EC%93%B8%EA%B9%8C&quot; aria-label=&quot;그러면 왜 쓸까 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;그러면 왜 쓸까?&lt;/h2&gt;
+&lt;p&gt;함수나 클래스의 메서드는 한 함수에 한 기능을 넣는 것이 좋다.&lt;br&gt;
+(Unit test를 생각한다면 더더욱 함수 하나에 한 기능을 넣어야 한다.)&lt;/p&gt;
+&lt;p&gt;그런데 한 함수에 한 기능을 넣기에는 애매한 경우가 있다.&lt;br&gt;
+혹은 한가지 기능에 간단한 로직을 첨가하는 것이 좀 더 좋아지는 경우&lt;br&gt;
+한 기능을 여러 메서드나 함수에서 계속적으로 사용할 때 함수마다 기능을 넣는 것은 계속 같은 코드가 중복되는 문제가 발생한다.&lt;/p&gt;
+&lt;p&gt;이럴 때 사용하는 것이 데코레이터이다.&lt;/p&gt;
+&lt;h2 id=&quot;데코레이터-형태-설명&quot;&gt;&lt;a href=&quot;#%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0-%ED%98%95%ED%83%9C-%EC%84%A4%EB%AA%85&quot; aria-label=&quot;데코레이터 형태 설명 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;데코레이터 형태 설명&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;def trace(func):                             # 호출할 함수를 매개변수로 받음
+    def wrapper():                           # 호출할 함수를 감싸는 함수
+        print(func.__name__, &amp;#39;함수 시작&amp;#39;)    # __name__으로 함수 이름 출력
+        func()                               # 매개변수로 받은 함수를 호출
+        print(func.__name__, &amp;#39;함수 끝&amp;#39;)
+    return wrapper                           # wrapper 함수 반환
+    # 함수안에서 함수를 만들고 반환하는 클로저 개념
+
+def hello():
+    print(&amp;#39;hello&amp;#39;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;결과&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;trace_hello = trace(hello)    # 데코레이터에 호출할 함수를 넣음
+trace_hello()                 # 반환된 함수를 호출
+
+hello 함수 시작
+hello
+hello 함수 끝&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;데코레이터의-일반-형태&quot;&gt;&lt;a href=&quot;#%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0%EC%9D%98-%EC%9D%BC%EB%B0%98-%ED%98%95%ED%83%9C&quot; aria-label=&quot;데코레이터의 일반 형태 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;데코레이터의 일반 형태&lt;/h2&gt;
+&lt;p&gt;데코레이터 앞에 @를 붙여준다. 그리고 데코레이터를 적용할 함수 앞 줄에 꼭 입력한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;@데코레이터
+def 함수이름():
+    코드&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;def trace(func):                             # 호출할 함수를 매개변수로 받음
+    def wrapper():                           # 호출할 함수를 감싸는 함수
+        print(func.__name__, &amp;#39;함수 시작&amp;#39;)    # __name__으로 함수 이름 출력
+        func()                               # 매개변수로 받은 함수를 호출
+        print(func.__name__, &amp;#39;함수 끝&amp;#39;)
+    return wrapper                           # wrapper 함수 반환
+    # 함수안에서 함수를 만들고 반환하는 클로저 개념
+
+@trace               # @데코레이터
+def hello():
+    print(&amp;#39;hello&amp;#39;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;-데코레이터-여러개-지정하기&quot;&gt;&lt;a href=&quot;#-%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0-%EC%97%AC%EB%9F%AC%EA%B0%9C-%EC%A7%80%EC%A0%95%ED%95%98%EA%B8%B0&quot; aria-label=&quot; 데코레이터 여러개 지정하기 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;※ 데코레이터 여러개 지정하기&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;@데코레이터1
+@데코레이터2
+def 함수이름():
+    코드&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;데코레이터가 위에서부터 차례대로 실행된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;def decorator1(func):
+    def wrapper():
+        print(&amp;#39;decorator1&amp;#39;)
+        func()
+    return wrapper
+
+def decorator2(func):
+    def wrapper():
+        print(&amp;#39;decorator2&amp;#39;)
+        func()
+    return wrapper
+
+# 데코레이터를 여러 개 지정
+@decorator1
+@decorator2
+def hello():
+    print(&amp;#39;hello&amp;#39;)
+
+hello()
+
+decorator1
+decorator2
+hello&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Sorting Algorithm python]]></title><description><![CDATA[Sorting by Python]]></description><link>https://ctsictai.github.io//posts/algorithm/sorting/1</link><guid isPermaLink="false">https://ctsictai.github.io//posts/algorithm/sorting/1</guid><pubDate>Tue, 31 Dec 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;프로그래머스-정렬-1번-문제&quot;&gt;&lt;a href=&quot;#%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EC%A0%95%EB%A0%AC-1%EB%B2%88-%EB%AC%B8%EC%A0%9C&quot; aria-label=&quot;프로그래머스 정렬 1번 문제 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;프로그래머스 정렬 1번 문제&lt;/h1&gt;
 &lt;p&gt;배열 array의 i번째 숫자부터 j번째 숫자까지 자르고 정렬했을 때, k번째에 있는 수를 구하려 합니다.&lt;/p&gt;
 &lt;p&gt;예를 들어 array가 [1, 5, 2, 6, 3, 7, 4], i = 2, j = 5, k = 3이라면&lt;/p&gt;
 &lt;p&gt;array의 2번째부터 5번째까지 자르면 [5, 2, 6, 3]입니다.&lt;br&gt;
@@ -2017,163 +2094,7 @@ except 안에서 raise를 사용하면 현재 예외를 다시 발생시킵니�
 assert는 지정된 조건식이 거짓일 때 AssertionError 예외를 발생시키며 조건식이 참이면 그냥 넘어갑니다. 보통 assert는 나와서는 안 되는 조건을 검사할 때 사용합니다.&lt;/p&gt;
 &lt;p&gt;x = int(input(‘3의 배수를 입력하세요: ‘))&lt;br&gt;
 assert x % 3 == 0, ‘3의 배수가 아닙니다.’ # 3의 배수가 아니면 예외 발생, 3의 배수이면 그냥 넘어감&lt;br&gt;
-print(x)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.9]]></title><description><![CDATA[Decorator]]></description><link>https://ctsictai.github.io//posts/python-part9/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part9/</guid><pubDate>Tue, 22 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;decorator&quot;&gt;&lt;a href=&quot;#decorator&quot; aria-label=&quot;decorator permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Decorator&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;@decorator명&lt;/strong&gt; —&gt; 데코레이터 선언&lt;/p&gt;
-&lt;p&gt;함수 앞뒤에 기능을 추가해서 손쉽게 함수를 활용할 수 있는 기법&lt;br&gt;
-여러 함수에 동일한 기능을 @데코레이터 하나로 간편하게 추가할 수 있다.&lt;br&gt;
-중첩 함수를 만드는 데 있어서 좀 더 편리한 기능이다.&lt;br&gt;
-중첩 함수를 만드는데 있어서 그 중첩 함수를 글로벌하게 데코레이터로써 쓸 수 있다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;대표적인 데코레이터&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;@staticmethod / @classmethod 등 class에서 메소드에 선언할 때 많이 씀&lt;/li&gt;
-&lt;li&gt;@auth 웹 페이지 상에서 signin 된 상태를 증명하기 위한 인가 증명에서 많이 쓰인다.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;데코레이터-작성하기&quot;&gt;&lt;a href=&quot;#%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0&quot; aria-label=&quot;데코레이터 작성하기 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;데코레이터 작성하기&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;def datetime&lt;em&gt;decorator(func): # &amp;#x3C;--- datetime&lt;/em&gt;decorator 는 데코레이터 이름, func 가 이 함수 안에 넣을 함수가 됨&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;def wrapper(): # &amp;#x3C;--- 호출할 함수를 감싸는 함수&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;print (‘time ’ + str(datetime.datetime.now())) # &amp;#x3C;--- 함수 앞에서 실행할 내용&lt;br&gt;
-func() # &amp;#x3C;--- 함수(데코레이터 적용시킬)&lt;br&gt;
-print (datetime.datetime.now()) # &amp;#x3C;--- 함수 뒤에서 실행할 내용
-return wrapper # &amp;#x3C;--- closure 함수로 만든다&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;기본 구조는 함수를 인자로 불러와서 그 함수를 함수안에서 사용한다는 개념이다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;print (‘time ’ + str(datetime.datetime.now())) 부분은
-데코레이터 적용할 함수 전에 실행할 로직이 들어가는 부분&lt;/li&gt;
-&lt;li&gt;print (datetime.datetime.now()) 부분은 데코레이터 적용할 함수의 로직이 끝난 뒤 실행할 로직이 들어가는 부분&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;실행할 함수 앞 뒤로 감싼 로직을 실행한다는 의미에서 wrapper라고 통상적으로 함수명을 많이 짓는다.&lt;/p&gt;
-&lt;h2 id=&quot;매개변수와-반환값이-있는-데코레이터&quot;&gt;&lt;a href=&quot;#%EB%A7%A4%EA%B0%9C%EB%B3%80%EC%88%98%EC%99%80-%EB%B0%98%ED%99%98%EA%B0%92%EC%9D%B4-%EC%9E%88%EB%8A%94-%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0&quot; aria-label=&quot;매개변수와 반환값이 있는 데코레이터 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;매개변수와 반환값이 있는 데코레이터&lt;/h2&gt;
-&lt;p&gt;def trace(func): # 호출할 함수를 매개변수로 받음&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;def wrapper(a, b): # 호출할 함수 add(a, b)의 매개변수와 똑같이 지정&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;r = func(a, b) # func에 매개변수 a, b를 넣어서 호출하고 반환값을 변수에 저장&lt;br&gt;
-print(‘{0}(a={1}, b={2}) -&gt; {3}‘.format(func.&lt;strong&gt;name&lt;/strong&gt;, a, b, r)) # 매개변수와 반환값 출력&lt;br&gt;
-return r # func의 반환값을 반환&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;return wrapper        # wrapper 함수 반환&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;@trace # @데코레이터&lt;br&gt;
-def add(a, b): # 매개변수는 두 개&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;return a + b # 매개변수 두 개를 더해서 반환&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;print(add(10, 20))&lt;/p&gt;
-&lt;p&gt;이렇게 되면 결과값은&lt;/p&gt;
-&lt;p&gt;add(a=10, b=20) -&gt; 30&lt;br&gt;
-30&lt;/p&gt;
-&lt;p&gt;이 데코레이터와 함수에서는 데코레이터 함수 내에서 함수를 호출해 변수에 저장 후에 변수를 return하는 방식으로 로직이 구성되었다.&lt;br&gt;
-그렇기 때문에 print가 먼저 실행되고 add 함수의 return이 나중에 실행된 것이다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;순서와 함수 호출 여부를 잘 봐야 한다&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;가변인자-매개변수와-반환값이-있는-데코레이터&quot;&gt;&lt;a href=&quot;#%EA%B0%80%EB%B3%80%EC%9D%B8%EC%9E%90-%EB%A7%A4%EA%B0%9C%EB%B3%80%EC%88%98%EC%99%80-%EB%B0%98%ED%99%98%EA%B0%92%EC%9D%B4-%EC%9E%88%EB%8A%94-%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0&quot; aria-label=&quot;가변인자 매개변수와 반환값이 있는 데코레이터 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;가변인자 매개변수와 반환값이 있는 데코레이터&lt;/h2&gt;
-&lt;p&gt;위의 과정은 매개변수가 고정되어 있는 함수이다.&lt;br&gt;
-매개변수(인수)가 고정되지 않은 함수는 어떻게 처리할까요? 이때는 wrapper 함수를 가변 인수 함수로 만들면 됩니다.&lt;/p&gt;
-&lt;p&gt;def trace(func): # 호출할 함수를 매개변수로 받음&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;def wrapper(*args, **kwargs): # 가변 인수 함수로 만듦&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;r = func(*args, **kwargs) # func에 args, kwargs를 언패킹하여 넣어줌&lt;br&gt;
-print(‘{0}(args={1}, kwargs={2}) -&gt; {3}‘.format(func.&lt;strong&gt;name&lt;/strong&gt;, args, kwargs, r)) # 매개변수와 반환값 출력&lt;br&gt;
-return r # func의 반환값을 반환&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;return wrapper # wrapper 함수 반환&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;@trace # @데코레이터&lt;br&gt;
-def get_max(*args): # 위치 인수를 사용하는 가변 인수 함수&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;return max(args)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;@trace # @데코레이터&lt;br&gt;
-def get_min(**kwargs): # 키워드 인수를 사용하는 가변 인수 함수&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;return min(kwargs.values())&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;결과값&lt;br&gt;
-print(get&lt;em&gt;max(10, 20))&lt;br&gt;
-print(get&lt;/em&gt;min(x=10, y=20, z=30))&lt;/p&gt;
-&lt;p&gt;get&lt;em&gt;max(args=(10, 20), kwargs={}) -&gt; 20&lt;br&gt;
-20&lt;br&gt;
-get&lt;/em&gt;min(args=(), kwargs={‘x’: 10, ‘y’: 20, ‘z’: 30}) -&gt; 10&lt;br&gt;
-10&lt;/p&gt;
-&lt;p&gt;고정 인자 함수와의 차이점은 wrapper 함수의 인자가 가변인자로 바뀐다는 점이다.&lt;/p&gt;
-&lt;h2 id=&quot;method-decorator&quot;&gt;&lt;a href=&quot;#method-decorator&quot; aria-label=&quot;method decorator permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Method Decorator&lt;/h2&gt;
-&lt;p&gt;클래스메서드나 정적메서드 데코레이터 사용하듯이 클래스의 메소드에 사용되어지는 데코레이터&lt;/p&gt;
-&lt;p&gt;def h1_tag(function):&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;def func_wrapper(self, *args, **kwargs): # &amp;#x3C;--- self 를 무조건 첫 파라미터로 넣어야 메서드에 적용가능(클래스에 적용하기 위한)&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;return “{0}“.format(function(self, *args, **kwargs)) # &amp;#x3C;--- function 함수에도 self 를 넣어야 함&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;return func_wrapper&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;클래스-선언시-메서드에-데코레이터-적용하기&quot;&gt;&lt;a href=&quot;#%ED%81%B4%EB%9E%98%EC%8A%A4-%EC%84%A0%EC%96%B8%EC%8B%9C-%EB%A9%94%EC%84%9C%EB%93%9C%EC%97%90-%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0&quot; aria-label=&quot;클래스 선언시 메서드에 데코레이터 적용하기 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;클래스 선언시 메서드에 데코레이터 적용하기&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;@staticmethod / @classmethod와 비슷&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;class Person:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;def &lt;strong&gt;init&lt;/strong&gt;(self, first&lt;em&gt;name, last&lt;/em&gt;name):&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;self.first&lt;em&gt;name = first&lt;/em&gt;name&lt;br&gt;
-self.last&lt;em&gt;name = last&lt;/em&gt;name&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;@h1&lt;em&gt;tag&lt;br&gt;
-def get&lt;/em&gt;name(self):&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;return self.first&lt;em&gt;name + ’ ’ + self.last&lt;/em&gt;name – 리턴값 1개!- 위에서 첫번째 인자 {0}으로 인식되어서 들어감&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;데코레이터 적용 확인해보기&lt;br&gt;
-davelee = Person(‘Lee’, ‘Dave’)&lt;br&gt;
-print(davelee.get_name())&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Lee Dave&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;파라미터를-가지고-있는-데코레이터&quot;&gt;&lt;a href=&quot;#%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0%EB%A5%BC-%EA%B0%80%EC%A7%80%EA%B3%A0-%EC%9E%88%EB%8A%94-%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0&quot; aria-label=&quot;파라미터를 가지고 있는 데코레이터 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;파라미터를 가지고 있는 데코레이터&lt;/h2&gt;
-&lt;p&gt;def name&lt;em&gt;decorator(char): - #char는 name&lt;/em&gt;decorator에 적용될 파라미터 -파라미터 적용을 위한 함수&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;def real_deco(func): - #실제 데코레이터 함수 적용 (func) 적용할 함수 인자로 불러&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;def wrapper(): - # 감쌀꺼 func이 greetings() – none param —&gt; wrapper no param # 혹 적용할 함수에 인자가 있으면 같이 적용해주자&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;return func() + char # func에 데코에서 받은 인자 char를 더해줌(둘 다 str type)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;return wrapper - 리턴 (wrapper 함수 자체를)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;return real_deco – 최종 리턴 – 이래야 함수 실행됨 (함수자체를 리턴해버리니까)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;@name_decorator(“정우성”) – 데코에 파라미터 char가 적용된 모습
-def greeting():&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;return “Hello, ”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;결과값&lt;br&gt;
-print(greeting())&lt;br&gt;
-Hello, 정우성&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.6]]></title><description><![CDATA[Class]]></description><link>https://ctsictai.github.io//posts/python-part6/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part6/</guid><pubDate>Tue, 22 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;클래스&quot;&gt;&lt;a href=&quot;#%ED%81%B4%EB%9E%98%EC%8A%A4&quot; aria-label=&quot;클래스 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;클래스&lt;/h1&gt;
+print(x)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.6]]></title><description><![CDATA[Class]]></description><link>https://ctsictai.github.io//posts/python-part6/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part6/</guid><pubDate>Tue, 22 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;클래스&quot;&gt;&lt;a href=&quot;#%ED%81%B4%EB%9E%98%EC%8A%A4&quot; aria-label=&quot;클래스 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;클래스&lt;/h1&gt;
 &lt;h2 id=&quot;개요&quot;&gt;&lt;a href=&quot;#%EA%B0%9C%EC%9A%94&quot; aria-label=&quot;개요 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;개요&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;클래스는 객체의 구조와 행동을 정의합니다.&lt;/li&gt;
@@ -2332,7 +2253,163 @@ mro() - 클래스를 작성하면 상속 관계를 확인할 수 있는 메소�
 &lt;p&gt;기반 클래스 Person의 속성 hello를 찾는 과정을 그림으로 나타내면 다음과 같은 모양이 됩니다.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://dojang.io/pluginfile.php/13907/mod_page/content/3/036004.png&quot; alt=&quot;기반클래스 속성찾기 로직&quot;&gt;&lt;/p&gt;
 &lt;h3 id=&quot;기반-클래스를-초기화하지-않아도-되는-경우&quot;&gt;&lt;a href=&quot;#%EA%B8%B0%EB%B0%98-%ED%81%B4%EB%9E%98%EC%8A%A4%EB%A5%BC-%EC%B4%88%EA%B8%B0%ED%99%94%ED%95%98%EC%A7%80-%EC%95%8A%EC%95%84%EB%8F%84-%EB%90%98%EB%8A%94-%EA%B2%BD%EC%9A%B0&quot; aria-label=&quot;기반 클래스를 초기화하지 않아도 되는 경우 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;기반 클래스를 초기화하지 않아도 되는 경우&lt;/h3&gt;
-&lt;p&gt;만약 파생 클래스에서 &lt;strong&gt;init&lt;/strong&gt; 메서드를 생략한다면 기반 클래스의 &lt;strong&gt;init&lt;/strong&gt;이 자동으로 호출되므로 super()는 사용하지 않아도 됩니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.5]]></title><description><![CDATA[While/Function/Module&Package/Closure/Reduce]]></description><link>https://ctsictai.github.io//posts/python-part5/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part5/</guid><pubDate>Mon, 21 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;while문&quot;&gt;&lt;a href=&quot;#while%EB%AC%B8&quot; aria-label=&quot;while문 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;While문&lt;/h1&gt;
+&lt;p&gt;만약 파생 클래스에서 &lt;strong&gt;init&lt;/strong&gt; 메서드를 생략한다면 기반 클래스의 &lt;strong&gt;init&lt;/strong&gt;이 자동으로 호출되므로 super()는 사용하지 않아도 됩니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.9]]></title><description><![CDATA[Decorator]]></description><link>https://ctsictai.github.io//posts/python-part9/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part9/</guid><pubDate>Tue, 22 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;decorator&quot;&gt;&lt;a href=&quot;#decorator&quot; aria-label=&quot;decorator permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Decorator&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;@decorator명&lt;/strong&gt; —&gt; 데코레이터 선언&lt;/p&gt;
+&lt;p&gt;함수 앞뒤에 기능을 추가해서 손쉽게 함수를 활용할 수 있는 기법&lt;br&gt;
+여러 함수에 동일한 기능을 @데코레이터 하나로 간편하게 추가할 수 있다.&lt;br&gt;
+중첩 함수를 만드는 데 있어서 좀 더 편리한 기능이다.&lt;br&gt;
+중첩 함수를 만드는데 있어서 그 중첩 함수를 글로벌하게 데코레이터로써 쓸 수 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;대표적인 데코레이터&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;@staticmethod / @classmethod 등 class에서 메소드에 선언할 때 많이 씀&lt;/li&gt;
+&lt;li&gt;@auth 웹 페이지 상에서 signin 된 상태를 증명하기 위한 인가 증명에서 많이 쓰인다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;데코레이터-작성하기&quot;&gt;&lt;a href=&quot;#%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0&quot; aria-label=&quot;데코레이터 작성하기 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;데코레이터 작성하기&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;def datetime&lt;em&gt;decorator(func): # &amp;#x3C;--- datetime&lt;/em&gt;decorator 는 데코레이터 이름, func 가 이 함수 안에 넣을 함수가 됨&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;def wrapper(): # &amp;#x3C;--- 호출할 함수를 감싸는 함수&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;print (‘time ’ + str(datetime.datetime.now())) # &amp;#x3C;--- 함수 앞에서 실행할 내용&lt;br&gt;
+func() # &amp;#x3C;--- 함수(데코레이터 적용시킬)&lt;br&gt;
+print (datetime.datetime.now()) # &amp;#x3C;--- 함수 뒤에서 실행할 내용
+return wrapper # &amp;#x3C;--- closure 함수로 만든다&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;기본 구조는 함수를 인자로 불러와서 그 함수를 함수안에서 사용한다는 개념이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;print (‘time ’ + str(datetime.datetime.now())) 부분은
+데코레이터 적용할 함수 전에 실행할 로직이 들어가는 부분&lt;/li&gt;
+&lt;li&gt;print (datetime.datetime.now()) 부분은 데코레이터 적용할 함수의 로직이 끝난 뒤 실행할 로직이 들어가는 부분&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;실행할 함수 앞 뒤로 감싼 로직을 실행한다는 의미에서 wrapper라고 통상적으로 함수명을 많이 짓는다.&lt;/p&gt;
+&lt;h2 id=&quot;매개변수와-반환값이-있는-데코레이터&quot;&gt;&lt;a href=&quot;#%EB%A7%A4%EA%B0%9C%EB%B3%80%EC%88%98%EC%99%80-%EB%B0%98%ED%99%98%EA%B0%92%EC%9D%B4-%EC%9E%88%EB%8A%94-%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0&quot; aria-label=&quot;매개변수와 반환값이 있는 데코레이터 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;매개변수와 반환값이 있는 데코레이터&lt;/h2&gt;
+&lt;p&gt;def trace(func): # 호출할 함수를 매개변수로 받음&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;def wrapper(a, b): # 호출할 함수 add(a, b)의 매개변수와 똑같이 지정&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;r = func(a, b) # func에 매개변수 a, b를 넣어서 호출하고 반환값을 변수에 저장&lt;br&gt;
+print(‘{0}(a={1}, b={2}) -&gt; {3}‘.format(func.&lt;strong&gt;name&lt;/strong&gt;, a, b, r)) # 매개변수와 반환값 출력&lt;br&gt;
+return r # func의 반환값을 반환&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;return wrapper        # wrapper 함수 반환&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;@trace # @데코레이터&lt;br&gt;
+def add(a, b): # 매개변수는 두 개&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;return a + b # 매개변수 두 개를 더해서 반환&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;print(add(10, 20))&lt;/p&gt;
+&lt;p&gt;이렇게 되면 결과값은&lt;/p&gt;
+&lt;p&gt;add(a=10, b=20) -&gt; 30&lt;br&gt;
+30&lt;/p&gt;
+&lt;p&gt;이 데코레이터와 함수에서는 데코레이터 함수 내에서 함수를 호출해 변수에 저장 후에 변수를 return하는 방식으로 로직이 구성되었다.&lt;br&gt;
+그렇기 때문에 print가 먼저 실행되고 add 함수의 return이 나중에 실행된 것이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;순서와 함수 호출 여부를 잘 봐야 한다&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;가변인자-매개변수와-반환값이-있는-데코레이터&quot;&gt;&lt;a href=&quot;#%EA%B0%80%EB%B3%80%EC%9D%B8%EC%9E%90-%EB%A7%A4%EA%B0%9C%EB%B3%80%EC%88%98%EC%99%80-%EB%B0%98%ED%99%98%EA%B0%92%EC%9D%B4-%EC%9E%88%EB%8A%94-%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0&quot; aria-label=&quot;가변인자 매개변수와 반환값이 있는 데코레이터 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;가변인자 매개변수와 반환값이 있는 데코레이터&lt;/h2&gt;
+&lt;p&gt;위의 과정은 매개변수가 고정되어 있는 함수이다.&lt;br&gt;
+매개변수(인수)가 고정되지 않은 함수는 어떻게 처리할까요? 이때는 wrapper 함수를 가변 인수 함수로 만들면 됩니다.&lt;/p&gt;
+&lt;p&gt;def trace(func): # 호출할 함수를 매개변수로 받음&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;def wrapper(*args, **kwargs): # 가변 인수 함수로 만듦&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;r = func(*args, **kwargs) # func에 args, kwargs를 언패킹하여 넣어줌&lt;br&gt;
+print(‘{0}(args={1}, kwargs={2}) -&gt; {3}‘.format(func.&lt;strong&gt;name&lt;/strong&gt;, args, kwargs, r)) # 매개변수와 반환값 출력&lt;br&gt;
+return r # func의 반환값을 반환&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;return wrapper # wrapper 함수 반환&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;@trace # @데코레이터&lt;br&gt;
+def get_max(*args): # 위치 인수를 사용하는 가변 인수 함수&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;return max(args)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;@trace # @데코레이터&lt;br&gt;
+def get_min(**kwargs): # 키워드 인수를 사용하는 가변 인수 함수&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;return min(kwargs.values())&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;결과값&lt;br&gt;
+print(get&lt;em&gt;max(10, 20))&lt;br&gt;
+print(get&lt;/em&gt;min(x=10, y=20, z=30))&lt;/p&gt;
+&lt;p&gt;get&lt;em&gt;max(args=(10, 20), kwargs={}) -&gt; 20&lt;br&gt;
+20&lt;br&gt;
+get&lt;/em&gt;min(args=(), kwargs={‘x’: 10, ‘y’: 20, ‘z’: 30}) -&gt; 10&lt;br&gt;
+10&lt;/p&gt;
+&lt;p&gt;고정 인자 함수와의 차이점은 wrapper 함수의 인자가 가변인자로 바뀐다는 점이다.&lt;/p&gt;
+&lt;h2 id=&quot;method-decorator&quot;&gt;&lt;a href=&quot;#method-decorator&quot; aria-label=&quot;method decorator permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Method Decorator&lt;/h2&gt;
+&lt;p&gt;클래스메서드나 정적메서드 데코레이터 사용하듯이 클래스의 메소드에 사용되어지는 데코레이터&lt;/p&gt;
+&lt;p&gt;def h1_tag(function):&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;def func_wrapper(self, *args, **kwargs): # &amp;#x3C;--- self 를 무조건 첫 파라미터로 넣어야 메서드에 적용가능(클래스에 적용하기 위한)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;return “{0}“.format(function(self, *args, **kwargs)) # &amp;#x3C;--- function 함수에도 self 를 넣어야 함&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;return func_wrapper&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;클래스-선언시-메서드에-데코레이터-적용하기&quot;&gt;&lt;a href=&quot;#%ED%81%B4%EB%9E%98%EC%8A%A4-%EC%84%A0%EC%96%B8%EC%8B%9C-%EB%A9%94%EC%84%9C%EB%93%9C%EC%97%90-%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0&quot; aria-label=&quot;클래스 선언시 메서드에 데코레이터 적용하기 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;클래스 선언시 메서드에 데코레이터 적용하기&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;@staticmethod / @classmethod와 비슷&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;class Person:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;def &lt;strong&gt;init&lt;/strong&gt;(self, first&lt;em&gt;name, last&lt;/em&gt;name):&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;self.first&lt;em&gt;name = first&lt;/em&gt;name&lt;br&gt;
+self.last&lt;em&gt;name = last&lt;/em&gt;name&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;@h1&lt;em&gt;tag&lt;br&gt;
+def get&lt;/em&gt;name(self):&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;return self.first&lt;em&gt;name + ’ ’ + self.last&lt;/em&gt;name – 리턴값 1개!- 위에서 첫번째 인자 {0}으로 인식되어서 들어감&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;데코레이터 적용 확인해보기&lt;br&gt;
+davelee = Person(‘Lee’, ‘Dave’)&lt;br&gt;
+print(davelee.get_name())&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Lee Dave&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;파라미터를-가지고-있는-데코레이터&quot;&gt;&lt;a href=&quot;#%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0%EB%A5%BC-%EA%B0%80%EC%A7%80%EA%B3%A0-%EC%9E%88%EB%8A%94-%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0&quot; aria-label=&quot;파라미터를 가지고 있는 데코레이터 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;파라미터를 가지고 있는 데코레이터&lt;/h2&gt;
+&lt;p&gt;def name&lt;em&gt;decorator(char): - #char는 name&lt;/em&gt;decorator에 적용될 파라미터 -파라미터 적용을 위한 함수&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;def real_deco(func): - #실제 데코레이터 함수 적용 (func) 적용할 함수 인자로 불러&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;def wrapper(): - # 감쌀꺼 func이 greetings() – none param —&gt; wrapper no param # 혹 적용할 함수에 인자가 있으면 같이 적용해주자&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;return func() + char # func에 데코에서 받은 인자 char를 더해줌(둘 다 str type)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;return wrapper - 리턴 (wrapper 함수 자체를)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;return real_deco – 최종 리턴 – 이래야 함수 실행됨 (함수자체를 리턴해버리니까)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;@name_decorator(“정우성”) – 데코에 파라미터 char가 적용된 모습
+def greeting():&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;return “Hello, ”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;결과값&lt;br&gt;
+print(greeting())&lt;br&gt;
+Hello, 정우성&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.5]]></title><description><![CDATA[While/Function/Module&Package/Closure/Reduce]]></description><link>https://ctsictai.github.io//posts/python-part5/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part5/</guid><pubDate>Mon, 21 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;while문&quot;&gt;&lt;a href=&quot;#while%EB%AC%B8&quot; aria-label=&quot;while문 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;While문&lt;/h1&gt;
 &lt;p&gt;while 구문은 특정 조건문이 True 일동안 코드블록을 반복 실행 합니다.&lt;/p&gt;
 &lt;h2 id=&quot;while-else&quot;&gt;&lt;a href=&quot;#while-else&quot; aria-label=&quot;while else permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;While Else&lt;/h2&gt;
 &lt;p&gt;파이썬의 while문은 else 문이 추가 될 수 있습니다.&lt;br&gt;
