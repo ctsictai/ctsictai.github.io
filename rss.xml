@@ -1,4 +1,107 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[CTS junior Web developer]]></title><description><![CDATA[Web developer Learning.]]></description><link>https://ctsictai.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 13 Jan 2020 10:52:36 GMT</lastBuildDate><item><title><![CDATA[Bcrypt]]></title><description><![CDATA[Bcrypt encryption of security information]]></description><link>https://ctsictai.github.io//posts/django/bcrypt</link><guid isPermaLink="false">https://ctsictai.github.io//posts/django/bcrypt</guid><pubDate>Mon, 13 Jan 2020 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;bcrypt란&quot;&gt;&lt;a href=&quot;#bcrypt%EB%9E%80&quot; aria-label=&quot;bcrypt란 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Bcrypt란?&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[CTS junior Web developer]]></title><description><![CDATA[Web developer Learning.]]></description><link>https://ctsictai.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 14 Jan 2020 14:37:01 GMT</lastBuildDate><item><title><![CDATA[transaction]]></title><description><![CDATA[Transaction]]></description><link>https://ctsictai.github.io//posts/django/transaction</link><guid isPermaLink="false">https://ctsictai.github.io//posts/django/transaction</guid><pubDate>Tue, 14 Jan 2020 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;트랜잭션이란&quot;&gt;&lt;a href=&quot;#%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EC%9D%B4%EB%9E%80&quot; aria-label=&quot;트랜잭션이란 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;트랜잭션이란?&lt;/h1&gt;
+&lt;p&gt;트랜잭션(Transaction)은 데이터베이스의 상태를 변환시키는 하나의 논리적 기능을 수행하기 위한 작업의 단위 또는 한꺼번에 모두 수행되어야 할 일련의 연산들을 의미한다.&lt;/p&gt;
+&lt;p&gt;트랜잭션의 특징&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;트랜잭션은 데이터베이스 시스템에서 병행 제어 및 회복 작업 시 처리되는 작업의 논리적 단위이다.&lt;/li&gt;
+&lt;li&gt;사용자가 시스템에 대한 서비스 요구 시 시스템이 응답하기 위한 상태 변환 과정의 작업단위이다.&lt;/li&gt;
+&lt;li&gt;하나의 트랜잭션은 Commit되거나 Rollback된다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;acidatomicity-consistency-isolation-durability&quot;&gt;&lt;a href=&quot;#acidatomicity-consistency-isolation-durability&quot; aria-label=&quot;acidatomicity consistency isolation durability permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;ACID(Atomicity, Consistency, Isolation, Durability)&lt;/h2&gt;
+&lt;p&gt;트랜잭션에 있어서 중요한 4가지 특징이다. 꼭 알아둬야 되는 개념으로 한 번 정리하고 넘어간다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;원자성(Atomicity)&lt;/strong&gt;은 트랜잭션과 관련된 작업들이 부분적으로 실행되다가 중단되지 않는 것을 보장하는 능력이다.&lt;br&gt;
+예를 들어, 자금 이체는 성공할 수도 실패할 수도 있지만 보내는 쪽에서 돈을 빼 오는 작업만 성공하고 받는 쪽에 돈을 넣는 작업을 실패해서는 안된다. 원자성은 이와 같이 중간 단계까지 실행되고 실패하는 일이 없도록 하는 것이다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;일관성(Consistency)&lt;/strong&gt;은 트랜잭션이 실행을 성공적으로 완료하면 언제나 일관성 있는 데이터베이스 상태로 유지하는 것을 의미한다.&lt;br&gt;
+무결성 제약이 모든 계좌는 잔고가 있어야 한다면 이를 위반하는 트랜잭션은 중단된다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;고립성(Isolation)&lt;/strong&gt;은 트랜잭션을 수행 시 다른 트랜잭션의 연산 작업이 끼어들지 못하도록 보장하는 것을 의미한다.&lt;br&gt;
+이것은 트랜잭션 밖에 있는 어떤 연산도 중간 단계의 데이터를 볼 수 없음을 의미한다. 은행 관리자는 이체 작업을 하는 도중에 쿼리를 실행하더라도 특정 계좌간 이체하는 양 쪽을 볼 수 없다.&lt;br&gt;
+공식적으로 고립성은 트랜잭션 실행내역은 연속적이어야 함을 의미한다. 성능관련 이유로 인해 이 특성은 가장 유연성 있는 제약 조건이다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;지속성(Durability)&lt;/strong&gt;은 성공적으로 수행된 트랜잭션은 영원히 반영되어야 함을 의미한다.&lt;br&gt;
+시스템 문제, DB 일관성 체크 등을 하더라도 유지되어야 함을 의미한다. 전형적으로 모든 트랜잭션은 로그로 남고 시스템 장애 발생 전 상태로 되돌릴 수 있다.&lt;br&gt;
+트랜잭션은 로그에 모든 것이 저장된 후에만 commit 상태로 간주될 수 있다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;트랜잭션-연산-및-상태&quot;&gt;&lt;a href=&quot;#%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98-%EC%97%B0%EC%82%B0-%EB%B0%8F-%EC%83%81%ED%83%9C&quot; aria-label=&quot;트랜잭션 연산 및 상태 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;트랜잭션 연산 및 상태&lt;/h1&gt;
+&lt;h3 id=&quot;commit연산&quot;&gt;&lt;a href=&quot;#commit%EC%97%B0%EC%82%B0&quot; aria-label=&quot;commit연산 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Commit연산&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;COMMIT은 변경한 데이터를 데이터베이스에 마지막으로 반영하고 현재의 트랜잭션을 종료하라는 명령어&lt;/li&gt;
+&lt;li&gt;COMMIT을 하면 트랜잭션의 처리과정이 모두 반영되며 하나의 트랜잭션 과정이 끝남&lt;/li&gt;
+&lt;li&gt;COMMIT하기 전 데이터가 저장됨&lt;/li&gt;
+&lt;li&gt;DDL(CREATE, DROP, ALTER, RENAME, TRUNCATE)은 AutoCommit임&lt;/li&gt;
+&lt;li&gt;정상적인 종료시에도 COMMIT 작업을 수행함 (EXIT로 종료)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;rollback연산&quot;&gt;&lt;a href=&quot;#rollback%EC%97%B0%EC%82%B0&quot; aria-label=&quot;rollback연산 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Rollback연산&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;ROLLBACK은 그 반대로 변경한 데이터를 변경(DML)을 취소하고 현재의 트랜잭션을 끝내라는 명령어&lt;/li&gt;
+&lt;li&gt;트랜잭션으로 인한 하나의 묶음처리가 시작되기 이전의 상태로 되돌려지는 것&lt;/li&gt;
+&lt;li&gt;이전 COMMIT한 곳까지만 복구가 됨&lt;/li&gt;
+&lt;li&gt;이전의 상태로 돌아가니 지금까지 수행했던 데이터베이스의 변경을 모두 무효화시킴&lt;/li&gt;
+&lt;li&gt;비정상적인 종료시 자동으로 ROLLBACK 작업을 수행함 (우측 상단 X버튼 클릭시, 정전, 컴퓨터가 Down시)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;트랜잭션-상태도&quot;&gt;&lt;a href=&quot;#%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98-%EC%83%81%ED%83%9C%EB%8F%84&quot; aria-label=&quot;트랜잭션 상태도 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;트랜잭션 상태도&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/997656365AE1FCA40B&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;transaction-in-django&quot;&gt;&lt;a href=&quot;#transaction-in-django&quot; aria-label=&quot;transaction in django permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Transaction in Django&lt;/h1&gt;
+&lt;h2 id=&quot;데코레이터decorator를-이용한-python--django-트랜잭션&quot;&gt;&lt;a href=&quot;#%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0decorator%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-python--django-%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98&quot; aria-label=&quot;데코레이터decorator를 이용한 python  django 트랜잭션 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;데코레이터(decorator)를 이용한 python + django 트랜잭션&lt;/h2&gt;
+&lt;p&gt;django 에서 트랜잭션을 이용하는 가장 쉬운 방법으로 데코레이터를 이용하는 방법입니다. 데코레이터를 이용하게 되면, 메서드 안에는 코드를 삽입할 필요가 없습니다.&lt;br&gt;
+&lt;strong&gt;“@transaction.atomic”&lt;/strong&gt; 이라는 데코레이터를 붙여주기만 하면 끝입니다. django 에서 기본적으로 제공해주는 데코레이터이므로, 따로 모듈을 설치해줄 필요도 없습니다.&lt;br&gt;
+가장 간단하게 atomic(원자성)한 트랜잭션을 처리하기 위한 손쉬운 방법이죠&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;from django.db import transaction  # 장고에서 제공하는 transaction
+
+@transaction.atomic                 # transaction decorator
+def transaction_test1(arg1, arg2):
+    # start transaction
+    a.save()
+
+    b.save()
+    # end transaction&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;with-명령어를-이용한-트랜잭션&quot;&gt;&lt;a href=&quot;#with-%EB%AA%85%EB%A0%B9%EC%96%B4%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98&quot; aria-label=&quot;with 명령어를 이용한 트랜잭션 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;with 명령어를 이용한 트랜잭션&lt;/h2&gt;
+&lt;p&gt;메서드 전체가 아닌 메서드의 일부분만 트랜잭션으로 묶어줄 필요가 있을 때 사용합니다. 트랜잭션으로 묶일 부분을 직접 지정해줘야 하는 불편함(?)이 있지만, 데코레이터와 마찬가지로 비교적 간단하게 처리가 가능합니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;from django.db import transaction
+
+def transaction_test2(arg1, arg2):
+
+    a.save()    # 항상 save 처리됨, 예외가 발생할 경우 에러 발생
+
+    with transaction.atomic(): # 메서드에 일부분만 트랜잭션 처리
+        # start transaction
+        b.save()
+
+        c.save()
+        # end transaction&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;savepoint-를-직접-지정해-주는-트랜잭션&quot;&gt;&lt;a href=&quot;#savepoint-%EB%A5%BC-%EC%A7%81%EC%A0%91-%EC%A7%80%EC%A0%95%ED%95%B4-%EC%A3%BC%EB%8A%94-%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98&quot; aria-label=&quot;savepoint 를 직접 지정해 주는 트랜잭션 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;savepoint 를 직접 지정해 주는 트랜잭션&lt;/h2&gt;
+&lt;p&gt;위의 2가지 방법의 경우, 메서드 내에서(트랜잭션으로 묶여져있는) exception 이 발생하더라도 저절로 롤백이 되기 때문에 예외처리를 따로 해 줄 필요는 없습니다.&lt;br&gt;
+하지만, 3 번의 경우에는 savepoint 및 cummit 지점을 직접 지정해 주기 때문에 &lt;strong&gt;예외처리&lt;/strong&gt; 또한 별도로 처리되어야 합니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;from django.db import transaction
+
+def transaction_test3(arg1, arg2):
+
+    a.save()
+
+    sid = transaction.savepoint()
+    # start transaction
+    try:
+
+        b.save()
+
+        c.save()
+
+        transaction.savepoint_commit(sid)
+        # end transaction
+    except Exception
+        # 트랜잭션 내에서 에러 발생시 롤백처리
+        transaction.savepoint_rollback(sid)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;db-설정에서-트랜잭션-처리를-자동으로-설정하는-방법&quot;&gt;&lt;a href=&quot;#db-%EC%84%A4%EC%A0%95%EC%97%90%EC%84%9C-%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98-%EC%B2%98%EB%A6%AC%EB%A5%BC-%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;db 설정에서 트랜잭션 처리를 자동으로 설정하는 방법 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;DB 설정에서 트랜잭션 처리를 자동으로 설정하는 방법&lt;/h2&gt;
+&lt;p&gt;django의 기본 프로젝트 디렉토리에 settings.py에 있는 DATABASE 설정에서 주요 문구를 추가하면된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# settings/base.py
+
+DATABASE = {
+  &amp;#39;default&amp;#39;: {
+    #...생략
+    &amp;#39;ATOMIC_REQUESTS&amp;#39;: True,
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;‘ATOMIC_REQUESTS’: False, 라면 디폴트값이 트랜잭션 처리를 하지 않는다. 그래서 데이터베이스 변화가 있는 API를 설계할 때 일일히 지정해줘야 한다.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Bcrypt]]></title><description><![CDATA[Bcrypt encryption of security information]]></description><link>https://ctsictai.github.io//posts/django/bcrypt</link><guid isPermaLink="false">https://ctsictai.github.io//posts/django/bcrypt</guid><pubDate>Mon, 13 Jan 2020 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;bcrypt란&quot;&gt;&lt;a href=&quot;#bcrypt%EB%9E%80&quot; aria-label=&quot;bcrypt란 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Bcrypt란?&lt;/h1&gt;
 &lt;p&gt;Blowfish를 기반으로 만들어진 “단방향 암호화 해싱함수”로 1999년 USENIX에서 발표됐다. Rainbow table 공격을 막기 위해서 salt를 사용하며, 암호검사 요청이 반복될 수록 cost를 늘림으로써, 무차별 대입 공격(brute-force search)을 막을 수 있다. cost는 반복횟수로 2^n 이다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Rainbow table attack이란?
@@ -2226,7 +2329,197 @@ mro() - 클래스를 작성하면 상속 관계를 확인할 수 있는 메소�
 &lt;p&gt;기반 클래스 Person의 속성 hello를 찾는 과정을 그림으로 나타내면 다음과 같은 모양이 됩니다.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://dojang.io/pluginfile.php/13907/mod_page/content/3/036004.png&quot; alt=&quot;기반클래스 속성찾기 로직&quot;&gt;&lt;/p&gt;
 &lt;h3 id=&quot;기반-클래스를-초기화하지-않아도-되는-경우&quot;&gt;&lt;a href=&quot;#%EA%B8%B0%EB%B0%98-%ED%81%B4%EB%9E%98%EC%8A%A4%EB%A5%BC-%EC%B4%88%EA%B8%B0%ED%99%94%ED%95%98%EC%A7%80-%EC%95%8A%EC%95%84%EB%8F%84-%EB%90%98%EB%8A%94-%EA%B2%BD%EC%9A%B0&quot; aria-label=&quot;기반 클래스를 초기화하지 않아도 되는 경우 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;기반 클래스를 초기화하지 않아도 되는 경우&lt;/h3&gt;
-&lt;p&gt;만약 파생 클래스에서 &lt;strong&gt;init&lt;/strong&gt; 메서드를 생략한다면 기반 클래스의 &lt;strong&gt;init&lt;/strong&gt;이 자동으로 호출되므로 super()는 사용하지 않아도 됩니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.7]]></title><description><![CDATA[Scope]]></description><link>https://ctsictai.github.io//posts/python-part7/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part7/</guid><pubDate>Tue, 22 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;scope&quot;&gt;&lt;a href=&quot;#scope&quot; aria-label=&quot;scope permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SCOPE&lt;/h1&gt;
+&lt;p&gt;만약 파생 클래스에서 &lt;strong&gt;init&lt;/strong&gt; 메서드를 생략한다면 기반 클래스의 &lt;strong&gt;init&lt;/strong&gt;이 자동으로 호출되므로 super()는 사용하지 않아도 됩니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.8]]></title><description><![CDATA[예외처리]]></description><link>https://ctsictai.github.io//posts/python-part8/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part8/</guid><pubDate>Tue, 22 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;예외처리&quot;&gt;&lt;a href=&quot;#%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC&quot; aria-label=&quot;예외처리 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;예외처리&lt;/h1&gt;
+&lt;h1 id=&quot;1-try---exception&quot;&gt;&lt;a href=&quot;#1-try---exception&quot; aria-label=&quot;1 try   exception permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. TRY - EXCEPTION&lt;/h1&gt;
+&lt;p&gt;try에 실행할 코드를 넣고 except에 예외가 발생했을 때 처리하는 코드를 넣습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;try:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;실행할 코드&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;except:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;예외가 발생했을 때 처리하는 코드&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;20을 정수값을 가진 x 로 나누는 코드를 예를 들면&lt;/p&gt;
+&lt;p&gt;다른 숫자는 상관없지만 x가 0인 경우는 연산이 되지 않는다.&lt;/p&gt;
+&lt;p&gt;이 때 처리를 어떻게 할 것인가&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;try:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;x = int(input(‘나눌 숫자를 입력하세요: ‘))&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;y = 20 / x
+print(y)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;except: # 예외가 발생했을 때 실행됨&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;print(‘예외가 발생했습니다.‘)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;x가 0인 경우에는 예외로 간주하여 except에 코딩된 print가 처리 된다.&lt;/p&gt;
+&lt;h2 id=&quot;그러면-특정-예외만-처리하고-싶은-경우에는-어떻게-해야-할까&quot;&gt;&lt;a href=&quot;#%EA%B7%B8%EB%9F%AC%EB%A9%B4-%ED%8A%B9%EC%A0%95-%EC%98%88%EC%99%B8%EB%A7%8C-%EC%B2%98%EB%A6%AC%ED%95%98%EA%B3%A0-%EC%8B%B6%EC%9D%80-%EA%B2%BD%EC%9A%B0%EC%97%90%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%ED%95%B4%EC%95%BC-%ED%95%A0%EA%B9%8C&quot; aria-label=&quot;그러면 특정 예외만 처리하고 싶은 경우에는 어떻게 해야 할까 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;그러면 특정 예외만 처리하고 싶은 경우에는 어떻게 해야 할까?&lt;/h2&gt;
+&lt;p&gt;다음과 같이 정수 두 개를 입력받아서 하나는 리스트의 인덱스로 사용하고, 하나는 나누는 값으로 사용합니다.&lt;br&gt;
+그리고 except를 두 개 사용하고 각각 ZeroDivisionError와 IndexError를 지정합니다.&lt;/p&gt;
+&lt;p&gt;y = [10, 20, 30]&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;try:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;index, x = map(int, input(‘인덱스와 나눌 숫자를 입력하세요: ‘).split())&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;print(y[index] / x)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;except ZeroDivisionError: # 숫자를 0으로 나눠서 에러가 발생했을 때 실행됨&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;print(‘숫자를 0으로 나눌 수 없습니다.‘)  0으로 나눌 경우&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;except IndexError: # 범위를 벗어난 인덱스에 접근하여 에러가 발생했을 때 실행됨&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;print(‘잘못된 인덱스입니다.‘)  실수 넣었을 때&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;주석에 쓰여져 있는 대로 숫자를 0으로 나누는 경우와 인덱스 범위를 넣었을 경우 두 가지 경우를 특정하여 예외처리를 할 수 있다.&lt;/p&gt;
+&lt;h2 id=&quot;예외의-에러-메시지-받아오기&quot;&gt;&lt;a href=&quot;#%EC%98%88%EC%99%B8%EC%9D%98-%EC%97%90%EB%9F%AC-%EB%A9%94%EC%8B%9C%EC%A7%80-%EB%B0%9B%EC%95%84%EC%98%A4%EA%B8%B0&quot; aria-label=&quot;예외의 에러 메시지 받아오기 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;예외의 에러 메시지 받아오기&lt;/h2&gt;
+&lt;p&gt;except에서 as 뒤에 변수를 지정하면 발생한 예외의 에러 메시지를 받아올 수 있습니다.&lt;/p&gt;
+&lt;p&gt;앞에서 만든 코드의 except에 as e를 넣습니다. 보통 예외( exception)의 e를 따서 변수 이름을 e로 짓습니다&lt;/p&gt;
+&lt;p&gt;y = [10, 20, 30]&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;try:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;index, x = map(int, input(‘인덱스와 나눌 숫자를 입력하세요: ‘).split())&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;print(y[index] / x)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;except ZeroDivisionError as e:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;print(‘숫자를 0으로 나눌 수 없습니다.’, e)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;except IndexError as e:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;print(‘잘못된 인덱스입니다.’, e)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;as e&lt;/strong&gt; 를 넣어서 달라지는 점은 무엇일까?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;0으로 나누는 경우인 ZeroDivisionError를 발생해보면&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;인덱스와 나눌 숫자를 입력하세요: 2 0 (입력)
+숫자를 0으로 나눌 수 없습니다. (division by zero) --&amp;gt; ()내용이 **as e**로 지정해서 나온 것이다&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;정수가 아닌 실수를 입력하여 IndexError를 발생시키면?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;인덱스와 나눌 숫자를 입력하세요: 3.1 5 (입력)
+잘못된 인덱스입니다. (list index out of range) --&amp;gt; 이게 e로 지정한 것&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;else와-finally&quot;&gt;&lt;a href=&quot;#else%EC%99%80-finally&quot; aria-label=&quot;else와 finally permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Else와 Finally&lt;/h1&gt;
+&lt;p&gt;이번에는 예외가 발생하지 않았을 때 코드를 실행하는 else를 사용해보겠습니다. 다음과 같이 else는 except 바로 다음에 와야 하며 except를 생략할 수 없습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;try:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;실행할 코드&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;except:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;예외가 발생했을 때 처리하는 코드&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;else:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;예외가 발생하지 않았을 때 실행할 코드&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;예외와는-상관없이-항상-코드-실행하기finally&quot;&gt;&lt;a href=&quot;#%EC%98%88%EC%99%B8%EC%99%80%EB%8A%94-%EC%83%81%EA%B4%80%EC%97%86%EC%9D%B4-%ED%95%AD%EC%83%81-%EC%BD%94%EB%93%9C-%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0finally&quot; aria-label=&quot;예외와는 상관없이 항상 코드 실행하기finally permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;예외와는 상관없이 항상 코드 실행하기(finally)&lt;/h2&gt;
+&lt;p&gt;이번에는 예외 발생 여부와 상관없이 항상 코드를 실행하는 finally를 사용해보겠습니다.&lt;br&gt;
+특히 finally는 except와 else를 생략할 수 있습니다. Finally는 코드가 끝나면 무조건 마지막에 실행되는 코드를 말한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;try:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;실행할 코드&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;except:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;예외가 발생했을 때 처리하는 코드&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;else:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;예외가 발생하지 않았을 때 실행할 코드&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;finally:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;예외 발생여부가 상관없이 무조건 마지막에 실행되는 코드&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/99611C4C5D4AE03E28&quot; alt=&quot;try-except-else-finally&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;예외-발생시키기&quot;&gt;&lt;a href=&quot;#%EC%98%88%EC%99%B8-%EB%B0%9C%EC%83%9D%EC%8B%9C%ED%82%A4%EA%B8%B0&quot; aria-label=&quot;예외 발생시키기 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;예외 발생시키기&lt;/h2&gt;
+&lt;p&gt;예외를 발생시킬 때는 raise에 예외를 지정하고 에러 메시지를 넣습니다(에러 메시지는 생략 할 수 있음).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;raise 예외(‘에러메시지’)&lt;/li&gt;
+&lt;li&gt;raise의 처리 과정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;def three_multiple():&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;x = int(input(‘3의 배수를 입력하세요: ‘))&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;if x % 3 != 0:                            # x가 3의 배수가 아니면
+    raise Exception(&amp;#39;3의 배수가 아닙니다.&amp;#39;)    # 예외를 발생시킴
+print(x)                             # 현재 함수 안에는   except가 없으므로
+
+        # 예외를 상위 코드 블록으로 넘김&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;try:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;three_multiple()&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;except Exception as e: # 하위 코드 블록에서 예외가 발생해도 실행됨&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;print(‘예외가 발생했습니다.’, e)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;이 코드를 x에 3의 배수가 아닌 수를 넣고 실행을 해보면 결과가&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;예외가 발생했습니다. 3의 배수가 아닙니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;이렇게 발생합니다. except가 출력되고 Exception에서 준 내용이 출력되는 형식입니다.&lt;/p&gt;
+&lt;p&gt;three_multiple 함수는 안에 try except가 없는 상태에서 raise로 예외를 발생시켰습니다.&lt;br&gt;
+이렇게 되면 함수 바깥에 있는 except에서 예외가 처리됩니다. 즉, 예외가 발생하더라도 현재 코드 블록에서 처리해줄 except가 없다면 except가 나올 때까지 계속 상위 코드 블록으로 올라갑니다.&lt;/p&gt;
+&lt;p&gt;함수안의 local scope와 바깥의 global scope 구분을 잘해야 합니다.&lt;/p&gt;
+&lt;h2 id=&quot;예외-다시-발생-시키기&quot;&gt;&lt;a href=&quot;#%EC%98%88%EC%99%B8-%EB%8B%A4%EC%8B%9C-%EB%B0%9C%EC%83%9D-%EC%8B%9C%ED%82%A4%EA%B8%B0&quot; aria-label=&quot;예외 다시 발생 시키기 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;예외 다시 발생 시키기&lt;/h2&gt;
+&lt;p&gt;이번에는 try except에서 처리한 예외를 다시 발생시키는 방법입니다.&lt;br&gt;
+except 안에서 raise를 사용하면 현재 예외를 다시 발생시킵니다(re-raise).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;except:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;raise ~~~&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;assert로-예외-발생시키기추가-내용&quot;&gt;&lt;a href=&quot;#assert%EB%A1%9C-%EC%98%88%EC%99%B8-%EB%B0%9C%EC%83%9D%EC%8B%9C%ED%82%A4%EA%B8%B0%EC%B6%94%EA%B0%80-%EB%82%B4%EC%9A%A9&quot; aria-label=&quot;assert로 예외 발생시키기추가 내용 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;assert로 예외 발생시키기(추가 내용)&lt;/h3&gt;
+&lt;p&gt;예외를 발생시키는 방법 중에는 assert를 사용하는 방법도 있습니다.&lt;br&gt;
+assert는 지정된 조건식이 거짓일 때 AssertionError 예외를 발생시키며 조건식이 참이면 그냥 넘어갑니다. 보통 assert는 나와서는 안 되는 조건을 검사할 때 사용합니다.&lt;/p&gt;
+&lt;p&gt;x = int(input(‘3의 배수를 입력하세요: ‘))&lt;br&gt;
+assert x % 3 == 0, ‘3의 배수가 아닙니다.’ # 3의 배수가 아니면 예외 발생, 3의 배수이면 그냥 넘어감&lt;br&gt;
+print(x)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.7]]></title><description><![CDATA[Scope]]></description><link>https://ctsictai.github.io//posts/python-part7/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part7/</guid><pubDate>Tue, 22 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;scope&quot;&gt;&lt;a href=&quot;#scope&quot; aria-label=&quot;scope permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SCOPE&lt;/h1&gt;
 &lt;p&gt;프로그래밍 언어에서 Scope는 어떠한 객체가 유효한 범위를 뜻한다.
 해당 범위를 벗어난다면 객체는 사용할 수 없다.&lt;/p&gt;
 &lt;p&gt;Python에서 scope은 항상 객체가 선언된 지점에서 위로는 상위 객체 까지, 아래로는 모든 하위 객체들과 그 안에까지가 범위 입니다.&lt;/p&gt;
@@ -2436,197 +2729,7 @@ def greeting():&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;결과값&lt;br&gt;
 print(greeting())&lt;br&gt;
-Hello, 정우성&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.8]]></title><description><![CDATA[예외처리]]></description><link>https://ctsictai.github.io//posts/python-part8/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part8/</guid><pubDate>Tue, 22 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;예외처리&quot;&gt;&lt;a href=&quot;#%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC&quot; aria-label=&quot;예외처리 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;예외처리&lt;/h1&gt;
-&lt;h1 id=&quot;1-try---exception&quot;&gt;&lt;a href=&quot;#1-try---exception&quot; aria-label=&quot;1 try   exception permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. TRY - EXCEPTION&lt;/h1&gt;
-&lt;p&gt;try에 실행할 코드를 넣고 except에 예외가 발생했을 때 처리하는 코드를 넣습니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;try:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;실행할 코드&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;except:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;예외가 발생했을 때 처리하는 코드&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;20을 정수값을 가진 x 로 나누는 코드를 예를 들면&lt;/p&gt;
-&lt;p&gt;다른 숫자는 상관없지만 x가 0인 경우는 연산이 되지 않는다.&lt;/p&gt;
-&lt;p&gt;이 때 처리를 어떻게 할 것인가&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;try:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;x = int(input(‘나눌 숫자를 입력하세요: ‘))&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;y = 20 / x
-print(y)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;except: # 예외가 발생했을 때 실행됨&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;print(‘예외가 발생했습니다.‘)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;x가 0인 경우에는 예외로 간주하여 except에 코딩된 print가 처리 된다.&lt;/p&gt;
-&lt;h2 id=&quot;그러면-특정-예외만-처리하고-싶은-경우에는-어떻게-해야-할까&quot;&gt;&lt;a href=&quot;#%EA%B7%B8%EB%9F%AC%EB%A9%B4-%ED%8A%B9%EC%A0%95-%EC%98%88%EC%99%B8%EB%A7%8C-%EC%B2%98%EB%A6%AC%ED%95%98%EA%B3%A0-%EC%8B%B6%EC%9D%80-%EA%B2%BD%EC%9A%B0%EC%97%90%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%ED%95%B4%EC%95%BC-%ED%95%A0%EA%B9%8C&quot; aria-label=&quot;그러면 특정 예외만 처리하고 싶은 경우에는 어떻게 해야 할까 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;그러면 특정 예외만 처리하고 싶은 경우에는 어떻게 해야 할까?&lt;/h2&gt;
-&lt;p&gt;다음과 같이 정수 두 개를 입력받아서 하나는 리스트의 인덱스로 사용하고, 하나는 나누는 값으로 사용합니다.&lt;br&gt;
-그리고 except를 두 개 사용하고 각각 ZeroDivisionError와 IndexError를 지정합니다.&lt;/p&gt;
-&lt;p&gt;y = [10, 20, 30]&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;try:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;index, x = map(int, input(‘인덱스와 나눌 숫자를 입력하세요: ‘).split())&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;print(y[index] / x)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;except ZeroDivisionError: # 숫자를 0으로 나눠서 에러가 발생했을 때 실행됨&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;print(‘숫자를 0으로 나눌 수 없습니다.‘)  0으로 나눌 경우&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;except IndexError: # 범위를 벗어난 인덱스에 접근하여 에러가 발생했을 때 실행됨&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;print(‘잘못된 인덱스입니다.‘)  실수 넣었을 때&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;주석에 쓰여져 있는 대로 숫자를 0으로 나누는 경우와 인덱스 범위를 넣었을 경우 두 가지 경우를 특정하여 예외처리를 할 수 있다.&lt;/p&gt;
-&lt;h2 id=&quot;예외의-에러-메시지-받아오기&quot;&gt;&lt;a href=&quot;#%EC%98%88%EC%99%B8%EC%9D%98-%EC%97%90%EB%9F%AC-%EB%A9%94%EC%8B%9C%EC%A7%80-%EB%B0%9B%EC%95%84%EC%98%A4%EA%B8%B0&quot; aria-label=&quot;예외의 에러 메시지 받아오기 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;예외의 에러 메시지 받아오기&lt;/h2&gt;
-&lt;p&gt;except에서 as 뒤에 변수를 지정하면 발생한 예외의 에러 메시지를 받아올 수 있습니다.&lt;/p&gt;
-&lt;p&gt;앞에서 만든 코드의 except에 as e를 넣습니다. 보통 예외( exception)의 e를 따서 변수 이름을 e로 짓습니다&lt;/p&gt;
-&lt;p&gt;y = [10, 20, 30]&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;try:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;index, x = map(int, input(‘인덱스와 나눌 숫자를 입력하세요: ‘).split())&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;print(y[index] / x)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;except ZeroDivisionError as e:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;print(‘숫자를 0으로 나눌 수 없습니다.’, e)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;except IndexError as e:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;print(‘잘못된 인덱스입니다.’, e)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;as e&lt;/strong&gt; 를 넣어서 달라지는 점은 무엇일까?&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;0으로 나누는 경우인 ZeroDivisionError를 발생해보면&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;인덱스와 나눌 숫자를 입력하세요: 2 0 (입력)
-숫자를 0으로 나눌 수 없습니다. (division by zero) --&amp;gt; ()내용이 **as e**로 지정해서 나온 것이다&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;정수가 아닌 실수를 입력하여 IndexError를 발생시키면?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;인덱스와 나눌 숫자를 입력하세요: 3.1 5 (입력)
-잘못된 인덱스입니다. (list index out of range) --&amp;gt; 이게 e로 지정한 것&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&quot;else와-finally&quot;&gt;&lt;a href=&quot;#else%EC%99%80-finally&quot; aria-label=&quot;else와 finally permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Else와 Finally&lt;/h1&gt;
-&lt;p&gt;이번에는 예외가 발생하지 않았을 때 코드를 실행하는 else를 사용해보겠습니다. 다음과 같이 else는 except 바로 다음에 와야 하며 except를 생략할 수 없습니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;try:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;실행할 코드&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;except:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;예외가 발생했을 때 처리하는 코드&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;else:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;예외가 발생하지 않았을 때 실행할 코드&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;예외와는-상관없이-항상-코드-실행하기finally&quot;&gt;&lt;a href=&quot;#%EC%98%88%EC%99%B8%EC%99%80%EB%8A%94-%EC%83%81%EA%B4%80%EC%97%86%EC%9D%B4-%ED%95%AD%EC%83%81-%EC%BD%94%EB%93%9C-%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0finally&quot; aria-label=&quot;예외와는 상관없이 항상 코드 실행하기finally permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;예외와는 상관없이 항상 코드 실행하기(finally)&lt;/h2&gt;
-&lt;p&gt;이번에는 예외 발생 여부와 상관없이 항상 코드를 실행하는 finally를 사용해보겠습니다.&lt;br&gt;
-특히 finally는 except와 else를 생략할 수 있습니다. Finally는 코드가 끝나면 무조건 마지막에 실행되는 코드를 말한다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;try:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;실행할 코드&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;except:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;예외가 발생했을 때 처리하는 코드&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;else:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;예외가 발생하지 않았을 때 실행할 코드&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;finally:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;예외 발생여부가 상관없이 무조건 마지막에 실행되는 코드&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/99611C4C5D4AE03E28&quot; alt=&quot;try-except-else-finally&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;예외-발생시키기&quot;&gt;&lt;a href=&quot;#%EC%98%88%EC%99%B8-%EB%B0%9C%EC%83%9D%EC%8B%9C%ED%82%A4%EA%B8%B0&quot; aria-label=&quot;예외 발생시키기 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;예외 발생시키기&lt;/h2&gt;
-&lt;p&gt;예외를 발생시킬 때는 raise에 예외를 지정하고 에러 메시지를 넣습니다(에러 메시지는 생략 할 수 있음).&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;raise 예외(‘에러메시지’)&lt;/li&gt;
-&lt;li&gt;raise의 처리 과정&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;def three_multiple():&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;x = int(input(‘3의 배수를 입력하세요: ‘))&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;if x % 3 != 0:                            # x가 3의 배수가 아니면
-    raise Exception(&amp;#39;3의 배수가 아닙니다.&amp;#39;)    # 예외를 발생시킴
-print(x)                             # 현재 함수 안에는   except가 없으므로
-
-        # 예외를 상위 코드 블록으로 넘김&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;try:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;three_multiple()&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;except Exception as e: # 하위 코드 블록에서 예외가 발생해도 실행됨&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;print(‘예외가 발생했습니다.’, e)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;이 코드를 x에 3의 배수가 아닌 수를 넣고 실행을 해보면 결과가&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;예외가 발생했습니다. 3의 배수가 아닙니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;이렇게 발생합니다. except가 출력되고 Exception에서 준 내용이 출력되는 형식입니다.&lt;/p&gt;
-&lt;p&gt;three_multiple 함수는 안에 try except가 없는 상태에서 raise로 예외를 발생시켰습니다.&lt;br&gt;
-이렇게 되면 함수 바깥에 있는 except에서 예외가 처리됩니다. 즉, 예외가 발생하더라도 현재 코드 블록에서 처리해줄 except가 없다면 except가 나올 때까지 계속 상위 코드 블록으로 올라갑니다.&lt;/p&gt;
-&lt;p&gt;함수안의 local scope와 바깥의 global scope 구분을 잘해야 합니다.&lt;/p&gt;
-&lt;h2 id=&quot;예외-다시-발생-시키기&quot;&gt;&lt;a href=&quot;#%EC%98%88%EC%99%B8-%EB%8B%A4%EC%8B%9C-%EB%B0%9C%EC%83%9D-%EC%8B%9C%ED%82%A4%EA%B8%B0&quot; aria-label=&quot;예외 다시 발생 시키기 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;예외 다시 발생 시키기&lt;/h2&gt;
-&lt;p&gt;이번에는 try except에서 처리한 예외를 다시 발생시키는 방법입니다.&lt;br&gt;
-except 안에서 raise를 사용하면 현재 예외를 다시 발생시킵니다(re-raise).&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;except:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;raise ~~~&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;assert로-예외-발생시키기추가-내용&quot;&gt;&lt;a href=&quot;#assert%EB%A1%9C-%EC%98%88%EC%99%B8-%EB%B0%9C%EC%83%9D%EC%8B%9C%ED%82%A4%EA%B8%B0%EC%B6%94%EA%B0%80-%EB%82%B4%EC%9A%A9&quot; aria-label=&quot;assert로 예외 발생시키기추가 내용 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;assert로 예외 발생시키기(추가 내용)&lt;/h3&gt;
-&lt;p&gt;예외를 발생시키는 방법 중에는 assert를 사용하는 방법도 있습니다.&lt;br&gt;
-assert는 지정된 조건식이 거짓일 때 AssertionError 예외를 발생시키며 조건식이 참이면 그냥 넘어갑니다. 보통 assert는 나와서는 안 되는 조건을 검사할 때 사용합니다.&lt;/p&gt;
-&lt;p&gt;x = int(input(‘3의 배수를 입력하세요: ‘))&lt;br&gt;
-assert x % 3 == 0, ‘3의 배수가 아닙니다.’ # 3의 배수가 아니면 예외 발생, 3의 배수이면 그냥 넘어감&lt;br&gt;
-print(x)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.5]]></title><description><![CDATA[While/Function/Module&Package/Closure/Reduce]]></description><link>https://ctsictai.github.io//posts/python-part5/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part5/</guid><pubDate>Mon, 21 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;while문&quot;&gt;&lt;a href=&quot;#while%EB%AC%B8&quot; aria-label=&quot;while문 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;While문&lt;/h1&gt;
+Hello, 정우성&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Python Apprenticeship Study Part.5]]></title><description><![CDATA[While/Function/Module&Package/Closure/Reduce]]></description><link>https://ctsictai.github.io//posts/python-part5/</link><guid isPermaLink="false">https://ctsictai.github.io//posts/python-part5/</guid><pubDate>Mon, 21 Oct 2019 23:30:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;while문&quot;&gt;&lt;a href=&quot;#while%EB%AC%B8&quot; aria-label=&quot;while문 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;While문&lt;/h1&gt;
 &lt;p&gt;while 구문은 특정 조건문이 True 일동안 코드블록을 반복 실행 합니다.&lt;/p&gt;
 &lt;h2 id=&quot;while-else&quot;&gt;&lt;a href=&quot;#while-else&quot; aria-label=&quot;while else permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;While Else&lt;/h2&gt;
 &lt;p&gt;파이썬의 while문은 else 문이 추가 될 수 있습니다.&lt;br&gt;
